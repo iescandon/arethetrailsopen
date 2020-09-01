@@ -1,4 +1,64 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Are The Trails Open? [GitHub license](https://img.shields.io/badge/license-MIT%20License-blue.svg)
+
+# Live Site
+
+www.arethetrailsopen.com
+
+## Description
+
+This application is a single paged full-stack application designed to decipher whether popular biking trails in Texas are open. The user can search by their city or zip code to find trails near them. An interactive map UI will show the trails listed on the map and also visually state with various colored icons whether or not the trail is open or not. Below the interactive map, a table will be rendered with all of the data plus allow for user input to update trail status. Users will be given the opportunity to create a login which will give them the opportunity to save trails as favorites for easier access to the trail status. Because of the nature of the targeted users, this app is designed to be very mobile responsive and fully functional on even the smallest screens.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [License](#license)
+- [Credits](#credits)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation
+
+In order to install this project, you must login to GitHub and go to github.com/iescandon/arethetrailsopen. Once there you will click on the green button that says clone or download. You will be given choices on how to download: using the ssh/html key or downloading the zip file.
+
+Using SSH/HTML Key: You will copy the link shown and open up either terminal (mac: pre-installed) or gitbash (pc: must be installed). Once the application is open, you will type git clone _paste url here_. Once you have cloned the arethetrailsopen repo, cd into the repo and type "open ." to open the folder which contains all files used for the website. You can also type "code ." to open the repo in VS code.
+
+Using Download ZIP: Click on Download Zip. Locate the file and double click it to unzip the file. Locate the unzipped folder and and open it. All the files for the website will be within this folder.
+
+## Usage
+
+Simply click on the live link listed above and use the website as normal. Type in the search bar to find nearest trails. Click on...
+
+## Technologies
+
+- MongoDB
+- Express.js
+- React
+- Node.js
+- Trailforks API???
+- jS Map???
+
+## License
+
+Copyright (c) [2020][inezescandon]
+The license is MIT License.
+Read more about it at https://opensource.org/licenses/MIT.
+
+## Credits
+
+<!-- Worked with my tutor Ivan Popov, my TA Peter Winston, and my professor Tish Mcneel . -->
+
+## Tests
+
+No tests available.
+
+## Questions
+
+If you have any additional questions please contact me at iescan4@gmail.com.
+GitHub: https://github.com/iescandon
+
+<!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -65,4 +125,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 ### `yarn build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify -->

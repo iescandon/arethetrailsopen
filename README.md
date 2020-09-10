@@ -6,6 +6,8 @@ www.arethetrailsopen.com
 
 ## Description
 
+![Alt Text](./trails.gif)`
+
 Various mountain bike trail facebook groups are littered with users asking for the trail status. Although some people know the answers, they get frustrated by having to constantly answer the same question over and over. There are apps that have that information available, but they are flooded with too much information that makes finding the trail status quite difficult and hard to understand. Additionally it only provides you with one trails status, so you have to go through the long process again to find out the status of another trail nearby.
 
 This application is a single paged full-stack application designed to find out whether popular biking trails in Texas are open. The user can search by their city or zip code to find trails near them. An interactive map UI will show the trails listed on the map and also visually state with various colored icons whether or not the trail is open or not. Below the interactive map, a table will be rendered with all of the data plus allow for user input to update trail status. Users will be given the opportunity to create a login which will give them the opportunity to save trails as favorites for easier access to the trail status. Because of the nature of the targeted users, this app is designed to be very mobile responsive and fully functional on even the smallest screens.

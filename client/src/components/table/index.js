@@ -2,7 +2,7 @@ import React from 'react';
 
 function Table() {
 	return (
-		<table class="table table-striped mt-3">
+		<table className="table table-striped mt-3">
 			<thead>
 				<tr>
 					<th scope="col">#</th>

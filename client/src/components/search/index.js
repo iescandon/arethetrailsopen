@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Search() {
+function Search({ search, handleInputChange, getLatAndLong }) {
 	return (
 		<form className="form-inline my-2 my-lg-0">
 			<input
@@ -8,8 +8,12 @@ function Search() {
 				type="search"
 				placeholder="Search"
 				aria-label="Search"
+				onChange={(event) => handleInputChange(event)}
 			/>
-			<button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+			<button
+				className="btn btn-outline-success my-2 my-sm-0"
+				onClick={(event) => getLatAndLong(search, event)}
+			>
 				Search
 			</button>
 		</form>

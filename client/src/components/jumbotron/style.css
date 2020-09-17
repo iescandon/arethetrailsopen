@@ -1,7 +1,8 @@
 .jumbotron {
 	background-image: url(./sendit.jpg);
 	background-size: cover;
-	background-position: center;
+	background-position-y: center;
+	/* background-position-y: -150px; */
 	/* height: 40vh; */
 }
 

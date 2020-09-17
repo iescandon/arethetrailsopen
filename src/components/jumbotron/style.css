@@ -1,0 +1,12 @@
+.jumbotron {
+	background-image: url(./sendit.jpg);
+	background-size: cover;
+	background-position: center;
+	/* height: 40vh; */
+}
+
+.display-4 {
+	color: white;
+	font-family: 'Fjalla One', sans-serif;
+	font-weight: bolder;
+}

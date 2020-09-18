@@ -12,16 +12,71 @@ let trailSystemSeed = [
 		lat: 29.56977,
 		lng: -95.66475,
 		open: true,
-		childrenTrails: [
+		trails: [
 			{
 				name: 'Tower Run',
 				condition: 'Dry',
 				lastUpdated: '09/18/2020',
 			},
 			{
-				name: 'Lung Buster',
-				condition: 'Wet',
-				lastUpdated: '09/15/2020',
+				name: 'Tower Run 2',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'Brazos Bend',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'Brazos Bend',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'Barbed Wire',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'The Wallow',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'Operation Yellowbird',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'RC Uppers',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'RC Lowers',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'Lungbuster',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'Bamboo Chute',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: "Buddy's Trail",
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'Da Bowl',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
 			},
 		],
 	},
@@ -30,15 +85,50 @@ let trailSystemSeed = [
 		lat: 29.7671,
 		lng: -95.4478,
 		open: true,
-		childrenTrails: [
+		trails: [
+			{
+				name: 'Green Ridge Trail',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'Blue Trail',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'Red Trail',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
 			{
 				name: 'Yellow Trail',
-				condition: 'Wet',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'Orange Trail',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'Purple Trail',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'Rollercoaster West',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'Rollercoaster East',
+				condition: 'Dry',
 				lastUpdated: '09/18/2020',
 			},
 			{
 				name: 'The Triangle',
-				condition: 'Wet',
+				condition: 'Dry',
 				lastUpdated: '09/18/2020',
 			},
 		],

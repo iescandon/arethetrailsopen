@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Table() {
+function Table({ selectedTrail }) {
 	return (
 		<table className="table table-striped mt-3">
 			<thead>
@@ -8,24 +8,19 @@ function Table() {
 					<th scope="col">Trail</th>
 					<th scope="col">Condition</th>
 					<th scope="col">Last Updated</th>
+					<th scope="col">Make a Change</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>Tower Run</td>
-					<td>Dry</td>
-					<td>11:25pm 9/17/2020</td>
-				</tr>
-				<tr>
-					<td>Tower Run 2</td>
-					<td>Dry</td>
-					<td>11:28pm 9/17/2020</td>
-				</tr>
-				<tr>
-					<td>Lungbuster</td>
-					<td>Dry</td>
-					<td>11:30pm 9/17/2020</td>
-				</tr>
+				{selectedTrail.trails.map((trail) => {
+					return (
+						<tr>
+							<td>{trail.name}</td>
+							<td>{trail.condition}</td>
+							<td>{trail.lastUpdated}</td>
+						</tr>
+					);
+				})}
 			</tbody>
 		</table>
 	);

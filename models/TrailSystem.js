@@ -7,7 +7,7 @@ const TrailSystemSchema = new Schema({
 	lat: Number,
 	lng: Number,
 	open: Boolean,
-	childrenTrails: [
+	trails: [
 		{
 			name: String,
 			condition: String,

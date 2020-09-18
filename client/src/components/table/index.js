@@ -5,30 +5,26 @@ function Table() {
 		<table className="table table-striped mt-3">
 			<thead>
 				<tr>
-					<th scope="col">#</th>
-					<th scope="col">First</th>
-					<th scope="col">Last</th>
-					<th scope="col">Handle</th>
+					<th scope="col">Trail</th>
+					<th scope="col">Condition</th>
+					<th scope="col">Last Updated</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<th scope="row">1</th>
-					<td>Mark</td>
-					<td>Otto</td>
-					<td>@mdo</td>
+					<td>Tower Run</td>
+					<td>Dry</td>
+					<td>11:25pm 9/17/2020</td>
 				</tr>
 				<tr>
-					<th scope="row">2</th>
-					<td>Jacob</td>
-					<td>Thornton</td>
-					<td>@fat</td>
+					<td>Tower Run 2</td>
+					<td>Dry</td>
+					<td>11:28pm 9/17/2020</td>
 				</tr>
 				<tr>
-					<th scope="row">3</th>
-					<td>Larry</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
+					<td>Lungbuster</td>
+					<td>Dry</td>
+					<td>11:30pm 9/17/2020</td>
 				</tr>
 			</tbody>
 		</table>

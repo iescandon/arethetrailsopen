@@ -4,7 +4,7 @@ import Marker from '../marker/marker.tsx';
 
 // const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-const SimpleMap = ({ centerPoint }) => {
+const SimpleMap = ({ centerPoint, selectedTrail }) => {
 	return (
 		// Important! Always set the container height explicitly
 		<div className="mb-4" style={{ height: '65vh', width: '100%' }}>
@@ -17,7 +17,12 @@ const SimpleMap = ({ centerPoint }) => {
 				defaultZoom={11}
 			>
 				{/* <AnyReactComponent lat={29.68527} lng={-95.38128} text="Home" /> */}
-				<Marker lat={29.68527} lng={-95.38128} name="My Home" color="#007bff" />
+				<Marker
+					lat={29.68527}
+					lng={-95.38128}
+					name={selectedTrail}
+					color="#007bff"
+				/>
 			</GoogleMapReact>
 		</div>
 	);

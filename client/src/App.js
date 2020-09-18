@@ -9,7 +9,7 @@ import Geocode from 'react-geocode';
 
 function App() {
 	const [search, setSearch] = useState(77054);
-	const [selectedTrail, setSelectedTrail] = useState('');
+	const [selectedTrail, setSelectedTrail] = useState('Brazos River Park');
 	const [centerPoint, setCenterPoint] = useState({
 		lat: 29.749907,
 		lng: -95.358421,
@@ -44,16 +44,27 @@ function App() {
 			<div className="container-fluid">
 				<div className="row">
 					<div className="col">
-						<Map centerPoint={centerPoint} />
+						<Map centerPoint={centerPoint} selectedTrail={selectedTrail} />
 					</div>
 					<div className="col">
-						<Search
-							search={search}
-							handleInputChange={handleInputChange}
-							getLatAndLong={getLatAndLong}
-						/>
-						<Legend />
-						<Table />
+						<div className="row">
+							<div className="col">
+								<Search
+									search={search}
+									handleInputChange={handleInputChange}
+									getLatAndLong={getLatAndLong}
+								/>
+							</div>
+							<div className="col text-center">
+								<Legend />
+							</div>
+						</div>
+						<div className="mt-4 row justify-content-center selectedTrail">
+							{selectedTrail}
+						</div>
+						<div className="row">
+							<Table />
+						</div>
 					</div>
 				</div>
 			</div>

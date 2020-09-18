@@ -1,6 +1,6 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
-import Marker from '../marker/marker.tsx';
+import Marker from '../marker';
 
 // const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -21,7 +21,7 @@ const SimpleMap = ({ centerPoint, selectedTrail }) => {
 					lat={29.68527}
 					lng={-95.38128}
 					name={selectedTrail}
-					color="#007bff"
+					color="blue"
 				/>
 			</GoogleMapReact>
 		</div>

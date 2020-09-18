@@ -1,26 +1,27 @@
 {
-  "name": "arethetrailsopen",
-  "version": "1.0.0",
-  "description": "# Live Site",
-  "main": "server.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^5.10.5"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iescandon/arethetrailsopen.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/iescandon/arethetrailsopen/issues"
-  },
-  "homepage": "https://github.com/iescandon/arethetrailsopen#readme"
+	"name": "arethetrailsopen",
+	"version": "1.0.0",
+	"description": "# Live Site",
+	"main": "server.js",
+	"dependencies": {
+		"express": "^4.17.1",
+		"mongoose": "^5.10.5"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js",
+		"seed": "node seeders/seed.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/iescandon/arethetrailsopen.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/iescandon/arethetrailsopen/issues"
+	},
+	"homepage": "https://github.com/iescandon/arethetrailsopen#readme"
 }

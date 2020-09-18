@@ -14,12 +14,12 @@ const SimpleMap = ({ centerPoint, selectedTrail }) => {
 				}}
 				// defaultCenter={centerPoint}
 				center={centerPoint}
-				defaultZoom={11}
+				defaultZoom={10}
 			>
 				{/* <AnyReactComponent lat={29.68527} lng={-95.38128} text="Home" /> */}
 				<Marker
-					lat={29.68527}
-					lng={-95.38128}
+					lat={29.56977}
+					lng={-95.66475}
 					name={selectedTrail}
 					color="blue"
 				/>

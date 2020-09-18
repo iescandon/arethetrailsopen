@@ -11,7 +11,25 @@ import API from './utils/API';
 function App() {
 	const [trails, setTrails] = useState([]);
 	const [search, setSearch] = useState(77054);
-	const [selectedTrail, setSelectedTrail] = useState('Brazos River Park');
+	const [selectedTrail, setSelectedTrail] = useState({
+		name: 'Brazos River Park',
+		lat: 29.56977,
+		lng: -95.66475,
+		open: true,
+		childrenTrails: [
+			{
+				name: 'Tower Run',
+				condition: 'Dry',
+				lastUpdated: '09/18/2020',
+			},
+			{
+				name: 'Lung Buster',
+				condition: 'Wet',
+				lastUpdated: '09/15/2020',
+			},
+		],
+	});
+
 	const [centerPoint, setCenterPoint] = useState({
 		lat: 29.749907,
 		lng: -95.358421,
@@ -71,7 +89,7 @@ function App() {
 							</div>
 						</div>
 						<div className="mt-4 row justify-content-center selectedTrail">
-							{selectedTrail}
+							{selectedTrail.name}
 						</div>
 						<div className="row">
 							<Table />

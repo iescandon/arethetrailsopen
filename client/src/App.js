@@ -124,14 +124,18 @@ function App() {
 
 	return (
 		<div>
-			<Jumbotron />
+			<Jumbotron
+				search={search}
+				handleInputChange={handleInputChange}
+				getLatAndLong={getLatAndLong}
+			/>
 			<div className="container-fluid">
 				<div className="row">
 					<div className="col">
 						<Map centerPoint={centerPoint} selectedTrail={selectedTrail} />
 					</div>
 					<div className="col">
-						<div className="row">
+						{/* <div className="row">
 							<div className="col">
 								<Search
 									search={search}
@@ -142,8 +146,8 @@ function App() {
 							<div className="col text-center">
 								<Legend />
 							</div>
-						</div>
-						<div className="mt-4 row justify-content-center selectedTrail">
+						</div> */}
+						<div className="row justify-content-center selectedTrail">
 							{selectedTrail.name}
 						</div>
 						<div className="row">
@@ -157,3 +161,38 @@ function App() {
 }
 
 export default App;
+
+// return (
+// 	<div>
+// 		<Jumbotron />
+// 		<div className="container-fluid">
+// 			<div className="row">
+// 				<div className="col">
+// 					<div className="row">
+// 						<div className="col">
+// 							<Search
+// 								search={search}
+// 								handleInputChange={handleInputChange}
+// 								getLatAndLong={getLatAndLong}
+// 							/>
+// 						</div>
+// 						<div className="col text-center">
+// 							<Legend />
+// 						</div>
+// 					</div>
+// 					<div className="row">
+// 						<Map centerPoint={centerPoint} selectedTrail={selectedTrail} />
+// 					</div>
+// 				</div>
+// 				<div className="col">
+// 					<div className="row justify-content-center selectedTrail">
+// 						{selectedTrail.name}
+// 					</div>
+// 					<div className="row">
+// 						<Table selectedTrail={selectedTrail} />
+// 					</div>
+// 				</div>
+// 			</div>
+// 		</div>
+// 	</div>
+// );

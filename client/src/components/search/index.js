@@ -6,12 +6,12 @@ function Search({ search, handleInputChange, getLatAndLong }) {
 			<input
 				className="form-control mr-sm-2"
 				type="search"
-				placeholder="Search"
+				placeholder=""
 				aria-label="Search"
 				onChange={(event) => handleInputChange(event)}
 			/>
 			<button
-				className="btn btn-outline-success my-2 my-sm-0"
+				className="btn btn-success my-2 my-sm-0"
 				onClick={(event) => getLatAndLong(search, event)}
 			>
 				Search

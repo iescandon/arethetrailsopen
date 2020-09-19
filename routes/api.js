@@ -13,10 +13,15 @@ router.get('/api/trails', (req, res) => {
 
 //TODO FIX API REQUEST...SEARCHING FOR TRAIL SYSTEM ID BUT DOENST EXIST
 router.put('/api/trails/:id', (req, res) => {
-	console.log(req.body);
+	console.log(req.params.id, req.body);
 	db.TrailSystem.findOneAndUpdate(
-		{ id: req.params.id },
-		{ $set: { condition: req.body.condition, lastUpdated: Date.now() } }
+		{ _id: req.body.selectedTrail, 'trails._id': req.params.id },
+		{
+			$set: {
+				'trails.$.condition': req.body.condition,
+				'trails.$.lastUpdated': Date.now(),
+			},
+		}
 	)
 		.then((data) => {
 			console.log(data);

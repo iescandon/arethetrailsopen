@@ -6,8 +6,8 @@ export default {
 	search: function () {
 		return axios.get(URL);
 	},
-	updateCondition: function (id, condition) {
-		console.log(id, condition);
-		return axios.put(`${URL}/${id}`, { condition });
+	updateCondition: function (id, condition, selectedTrail) {
+		console.log(id, condition, selectedTrail);
+		return axios.put(`${URL}/${id}`, { condition, selectedTrail });
 	},
 };

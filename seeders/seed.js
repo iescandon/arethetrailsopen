@@ -97,7 +97,7 @@ let trailSystemSeed = [
 		name: 'Memorial Park',
 		lat: 29.7671,
 		lng: -95.4478,
-		open: false,
+		open: true,
 		trails: [
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),
@@ -151,6 +151,34 @@ let trailSystemSeed = [
 				_id: new mongoose.Types.ObjectId().toHexString(),
 				name: 'The Triangle',
 				condition: 'Wet',
+				lastUpdated: Date.now(),
+			},
+		],
+	},
+	{
+		name: 'Cypress Creek',
+		lat: 29.98352,
+		lng: -95.57724,
+		open: true,
+		trails: [
+			{
+				_id: new mongoose.Types.ObjectId().toHexString(),
+				name: 'Trail',
+				condition: 'Dry',
+				lastUpdated: Date.now(),
+			},
+		],
+	},
+	{
+		name: 'Jack Brooks',
+		lat: 29.36522,
+		lng: -95.03935,
+		open: true,
+		trails: [
+			{
+				_id: new mongoose.Types.ObjectId().toHexString(),
+				name: 'Trail',
+				condition: 'Dry',
 				lastUpdated: Date.now(),
 			},
 		],

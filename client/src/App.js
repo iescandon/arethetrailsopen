@@ -77,13 +77,13 @@ function App() {
 						/>
 					</div>
 					<div className="col">
-						<div className="row justify-content-center">
+						{/* <div className="row justify-content-center">
 							<img
 								src={require(`./assets/${selectedTrail.open}.png`)}
 								alt="open or closed sign"
 								className="sign"
 							/>
-						</div>
+						</div> */}
 						<div className="mt-3 row justify-content-center selectedTrail">
 							{selectedTrail.name}
 						</div>

@@ -23,7 +23,8 @@ function MapComponent({ centerPoint, trails, selectTrail }) {
 						position={{ lat: marker.lat, lng: marker.lng }}
 						onClick={() => selectTrail(marker)}
 						options={{
-							icon: require(`./${marker.open}.svg`),
+							// icon: require(`./${marker.open}.svg`),
+							icon: require(`./blackmarker.svg`),
 							// origin: new window.google.maps.Point(0, 0),
 							// anchor: new window.google.maps.Point(15, 15),
 							// scaledSize: new window.google.maps.Size(30, 30),

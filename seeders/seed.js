@@ -97,7 +97,7 @@ let trailSystemSeed = [
 		name: 'Memorial Park',
 		lat: 29.7671,
 		lng: -95.4478,
-		open: true,
+		open: false,
 		trails: [
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),

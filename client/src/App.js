@@ -52,6 +52,14 @@ function App() {
 		);
 	};
 
+	const updateTrailCondition = (id, event) => {
+		const condition = event.target.getAttribute('data-condition');
+		API.updateCondition(id, condition).then((res) => {
+			console.log(res);
+			// setTrails(res);
+		});
+	};
+
 	return (
 		<div>
 			<Jumbotron
@@ -64,17 +72,35 @@ function App() {
 					<div className="col">
 						<Map
 							centerPoint={centerPoint}
-							selectedTrail={selectedTrail}
 							trails={trails}
 							selectTrail={selectTrail}
 						/>
 					</div>
 					<div className="col">
+						<div className="row justify-content-center">
+							<img
+								src={require(`./assets/${selectedTrail.open}.png`)}
+								alt="open or closed sign"
+								className="sign"
+							/>
+						</div>
 						<div className="mt-3 row justify-content-center selectedTrail">
+							{/* <div className="col-2"></div>
+							<div className="col-8 text-center">{selectedTrail.name}</div>
+							<div className="col-2 text-center">
+								<img
+									src={require(`./assets/${selectedTrail.open}.png`)}
+									alt="open or closed sign"
+									className="sign"
+								/>
+							</div> */}
 							{selectedTrail.name}
 						</div>
 						<div className="row">
-							<Table selectedTrail={selectedTrail} />
+							<Table
+								selectedTrail={selectedTrail}
+								updateTrailCondition={updateTrailCondition}
+							/>
 						</div>
 					</div>
 				</div>

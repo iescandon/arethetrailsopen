@@ -1,15 +1,16 @@
 import React from 'react';
 import { Dropdown } from 'react-bootstrap';
-import API from '../../utils/API';
+// import API from '../../utils/API';
 import './style.css';
 
-function Table({ selectedTrail }) {
-	const updateTrailCondition = (id, event) => {
-		const condition = event.target.getAttribute('data-condition');
-		API.updateCondition(id, condition).then((res) => {
-			console.log(res);
-		});
-	};
+function Table({ selectedTrail, updateTrailCondition }) {
+	// const updateTrailCondition = (id, event) => {
+	// 	const condition = event.target.getAttribute('data-condition');
+	// 	API.updateCondition(id, condition).then((res) => {
+	// 		console.log(res);
+	// 	});
+
+	// };
 
 	const trailConditions = ['Dry', 'Hero', 'Tacky', 'Variable', 'Muddy', 'Wet'];
 
@@ -26,7 +27,7 @@ function Table({ selectedTrail }) {
 			<tbody>
 				{selectedTrail.trails.map((trail) => {
 					return (
-						<tr key={trail._id}>
+						<tr key={trail.id}>
 							<td>{trail.name}</td>
 							<td>
 								<Dropdown>
@@ -43,7 +44,7 @@ function Table({ selectedTrail }) {
 												<Dropdown.Item
 													key={condition}
 													onClick={(event) =>
-														updateTrailCondition(trail._id, event)
+														updateTrailCondition(trail.id, event)
 													}
 													data-condition={condition}
 												>

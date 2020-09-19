@@ -4,10 +4,9 @@ import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 const containerStyle = {
 	width: '50vw',
 	height: '80vh',
-	paddingLeft: '0px',
 };
 
-function MapComponent({ centerPoint, selectedTrail, trails, selectTrail }) {
+function MapComponent({ centerPoint, trails, selectTrail }) {
 	return (
 		<LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_API_KEY}>
 			<GoogleMap

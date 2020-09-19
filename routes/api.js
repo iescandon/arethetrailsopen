@@ -16,7 +16,7 @@ router.put('/api/trails/:id', (req, res) => {
 	console.log(req.body);
 	db.TrailSystem.findOneAndUpdate(
 		{ _id: req.params.id },
-		{ $set: { condition: req.body.condition } }
+		{ $set: { condition: req.body.condition, lastUpdated: Date.now() } }
 	)
 		.then((data) => {
 			console.log(data);

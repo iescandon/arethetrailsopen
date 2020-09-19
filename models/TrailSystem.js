@@ -5,8 +5,8 @@ const Schema = mongoose.Schema;
 const IndividualTrailSchema = new Schema({
 	name: String,
 	condition: String,
-	lastUpdated: String,
-	// lastUpdated: Date,
+	// lastUpdated: String,
+	lastUpdated: Date,
 });
 
 const TrailSystemSchema = new Schema({
@@ -17,11 +17,11 @@ const TrailSystemSchema = new Schema({
 	trails: [IndividualTrailSchema],
 });
 
-TrailSystemSchema.methods.lastUpdatedDate = function () {
-	this.lastUpdated = Date.now();
+// TrailSystemSchema.methods.lastUpdatedDate = function () {
+// 	this.lastUpdated = Date.now();
 
-	return this.lastUpdated;
-};
+// 	return this.lastUpdated;
+// };
 
 const TrailSystem = mongoose.model('TrailSystem', TrailSystemSchema);
 

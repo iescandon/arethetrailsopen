@@ -1,10 +1,10 @@
 .Dry {
-	background-color: green !important;
+	background-color: #28a745 !important;
 	color: white !important;
 }
 
 .Hero {
-	background-color: green !important;
+	background-color: #28a745 !important;
 	color: white !important;
 }
 
@@ -19,11 +19,16 @@
 }
 
 .Muddy {
-	background-color: red !important;
+	background-color: #e61d1d !important;
 	color: white !important;
 }
 
 .Wet {
-	background-color: red !important;
+	background-color: #e61d1d !important;
 	color: white !important;
+}
+
+#dropdown-basic {
+	padding-top: 1px;
+	padding-bottom: 1px;
 }

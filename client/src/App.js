@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Map from './components/map';
 import Jumbotron from './components/jumbotron';
@@ -12,77 +12,7 @@ function App() {
 	const [trails, setTrails] = useState([]);
 	const [search, setSearch] = useState(77054);
 	const [selectedTrail, setSelectedTrail] = useState({
-		name: 'Brazos River Park',
-		lat: 29.56977,
-		lng: -95.66475,
-		open: true,
-		trails: [
-			{
-				name: 'Tower Run',
-				condition: 'Dry',
-				lastUpdated: '09/18/2020',
-			},
-			{
-				name: 'Tower Run 2',
-				condition: 'Dry',
-				lastUpdated: '09/18/2020',
-			},
-			{
-				name: 'Brazos Bend',
-				condition: 'Dry',
-				lastUpdated: '09/18/2020',
-			},
-			{
-				name: 'Brazos Bend',
-				condition: 'Dry',
-				lastUpdated: '09/18/2020',
-			},
-			{
-				name: 'Barbed Wire',
-				condition: 'Dry',
-				lastUpdated: '09/18/2020',
-			},
-			{
-				name: 'The Wallow',
-				condition: 'Dry',
-				lastUpdated: '09/18/2020',
-			},
-			{
-				name: 'Operation Yellowbird',
-				condition: 'Dry',
-				lastUpdated: '09/18/2020',
-			},
-			{
-				name: 'RC Uppers',
-				condition: 'Dry',
-				lastUpdated: '09/18/2020',
-			},
-			{
-				name: 'RC Lowers',
-				condition: 'Dry',
-				lastUpdated: '09/18/2020',
-			},
-			{
-				name: 'Lungbuster',
-				condition: 'Dry',
-				lastUpdated: '09/18/2020',
-			},
-			{
-				name: 'Bamboo Chute',
-				condition: 'Dry',
-				lastUpdated: '09/18/2020',
-			},
-			{
-				name: "Buddy's Trail",
-				condition: 'Dry',
-				lastUpdated: '09/18/2020',
-			},
-			{
-				name: 'Da Bowl',
-				condition: 'Dry',
-				lastUpdated: '09/18/2020',
-			},
-		],
+		trails: [],
 	});
 
 	const [centerPoint, setCenterPoint] = useState({
@@ -90,12 +20,19 @@ function App() {
 		lng: -95.358421,
 	});
 
-	const getTrails = () => {
+	// const getTrails = () => {
+	useEffect(() => {
 		API.search().then((res) => {
-			console.log(res);
-			setTrails(res.data.results);
+			setTrails(res.data);
+			setSelectedTrail(res.data[0]);
 		});
+	}, []);
+
+	const selectTrail = (trail) => {
+		console.log(trail);
+		setSelectedTrail(trail);
 	};
+	// };
 
 	const handleInputChange = ({ target }) => {
 		const { value } = target;
@@ -120,7 +57,7 @@ function App() {
 		);
 	};
 
-	getTrails();
+	// getTrails();
 
 	return (
 		<div>
@@ -132,7 +69,12 @@ function App() {
 			<div className="container-fluid">
 				<div className="row">
 					<div className="col">
-						<Map centerPoint={centerPoint} selectedTrail={selectedTrail} />
+						<Map
+							centerPoint={centerPoint}
+							selectedTrail={selectedTrail}
+							trails={trails}
+							selectTrail={selectTrail}
+						/>
 					</div>
 					<div className="col">
 						{/* <div className="row">
@@ -147,7 +89,7 @@ function App() {
 								<Legend />
 							</div>
 						</div> */}
-						<div className="row justify-content-center selectedTrail">
+						<div className="mt-3 row justify-content-center selectedTrail">
 							{selectedTrail.name}
 						</div>
 						<div className="row">

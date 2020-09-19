@@ -14,7 +14,7 @@ function Table({ selectedTrail }) {
 			<tbody>
 				{selectedTrail.trails.map((trail) => {
 					return (
-						<tr>
+						<tr key={trail._id}>
 							<td>{trail.name}</td>
 							<td>{trail.condition}</td>
 							<td>{trail.lastUpdated}</td>

@@ -1,0 +1,8 @@
+button {
+	font-weight: 900;
+	/* font-family: 'Fjalla One', sans-serif !important; */
+}
+
+.form-control {
+	width: 300px !important;
+}

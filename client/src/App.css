@@ -3,3 +3,8 @@
 	font-family: 'Fjalla One', sans-serif;
 	/* font-weight: bolder; */
 }
+
+div[title='marker'] > img {
+	height: 30px !important;
+	width: 30px !important;
+}

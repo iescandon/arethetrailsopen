@@ -4,7 +4,7 @@ import './style.css';
 
 function Jumbotron({ search, handleInputChange, getLatAndLong }) {
 	return (
-		<div className="jumbotron jumbotron-fluid">
+		<div className="jumbotron jumbotron-fluid mb-0">
 			<div className="container">
 				<div className="row">
 					<div className="col">

@@ -2,23 +2,19 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
+const IndividualTrailSchema = new Schema({
+	name: String,
+	condition: String,
+	lastUpdated: String,
+	// lastUpdated: Date,
+});
+
 const TrailSystemSchema = new Schema({
 	name: String,
 	lat: Number,
 	lng: Number,
 	open: Boolean,
-	trails: [
-		{
-			name: String,
-			condition: String,
-			lastUpdated: String,
-			// lastUpdated: Date,
-		},
-		// {
-		// 	type: Schema.Types.ObjectId,
-		// 	ref: 'IndividualTrail',
-		// },
-	],
+	trails: [IndividualTrailSchema],
 });
 
 TrailSystemSchema.methods.lastUpdatedDate = function () {

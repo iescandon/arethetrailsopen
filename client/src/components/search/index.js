@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 
 function Search({ search, handleInputChange, getLatAndLong }) {
 	return (
@@ -14,7 +15,7 @@ function Search({ search, handleInputChange, getLatAndLong }) {
 				className="btn btn-success my-2 my-sm-0"
 				onClick={(event) => getLatAndLong(search, event)}
 			>
-				Search
+				<i className="fa fa-search" aria-hidden="true"></i>
 			</button>
 		</form>
 	);

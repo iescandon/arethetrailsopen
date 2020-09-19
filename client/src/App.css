@@ -1,7 +1,6 @@
 .selectedTrail {
 	font-size: 36px;
 	font-family: 'Fjalla One', sans-serif;
-	/* font-weight: bolder; */
 }
 
 div[title='marker'] > img {

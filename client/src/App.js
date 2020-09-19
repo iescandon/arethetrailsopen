@@ -3,8 +3,6 @@ import './App.css';
 import Map from './components/map';
 import Jumbotron from './components/jumbotron';
 import Table from './components/table';
-import Search from './components/search';
-import Legend from './components/legend';
 import Geocode from 'react-geocode';
 import API from './utils/API';
 
@@ -20,7 +18,6 @@ function App() {
 		lng: -95.358421,
 	});
 
-	// const getTrails = () => {
 	useEffect(() => {
 		API.search().then((res) => {
 			setTrails(res.data);
@@ -29,10 +26,8 @@ function App() {
 	}, []);
 
 	const selectTrail = (trail) => {
-		console.log(trail);
 		setSelectedTrail(trail);
 	};
-	// };
 
 	const handleInputChange = ({ target }) => {
 		const { value } = target;
@@ -57,8 +52,6 @@ function App() {
 		);
 	};
 
-	// getTrails();
-
 	return (
 		<div>
 			<Jumbotron
@@ -77,18 +70,6 @@ function App() {
 						/>
 					</div>
 					<div className="col">
-						{/* <div className="row">
-							<div className="col">
-								<Search
-									search={search}
-									handleInputChange={handleInputChange}
-									getLatAndLong={getLatAndLong}
-								/>
-							</div>
-							<div className="col text-center">
-								<Legend />
-							</div>
-						</div> */}
 						<div className="mt-3 row justify-content-center selectedTrail">
 							{selectedTrail.name}
 						</div>
@@ -103,38 +84,3 @@ function App() {
 }
 
 export default App;
-
-// return (
-// 	<div>
-// 		<Jumbotron />
-// 		<div className="container-fluid">
-// 			<div className="row">
-// 				<div className="col">
-// 					<div className="row">
-// 						<div className="col">
-// 							<Search
-// 								search={search}
-// 								handleInputChange={handleInputChange}
-// 								getLatAndLong={getLatAndLong}
-// 							/>
-// 						</div>
-// 						<div className="col text-center">
-// 							<Legend />
-// 						</div>
-// 					</div>
-// 					<div className="row">
-// 						<Map centerPoint={centerPoint} selectedTrail={selectedTrail} />
-// 					</div>
-// 				</div>
-// 				<div className="col">
-// 					<div className="row justify-content-center selectedTrail">
-// 						{selectedTrail.name}
-// 					</div>
-// 					<div className="row">
-// 						<Table selectedTrail={selectedTrail} />
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</div>
-// 	</div>
-// );

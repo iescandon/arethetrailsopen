@@ -18,10 +18,6 @@ function Jumbotron({ search, handleInputChange, getLatAndLong }) {
 						/>
 					</div>
 				</div>
-				{/* <p className="lead">
-					This is a modified jumbotron that occupies the entire horizontal space
-					of its parent.
-				</p> */}
 			</div>
 		</div>
 	);

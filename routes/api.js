@@ -11,4 +11,19 @@ router.get('/api/trails', (req, res) => {
 		});
 });
 
+//TODO FIX API REQUEST...SEARCHING FOR TRAIL SYSTEM ID BUT DOENST EXIST
+router.put('/api/trails/:id', (req, res) => {
+	console.log(req.body);
+	db.TrailSystem.findOneAndUpdate(
+		{ _id: req.params.id },
+		{ $set: { condition: req.body.condition } }
+	)
+		.then((data) => {
+			console.log(data);
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+});
+
 module.exports = router;

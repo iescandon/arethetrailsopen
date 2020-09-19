@@ -1,4 +1,4 @@
 module.exports = {
 	TrailSystem: require('./TrailSystem'),
-	IndividualTrail: require('./IndividualTrail'),
+	// IndividualTrail: require('./IndividualTrail'),
 };

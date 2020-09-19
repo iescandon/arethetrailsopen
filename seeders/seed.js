@@ -16,13 +16,13 @@ let trailSystemSeed = [
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),
 				name: 'Tower Run',
-				condition: 'Dry',
+				condition: 'Hero',
 				lastUpdated: '09/18/2020',
 			},
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),
 				name: 'Tower Run 2',
-				condition: 'Dry',
+				condition: 'Hero',
 				lastUpdated: '09/18/2020',
 			},
 			{
@@ -108,7 +108,7 @@ let trailSystemSeed = [
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),
 				name: 'Blue Trail',
-				condition: 'Dry',
+				condition: 'Hero',
 				lastUpdated: '09/18/2020',
 			},
 			{
@@ -126,31 +126,31 @@ let trailSystemSeed = [
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),
 				name: 'Orange Trail',
-				condition: 'Dry',
+				condition: 'Hero',
 				lastUpdated: '09/18/2020',
 			},
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),
 				name: 'Purple Trail',
-				condition: 'Dry',
+				condition: 'Tacky',
 				lastUpdated: '09/18/2020',
 			},
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),
 				name: 'Rollercoaster West',
-				condition: 'Dry',
+				condition: 'Variable',
 				lastUpdated: '09/18/2020',
 			},
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),
 				name: 'Rollercoaster East',
-				condition: 'Dry',
+				condition: 'Muddy',
 				lastUpdated: '09/18/2020',
 			},
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),
 				name: 'The Triangle',
-				condition: 'Dry',
+				condition: 'Wet',
 				lastUpdated: '09/18/2020',
 			},
 		],

@@ -97,12 +97,12 @@ let trailSystemSeed = [
 		name: 'Memorial Park',
 		lat: 29.7671,
 		lng: -95.4478,
-		open: true,
+		open: false,
 		trails: [
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),
 				name: 'Green Ridge Trail',
-				condition: 'Dry',
+				condition: 'Tacky',
 				lastUpdated: Date.now(),
 			},
 			{
@@ -138,7 +138,7 @@ let trailSystemSeed = [
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),
 				name: 'Rollercoaster West',
-				condition: 'Variable',
+				condition: 'Muddy',
 				lastUpdated: Date.now(),
 			},
 			{
@@ -173,6 +173,20 @@ let trailSystemSeed = [
 		name: 'Jack Brooks',
 		lat: 29.36522,
 		lng: -95.03935,
+		open: true,
+		trails: [
+			{
+				_id: new mongoose.Types.ObjectId().toHexString(),
+				name: 'Trail',
+				condition: 'Dry',
+				lastUpdated: Date.now(),
+			},
+		],
+	},
+	{
+		name: 'Anthills/Terry Hershey Park',
+		lat: 29.77358,
+		lng: -95.60626,
 		open: true,
 		trails: [
 			{

@@ -10,4 +10,8 @@ export default {
 		console.log(id, condition, selectedTrail);
 		return axios.put(`${URL}/${id}`, { condition, selectedTrail });
 	},
+	updateStatus: function (id, status) {
+		console.log(id, status);
+		return axios.put(URL, { id, status });
+	},
 };

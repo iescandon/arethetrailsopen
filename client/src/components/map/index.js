@@ -1,5 +1,11 @@
 import React from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import './style.css';
+import {
+	GoogleMap,
+	LoadScript,
+	Marker,
+	InfoWindow,
+} from '@react-google-maps/api';
 
 const containerStyle = {
 	width: '50vw',
@@ -17,19 +23,27 @@ function MapComponent({ centerPoint, trails, selectTrail }) {
 				{/* Child components, such as markers, info windows, etc. */}
 
 				{trails.map((marker) => (
-					<Marker
-						title={marker.name}
-						key={`${marker.lat}-${marker.lng}`}
-						position={{ lat: marker.lat, lng: marker.lng }}
-						onClick={() => selectTrail(marker)}
-						options={{
-							// icon: require(`./${marker.open}.svg`),
-							icon: require(`./blackmarker.svg`),
-							// origin: new window.google.maps.Point(0, 0),
-							// anchor: new window.google.maps.Point(15, 15),
-							// scaledSize: new window.google.maps.Size(30, 30),
-						}}
-					/>
+					<div key={`${marker.lat}-${marker.lng}`}>
+						<Marker
+							title={marker.name}
+							key={`${marker.lat}-${marker.lng}`}
+							position={{ lat: marker.lat, lng: marker.lng }}
+							onClick={() => selectTrail(marker)}
+							options={{
+								icon: require(`./${marker.open}.svg`),
+								// icon: require(`./blackmarker.svg`),
+								// origin: new window.google.maps.Point(0, 0),
+								// anchor: new window.google.maps.Point(15, 15),
+								// scaledSize: new window.google.maps.Size(30, 30),
+							}}
+							animation={2}
+						/>
+						{/* <InfoWindow pixelOffset={'0'}>
+							<div>
+								<h1>{marker.name}</h1>
+							</div>
+						</InfoWindow> */}
+					</div>
 				))}
 			</GoogleMap>
 		</LoadScript>

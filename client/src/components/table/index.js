@@ -12,7 +12,7 @@ function Table({ selectedTrail, updateTrailCondition }) {
 
 	// };
 
-	const trailConditions = ['Dry', 'Hero', 'Tacky', 'Variable', 'Muddy', 'Wet'];
+	const trailConditions = ['Dry', 'Hero', 'Tacky', 'Muddy', 'Wet'];
 
 	return (
 		<table className="table table-striped mt-3">

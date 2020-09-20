@@ -6,7 +6,7 @@ import Information from './components/information';
 import Geocode from 'react-geocode';
 import API from './utils/API';
 import Locate from './components/locate';
-// import Footer from './components/footer';
+import Footer from './components/footer';
 
 function App() {
 	const [trails, setTrails] = useState([]);
@@ -122,6 +122,7 @@ function App() {
 							selectTrail={selectTrail}
 							onMapLoad={onMapLoad}
 						/>
+						{/* <Footer /> */}
 					</div>
 					<div className="col">
 						<Information
@@ -132,7 +133,6 @@ function App() {
 					</div>
 				</div>
 			</div>
-			{/* <Footer /> */}
 		</div>
 	);
 }

@@ -27,7 +27,7 @@ function Table({ selectedTrail, updateTrailCondition }) {
 			<tbody>
 				{selectedTrail.trails.map((trail) => {
 					return (
-						<tr key={trail._id}>
+						<tr key={trail.trailId}>
 							<td>{trail.name}</td>
 							<td>
 								<Dropdown>
@@ -44,7 +44,7 @@ function Table({ selectedTrail, updateTrailCondition }) {
 												<Dropdown.Item
 													key={condition}
 													onClick={(event) => {
-														updateTrailCondition(trail._id, event);
+														updateTrailCondition(trail.trailId, event);
 														updateCurrentDate(trail.lastUpdated);
 													}}
 													data-condition={condition}

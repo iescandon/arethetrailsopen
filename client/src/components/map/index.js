@@ -38,7 +38,7 @@ function MapComponent({ centerPoint, trails, selectTrail }) {
 							key={`${marker.lat}-${marker.lng}`}
 							position={{ lat: marker.lat, lng: marker.lng }}
 							onClick={() => {
-								selectTrail(marker);
+								// selectTrail(marker);
 								setSelectedMarker(marker);
 							}}
 							// onClick={() => {
@@ -60,9 +60,18 @@ function MapComponent({ centerPoint, trails, selectTrail }) {
 									setSelectedMarker(null);
 								}}
 							>
-								<div>
-									<h6>{marker.name}</h6>
-									<p>{marker.address}</p>
+								<div className="text-center">
+									<h6 className="text-center">{marker.name}</h6>
+									<p className="mb-2">{marker.address}</p>
+									<a
+										className="viewTrailsLink"
+										onClick={() => {
+											selectTrail(marker);
+											setSelectedMarker(null);
+										}}
+									>
+										View Trails
+									</a>
 								</div>
 							</InfoWindow>
 						) : null}

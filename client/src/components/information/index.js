@@ -19,8 +19,10 @@ function Information({
 	return (
 		<div>
 			<div className="mt-3 row justify-content-center selectedTrail">
-				<div className="col offset-md-4 text-center">{selectedTrail.name}</div>
-				<div className="col">
+				<div className="col-8 offset-md-2 text-center">
+					{selectedTrail.name}
+				</div>
+				<div className="col-2">
 					<label>
 						<Switch
 							onChange={updateTrailStatus}

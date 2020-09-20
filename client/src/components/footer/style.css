@@ -1,0 +1,44 @@
+.footer {
+	background-color: rgb(248, 248, 248);
+	/* margin-bottom: 0;
+	padding-top: 12px;
+	padding-bottom: 0.5px; */
+}
+
+.fa-linkedin,
+.fa-github,
+.fa-instagram {
+	padding: 10px;
+	font-size: 20px;
+	text-align: center;
+	text-decoration: none;
+	color: grey;
+}
+
+.fa-linkedin:hover,
+.fa-github:hover,
+.fa-instagram:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.menu li {
+	display: inline;
+}
+
+.menu {
+	margin: 0 !important;
+}
+
+.email {
+	color: grey;
+}
+
+.email:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.copyright {
+	color: grey;
+}

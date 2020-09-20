@@ -12,6 +12,7 @@ let trailSystemSeed = [
 		lat: 29.56977,
 		lng: -95.66475,
 		open: true,
+		address: '18427 Southwest Fwy, Sugar Land, TX 77479',
 		trails: [
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),
@@ -98,6 +99,7 @@ let trailSystemSeed = [
 		lat: 29.7671,
 		lng: -95.4478,
 		open: false,
+		address: '7575 N Picnic Ln, Houston, TX 77007',
 		trails: [
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),
@@ -160,6 +162,7 @@ let trailSystemSeed = [
 		lat: 29.98352,
 		lng: -95.57724,
 		open: true,
+		address: '14234 W Cypress Forest Dr, Houston, TX 77070',
 		trails: [
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),
@@ -174,6 +177,7 @@ let trailSystemSeed = [
 		lat: 29.36522,
 		lng: -95.03935,
 		open: true,
+		address: '5700 FM 2004 &, Hwy 6, Hitchcock, TX 77563',
 		trails: [
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),
@@ -188,6 +192,7 @@ let trailSystemSeed = [
 		lat: 29.77358,
 		lng: -95.60626,
 		open: true,
+		address: '1001 S Dairy Ashford Rd, Houston, TX 77077',
 		trails: [
 			{
 				_id: new mongoose.Types.ObjectId().toHexString(),

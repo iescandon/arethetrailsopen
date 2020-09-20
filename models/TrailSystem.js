@@ -13,6 +13,7 @@ const TrailSystemSchema = new Schema({
 	lat: Number,
 	lng: Number,
 	open: Boolean,
+	address: String,
 	trails: [IndividualTrailSchema],
 });
 

@@ -40,8 +40,10 @@ Simply click on the live link listed above and use the website as normal. Type i
 - Express.js
 - React
 - Node.js
-- Trailforks API???
-- jS Map???
+- React Google Maps API
+- Axios
+- Mongoose
+- React Switch
 
 ## License
 
@@ -52,6 +54,10 @@ Read more about it at https://opensource.org/licenses/MIT.
 ## Credits
 
 <!-- Worked with my tutor Ivan Popov, my TA Peter Winston, and my professor Tish Mcneel . -->
+
+Jumbotron photo by Andhika Soreng on Unsplash.
+Marker photo by Freepik on Flaticon.com.
+Favicon photo by Freepik on Flaticon.com
 
 ## Tests
 

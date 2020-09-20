@@ -1,22 +1,16 @@
 import React, { useState, useEffect } from 'react';
-// import Switch from 'react-switch';
 import './App.css';
 import Map from './components/map';
 import Jumbotron from './components/jumbotron';
-// import Table from './components/table';
 import Information from './components/information';
 import Geocode from 'react-geocode';
 import API from './utils/API';
+// import Footer from './components/footer';
 
 function App() {
 	const [trails, setTrails] = useState([]);
-	const [search, setSearch] = useState(77054);
-	const [selectedTrail, setSelectedTrail] = useState({
-		trails: [],
-	});
-
-	// const trailStatus = selectedTrail.open;
-
+	const [search, setSearch] = useState(null);
+	const [selectedTrail, setSelectedTrail] = useState(null);
 	const [centerPoint, setCenterPoint] = useState({
 		lat: 29.749907,
 		lng: -95.358421,
@@ -29,7 +23,6 @@ function App() {
 	const getTrails = () => {
 		API.search().then((res) => {
 			setTrails(res.data);
-			// setSelectedTrail(res.data[0]);
 		});
 	};
 
@@ -66,10 +59,10 @@ function App() {
 			console.log(res);
 			// setTrails(res);
 		});
+		// getTrails();
 	};
 
 	const updateTrailStatus = () => {
-		//call api
 		console.log('toggle');
 		if (selectedTrail.open === true) {
 			const newStatus = false;
@@ -98,6 +91,7 @@ function App() {
 						<Map
 							centerPoint={centerPoint}
 							trails={trails}
+							selectedTrail={selectedTrail}
 							selectTrail={selectTrail}
 						/>
 					</div>
@@ -108,43 +102,11 @@ function App() {
 							updateTrailCondition={updateTrailCondition}
 						/>
 					</div>
-
-					{/* <div className="col">
-						<div className="mt-3 row justify-content-center selectedTrail">
-							<div className="col offset-md-4 text-center">
-								{selectedTrail.name}
-							</div>
-							<div className="col">
-								<label>
-									<Switch
-										onChange={updateTrailStatus}
-										checked={selectedTrail.open}
-										offColor="#e61d1d"
-									/>
-								</label>
-							</div>
-						</div>
-						<div className="row">
-							<Table
-								selectedTrail={selectedTrail}
-								updateTrailCondition={updateTrailCondition}
-							/>
-						</div>
-					</div> */}
 				</div>
 			</div>
+			{/* <Footer /> */}
 		</div>
 	);
 }
 
 export default App;
-
-{
-	/* <div className="row justify-content-center">
-							<img
-								src={require(`./assets/${selectedTrail.open}.png`)}
-								alt="open or closed sign"
-								className="sign"
-							/>
-						</div> */
-}

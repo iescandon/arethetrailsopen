@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
+import mapStyles from './mapStyles';
 import {
 	GoogleMap,
 	LoadScript,
@@ -12,13 +13,21 @@ const containerStyle = {
 	height: '80vh',
 };
 
+const mapOptions = {
+	// styles: mapStyles,
+	disableDefaultUI: true,
+	zoomControl: true,
+};
+
 function MapComponent({ centerPoint, trails, selectTrail }) {
+	const [selectedMarker, setSelectedMarker] = useState(null);
 	return (
 		<LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_API_KEY}>
 			<GoogleMap
 				mapContainerStyle={containerStyle}
 				center={centerPoint}
 				zoom={10}
+				options={mapOptions}
 			>
 				{/* Child components, such as markers, info windows, etc. */}
 
@@ -28,7 +37,13 @@ function MapComponent({ centerPoint, trails, selectTrail }) {
 							title={marker.name}
 							key={`${marker.lat}-${marker.lng}`}
 							position={{ lat: marker.lat, lng: marker.lng }}
-							onClick={() => selectTrail(marker)}
+							onClick={() => {
+								selectTrail(marker);
+								setSelectedMarker(marker);
+							}}
+							// onClick={() => {
+							// 	setSelectedMarker(marker);
+							// }}
 							options={{
 								icon: require(`./${marker.open}.svg`),
 								// icon: require(`./blackmarker.svg`),
@@ -38,11 +53,19 @@ function MapComponent({ centerPoint, trails, selectTrail }) {
 							}}
 							animation={2}
 						/>
-						{/* <InfoWindow pixelOffset={'0'}>
-							<div>
-								<h1>{marker.name}</h1>
-							</div>
-						</InfoWindow> */}
+						{selectedMarker === marker ? (
+							<InfoWindow
+								position={{ lat: marker.lat, lng: marker.lng }}
+								onCloseClick={() => {
+									setSelectedMarker(null);
+								}}
+							>
+								<div>
+									<h6>{marker.name}</h6>
+									<p>{marker.address}</p>
+								</div>
+							</InfoWindow>
+						) : null}
 					</div>
 				))}
 			</GoogleMap>

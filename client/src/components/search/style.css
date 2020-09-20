@@ -1,5 +1,6 @@
 .form-control {
 	width: 300px !important;
+	opacity: 0.8;
 }
 .searchbtn {
 	color: #fff !important;

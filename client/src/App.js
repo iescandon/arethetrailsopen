@@ -16,6 +16,16 @@ function App() {
 		lng: -95.358421,
 	});
 
+	const mapRef = React.useRef();
+	const onMapLoad = React.useCallback((map) => {
+		mapRef.current = map;
+	}, []);
+
+	const panTo = React.useCallback(({ lat, lng }) => {
+		mapRef.current.panTo({ lat, lng });
+		mapRef.current.setZoom(14);
+	}, []);
+
 	useEffect(() => {
 		getTrails();
 	}, []);
@@ -82,6 +92,7 @@ function App() {
 		<div>
 			<Jumbotron
 				search={search}
+				panTo={panTo}
 				handleInputChange={handleInputChange}
 				getLatAndLong={getLatAndLong}
 			/>

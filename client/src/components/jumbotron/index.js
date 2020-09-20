@@ -2,7 +2,7 @@ import React from 'react';
 import Search from '../search';
 import './style.css';
 
-function Jumbotron({ search, handleInputChange, getLatAndLong }) {
+function Jumbotron({ search, handleInputChange, getLatAndLong, panTo }) {
 	return (
 		<div className="jumbotron jumbotron-fluid mb-0">
 			<div className="container">
@@ -15,6 +15,7 @@ function Jumbotron({ search, handleInputChange, getLatAndLong }) {
 							search={search}
 							handleInputChange={handleInputChange}
 							getLatAndLong={getLatAndLong}
+							panTo={panTo}
 						/>
 					</div>
 				</div>

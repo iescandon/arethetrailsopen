@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import useOnclickOutside from 'react-cool-onclickoutside';
 // import mapStyles from './mapStyles';
 
@@ -39,6 +40,13 @@ function MapComponent({
 	});
 	if (loadError) return 'Error';
 	if (!isLoaded) return 'Loading...';
+
+	// const renderTooltip = (props) => (
+	// 	<Tooltip id="button-tooltip" {...props}>
+	// 		Click Me!
+	// 	</Tooltip>
+	// );
+
 	return (
 		// <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_API_KEY}>
 		<GoogleMap
@@ -50,6 +58,11 @@ function MapComponent({
 		>
 			{trails.map((marker) => (
 				<div key={`${marker.lat}-${marker.lng}`}>
+					{/* <OverlayTrigger
+						placement="top"
+						delay={{ show: 250, hide: 400 }}
+						overlay={renderTooltip}
+					> */}
 					<Marker
 						// title={marker.name}
 						key={`${marker.lat}-${marker.lng}`}
@@ -70,6 +83,7 @@ function MapComponent({
 						}}
 						animation={2}
 					/>
+					{/* </OverlayTrigger> */}
 					{selectedMarker === marker ? (
 						<InfoWindow
 							position={{ lat: marker.lat, lng: marker.lng }}

@@ -2,17 +2,17 @@ import React from 'react';
 import { Dropdown } from 'react-bootstrap';
 // import API from '../../utils/API';
 import './style.css';
+import { formatRelative } from 'date-fns';
 
 function Table({ selectedTrail, updateTrailCondition }) {
-	// const updateTrailCondition = (id, event) => {
-	// 	const condition = event.target.getAttribute('data-condition');
-	// 	API.updateCondition(id, condition).then((res) => {
-	// 		console.log(res);
-	// 	});
-
-	// };
-
 	const trailConditions = ['Dry', 'Hero', 'Tacky', 'Muddy', 'Wet'];
+
+	const updateCurrentDate = (lastDate) => {
+		// let currentDate = Date.now();
+		// let updatedDate = formatRelative(currentDate, lastDate);
+		console.log(lastDate);
+		console.log(Date());
+	};
 
 	return (
 		<table className="table table-striped mt-3">
@@ -43,21 +43,21 @@ function Table({ selectedTrail, updateTrailCondition }) {
 											return (
 												<Dropdown.Item
 													key={condition}
-													onClick={(event) =>
-														updateTrailCondition(trail._id, event)
-													}
+													onClick={(event) => {
+														updateTrailCondition(trail._id, event);
+														updateCurrentDate(trail.lastUpdated);
+													}}
 													data-condition={condition}
 												>
 													{condition}
 												</Dropdown.Item>
 											);
 										})}
-										{/* <Dropdown.Item>Hero</Dropdown.Item>
-										<Dropdown.Item>Muddy</Dropdown.Item> */}
 									</Dropdown.Menu>
 								</Dropdown>
 							</td>
 							<td>{trail.lastUpdated}</td>
+							{/* <td>{formatRelative(trail.lastUpdated, new Date())}</td> */}
 						</tr>
 					);
 				})}

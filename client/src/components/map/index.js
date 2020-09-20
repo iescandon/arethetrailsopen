@@ -10,8 +10,6 @@ import {
 	InfoWindow,
 } from '@react-google-maps/api';
 
-// import { formatRelative } from 'date-fns';
-
 const containerStyle = {
 	width: '50vw',
 	height: '80vh',
@@ -23,7 +21,13 @@ const mapOptions = {
 	zoomControl: true,
 };
 
-function MapComponent({ centerPoint, trails, selectTrail }) {
+function MapComponent({
+	centerPoint,
+	trails,
+	selectTrail,
+	onMapLoad,
+	userLocation,
+}) {
 	const [selectedMarker, setSelectedMarker] = useState(null);
 	const ref = useOnclickOutside(() => {
 		setSelectedMarker(null);
@@ -41,12 +45,13 @@ function MapComponent({ centerPoint, trails, selectTrail }) {
 			mapContainerStyle={containerStyle}
 			center={centerPoint}
 			zoom={10}
+			onLoad={onMapLoad}
 			options={mapOptions}
 		>
 			{trails.map((marker) => (
 				<div key={`${marker.lat}-${marker.lng}`}>
 					<Marker
-						title={marker.name}
+						// title={marker.name}
 						key={`${marker.lat}-${marker.lng}`}
 						position={{ lat: marker.lat, lng: marker.lng }}
 						onClick={() => {
@@ -89,6 +94,13 @@ function MapComponent({ centerPoint, trails, selectTrail }) {
 					) : null}
 				</div>
 			))}
+			{/* <Marker
+				position={{ lat: userLocation.lat, lng: userLocation.lng }}
+				animation={2}
+				options={{
+					icon: require(`./button.svg`),
+				}}
+			/> */}
 		</GoogleMap>
 		// </LoadScript>
 	);

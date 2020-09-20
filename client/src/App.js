@@ -5,6 +5,7 @@ import Jumbotron from './components/jumbotron';
 import Information from './components/information';
 import Geocode from 'react-geocode';
 import API from './utils/API';
+import Locate from './components/locate';
 // import Footer from './components/footer';
 
 function App() {
@@ -15,6 +16,19 @@ function App() {
 		lat: 29.749907,
 		lng: -95.358421,
 	});
+	// const [userLocation, setUserLocation] = useState({});
+
+	const getUserLocation = () => {
+		navigator.geolocation.getCurrentPosition(
+			(position) => {
+				setCenterPoint({
+					lat: position.coords.latitude,
+					lng: position.coords.longitude,
+				});
+			},
+			() => null
+		);
+	};
 
 	const mapRef = React.useRef();
 	const onMapLoad = React.useCallback((map) => {
@@ -23,11 +37,12 @@ function App() {
 
 	const panTo = React.useCallback(({ lat, lng }) => {
 		mapRef.current.panTo({ lat, lng });
-		mapRef.current.setZoom(14);
+		mapRef.current.setZoom(10);
 	}, []);
 
 	useEffect(() => {
 		getTrails();
+		getUserLocation();
 	}, []);
 
 	const getTrails = () => {
@@ -61,6 +76,7 @@ function App() {
 				console.error(error);
 			}
 		);
+		setSearch('');
 	};
 
 	const updateTrailCondition = (id, event) => {
@@ -92,18 +108,19 @@ function App() {
 		<div>
 			<Jumbotron
 				search={search}
-				panTo={panTo}
 				handleInputChange={handleInputChange}
 				getLatAndLong={getLatAndLong}
 			/>
 			<div className="container-fluid">
 				<div className="row">
 					<div className="col">
+						<Locate panTo={panTo} centerPoint={centerPoint} />
 						<Map
 							centerPoint={centerPoint}
 							trails={trails}
 							selectedTrail={selectedTrail}
 							selectTrail={selectTrail}
+							onMapLoad={onMapLoad}
 						/>
 					</div>
 					<div className="col">

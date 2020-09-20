@@ -10,3 +10,11 @@
 .sign {
 	height: 15vh;
 }
+/* 
+button {
+	outline: none !important;
+}
+
+button:focus {
+	outline: 0 !important;
+} */

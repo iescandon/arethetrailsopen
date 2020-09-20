@@ -15,7 +15,6 @@ function Jumbotron({ search, handleInputChange, getLatAndLong, panTo }) {
 							search={search}
 							handleInputChange={handleInputChange}
 							getLatAndLong={getLatAndLong}
-							panTo={panTo}
 						/>
 					</div>
 				</div>

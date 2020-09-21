@@ -1,0 +1,35 @@
+ul {
+	padding-inline-start: 0 !important;
+}
+
+.fa-linkedin,
+.fa-github,
+.fa-instagram,
+.fa-envelope {
+	padding: 10px;
+	font-size: 20px;
+	text-align: center;
+	text-decoration: none;
+	color: #343a40;
+	width: 40px;
+	height: 40px;
+}
+
+.fa-linkedin:hover,
+.fa-github:hover,
+.fa-instagram:hover,
+.fa-envelope:hover {
+	text-decoration: none;
+	color: green;
+}
+
+.fa-envelope {
+}
+
+.menu li {
+	display: inline;
+}
+
+.menu {
+	margin: 0 !important;
+}

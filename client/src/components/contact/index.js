@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import API from '../../utils/API';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { set } from 'mongoose';
+import './style.css';
 
 function Contact() {
 	const [message, setMessage] = useState({
@@ -82,6 +82,38 @@ function Contact() {
 					Submit
 				</button>
 			</form>
+			<div className="text-center">
+				<ul className="navbar-brand menu">
+					<li>
+						<a
+							href="https://www.linkedin.com/in/iescandon/"
+							target="_blank"
+							className="fa fa-linkedin"
+						></a>
+					</li>
+					<li>
+						<a
+							href="https://github.com/iescandon"
+							target="_blank"
+							className="fa fa-github"
+						></a>
+					</li>
+					<li>
+						<a
+							href="https://www.instagram.com/inescandon/?hl=en"
+							target="_blank"
+							className="fa fa-instagram"
+						></a>
+					</li>
+					<li>
+						<a
+							href="mailto:iescan4@gmail.com"
+							target="_blank"
+							className="fa fa-envelope"
+						></a>
+					</li>
+				</ul>
+			</div>
 			<ToastContainer
 				position="top-center"
 				autoClose={2000}

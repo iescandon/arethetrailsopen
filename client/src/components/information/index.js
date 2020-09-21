@@ -1,40 +1,58 @@
-import React from 'react';
-import Switch from 'react-switch';
-import Table from '../table';
-import './style.css';
+import React, { useState } from 'react';
+import TrailData from '../traildata';
+import Instructions from '../instructions';
+import Contact from '../contact';
+import About from '../about';
+import { ButtonGroup, Button } from 'react-bootstrap';
 
 function Information({
 	selectedTrail,
 	updateTrailStatus,
 	updateTrailCondition,
 }) {
-	if (!selectedTrail.name) {
-		return (
-			<div className="message text-center mt-5">
-				Search for a trail near you!
-			</div>
-		);
-	}
+	const [pageState, setPageState] = useState('Instructions');
 
 	return (
 		<div>
-			<div className="mt-3 row justify-content-center selectedTrail">
-				<div className="col-8 offset-md-2 text-center">
-					{selectedTrail.name}
+			{!selectedTrail.name ? (
+				<div>
+					<div className="row mt-3 justify-content-center">
+						<ButtonGroup aria-label="Basic example">
+							<Button
+								variant="outline-dark"
+								onClick={() => {
+									setPageState('About');
+								}}
+							>
+								About
+							</Button>
+							<Button
+								variant="outline-dark"
+								onClick={() => {
+									setPageState('Instructions');
+								}}
+							>
+								Instructions
+							</Button>
+							<Button
+								variant="outline-dark"
+								onClick={() => {
+									setPageState('Contact');
+								}}
+							>
+								Contact
+							</Button>
+						</ButtonGroup>
+					</div>
+					{pageState === 'Instructions' ? <Instructions /> : null}
+					{pageState === 'Contact' ? <Contact /> : null}
+					{pageState === 'About' ? <About /> : null}
 				</div>
-				<div className="col-2">
-					<label>
-						<Switch
-							onChange={updateTrailStatus}
-							checked={selectedTrail.open}
-							offColor="#e61d1d"
-						/>
-					</label>
-				</div>
-			</div>
-			<div className="row">
-				<Table
+			) : null}
+			<div>
+				<TrailData
 					selectedTrail={selectedTrail}
+					updateTrailStatus={updateTrailStatus}
 					updateTrailCondition={updateTrailCondition}
 				/>
 			</div>

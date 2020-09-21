@@ -4,7 +4,6 @@ import Jumbotron from '../../components/jumbotron';
 import Information from '../../components/information';
 import Geocode from 'react-geocode';
 import API from '../../utils/API';
-import Locate from '../../components/locate';
 import './style.css';
 // import Footer from '../../components/footer';
 
@@ -120,13 +119,14 @@ function Home() {
 			<div className="container-fluid">
 				<div className="row">
 					<div className="col">
-						<Locate panTo={panTo} userLocation={userLocation} />
 						<Map
 							centerPoint={centerPoint}
 							trails={trails}
 							selectedTrail={selectedTrail}
 							selectTrail={selectTrail}
 							onMapLoad={onMapLoad}
+							panTo={panTo}
+							userLocation={userLocation}
 						/>
 						{/* <Footer /> */}
 					</div>

@@ -1,12 +1,30 @@
 .jumbotron {
-	background-image: url(./sendit.jpg);
+	background-image: url(./background.jpg);
 	background-size: cover;
 	background-position-y: center;
 }
 
 .display-4 {
-	color: white;
+	color: white !important;
 	font-family: 'Fjalla One', sans-serif;
 	font-weight: bolder;
 	font-size: 64px !important;
+	text-decoration: none !important;
+}
+
+.display-4:hover {
+	opacity: 70%;
+	cursor: pointer;
+}
+
+.lead {
+	color: white;
+	font-weight: 900;
+	/* outline: white; */
+	/* opacity: 70%; */
+}
+
+.title {
+	color: white !important;
+	text-decoration: none !important;
 }

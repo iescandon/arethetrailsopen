@@ -13,3 +13,17 @@
 	/* text-decoration: underline; */
 	color: #28a745;
 }
+
+.fa-spin {
+	display: block;
+}
+
+.wheel {
+	width: 50px;
+}
+
+.loading {
+	width: 50vw;
+	font-family: 'Fjalla One', sans-serif;
+	color: grey;
+}

@@ -6,6 +6,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import mapStyles from './mapStyles';
+import Locate from '../locate';
 
 import {
 	GoogleMap,
@@ -25,7 +26,14 @@ const mapOptions = {
 	zoomControl: true,
 };
 
-function MapComponent({ centerPoint, trails, selectTrail, onMapLoad }) {
+function MapComponent({
+	centerPoint,
+	trails,
+	selectTrail,
+	onMapLoad,
+	panTo,
+	userLocation,
+}) {
 	const [selectedMarker, setSelectedMarker] = useState({});
 	const ref = useOnclickOutside(() => {
 		setSelectedMarker({});
@@ -36,14 +44,25 @@ function MapComponent({ centerPoint, trails, selectTrail, onMapLoad }) {
 		// libraries,
 	});
 	if (loadError) return 'Error';
-	if (!isLoaded) {
-		return (
-			<div className="my-auto mx-auto justify-content-center text-center">
-				<p>Loading... </p>
-				<i className="fas fa-cog fa-spin"></i>
-			</div>
-		);
-	}
+	if (!isLoaded) return 'Loading...';
+	// if (!isLoaded) {
+	// 	return (
+	// 		<div className="row mt-5 pt-5">
+	// 			<div className="col">
+	// 				<div className="row justify-content-center">
+	// 					<p>Loading</p>
+	// 				</div>
+	// 				<div className="row justify-content-center">
+	// 					<img
+	// 						src={require('./loading.png')}
+	// 						alt="wheel"
+	// 						className="fa-spin wheel"
+	// 					/>
+	// 				</div>
+	// 			</div>
+	// 		</div>
+	// 	);
+	// }
 
 	// const renderTooltip = (props) => (
 	// 	<Tooltip id="button-tooltip" {...props}>
@@ -54,70 +73,73 @@ function MapComponent({ centerPoint, trails, selectTrail, onMapLoad }) {
 	const notify = () => toast.success('Address Copied!');
 
 	return (
-		<GoogleMap
-			mapContainerStyle={containerStyle}
-			center={centerPoint}
-			zoom={10}
-			onLoad={onMapLoad}
-			options={mapOptions}
-		>
-			{trails.map((marker) => {
-				return (
-					<div key={`${marker.lat}-${marker.lng}`}>
-						{/* <OverlayTrigger
+		<div>
+			<Locate panTo={panTo} userLocation={userLocation} />
+			<GoogleMap
+				mapContainerStyle={containerStyle}
+				center={centerPoint}
+				zoom={10}
+				onLoad={onMapLoad}
+				options={mapOptions}
+			>
+				{trails.map((marker) => {
+					return (
+						<div key={`${marker.lat}-${marker.lng}`}>
+							{/* <OverlayTrigger
 						placement="top"
 						delay={{ show: 250, hide: 400 }}
 						overlay={renderTooltip}
 					> */}
-						<Marker
-							key={`${marker.lat}-${marker.lng}`}
-							position={{ lat: marker.lat, lng: marker.lng }}
-							onClick={() => {
-								setSelectedMarker(marker);
-								// selectTrail(marker);
-							}}
-							options={{
-								icon: require(`./${marker.open}.svg`),
-							}}
-							animation={2}
-						/>
-						{/* </OverlayTrigger> */}
-						{selectedMarker === marker ? (
-							<InfoWindow
+							<Marker
+								key={`${marker.lat}-${marker.lng}`}
 								position={{ lat: marker.lat, lng: marker.lng }}
-								onCloseClick={() => {
-									setSelectedMarker({});
+								onClick={() => {
+									setSelectedMarker(marker);
+									// selectTrail(marker);
 								}}
-							>
-								<div ref={ref} className="text-center">
-									<h6 className="text-center">{marker.name}</h6>
-									<CopyToClipboard text={marker.address}>
-										<p className="mb-2 address" onClick={notify}>
-											{marker.address}
+								options={{
+									icon: require(`./${marker.open}.svg`),
+								}}
+								animation={2}
+							/>
+							{/* </OverlayTrigger> */}
+							{selectedMarker === marker ? (
+								<InfoWindow
+									position={{ lat: marker.lat, lng: marker.lng }}
+									onCloseClick={() => {
+										setSelectedMarker({});
+									}}
+								>
+									<div ref={ref} className="text-center">
+										<h6 className="text-center">{marker.name}</h6>
+										<CopyToClipboard text={marker.address}>
+											<p className="mb-2 address" onClick={notify}>
+												{marker.address}
+											</p>
+										</CopyToClipboard>
+										<ToastContainer
+											position="top-center"
+											autoClose={2000}
+											hideProgressBar={true}
+											pauseOnHover={false}
+										/>
+										<p
+											className="viewTrailsLink mb-0"
+											onClick={() => {
+												selectTrail(marker);
+												setSelectedMarker({});
+											}}
+										>
+											View Trails
 										</p>
-									</CopyToClipboard>
-									<ToastContainer
-										position="top-center"
-										autoClose={2000}
-										hideProgressBar={true}
-										pauseOnHover={false}
-									/>
-									<p
-										className="viewTrailsLink mb-0"
-										onClick={() => {
-											selectTrail(marker);
-											setSelectedMarker({});
-										}}
-									>
-										View Trails
-									</p>
-								</div>
-							</InfoWindow>
-						) : null}
-					</div>
-				);
-			})}
-		</GoogleMap>
+									</div>
+								</InfoWindow>
+							) : null}
+						</div>
+					);
+				})}
+			</GoogleMap>
+		</div>
 	);
 }
 

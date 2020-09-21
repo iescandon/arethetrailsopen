@@ -1,8 +1,8 @@
 import React from 'react';
 import { Dropdown } from 'react-bootstrap';
-// import API from '../../utils/API';
 import './style.css';
-import { formatRelative } from 'date-fns';
+// import API from '../../utils/API';
+// import { formatRelative } from 'date-fns';
 
 function Table({ selectedTrail, updateTrailCondition }) {
 	const trailConditions = ['Dry', 'Hero', 'Tacky', 'Muddy', 'Wet'];
@@ -21,7 +21,6 @@ function Table({ selectedTrail, updateTrailCondition }) {
 					<th scope="col">Trail</th>
 					<th scope="col">Status</th>
 					<th scope="col">Last Updated</th>
-					{/* <th scope="col">Update Status</th> */}
 				</tr>
 			</thead>
 			<tbody>

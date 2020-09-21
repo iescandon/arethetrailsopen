@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
-import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+// import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import useOnclickOutside from 'react-cool-onclickoutside';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ToastContainer, toast } from 'react-toastify';
@@ -25,13 +25,7 @@ const mapOptions = {
 	zoomControl: true,
 };
 
-function MapComponent({
-	centerPoint,
-	trails,
-	selectTrail,
-	onMapLoad,
-	userLocation,
-}) {
+function MapComponent({ centerPoint, trails, selectTrail, onMapLoad }) {
 	const [selectedMarker, setSelectedMarker] = useState(null);
 	const ref = useOnclickOutside(() => {
 		setSelectedMarker(null);
@@ -53,7 +47,6 @@ function MapComponent({
 	const notify = () => toast.success('Address Copied!');
 
 	return (
-		// <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_API_KEY}>
 		<GoogleMap
 			mapContainerStyle={containerStyle}
 			center={centerPoint}
@@ -61,76 +54,62 @@ function MapComponent({
 			onLoad={onMapLoad}
 			options={mapOptions}
 		>
-			{trails.map((marker) => (
-				<div key={`${marker.lat}-${marker.lng}`}>
-					{/* <OverlayTrigger
+			{trails.map((marker) => {
+				return (
+					<div key={`${marker.lat}-${marker.lng}`}>
+						{/* <OverlayTrigger
 						placement="top"
 						delay={{ show: 250, hide: 400 }}
 						overlay={renderTooltip}
 					> */}
-					<Marker
-						// title={marker.name}
-						key={`${marker.lat}-${marker.lng}`}
-						position={{ lat: marker.lat, lng: marker.lng }}
-						onClick={() => {
-							// selectTrail(marker);
-							setSelectedMarker(marker);
-						}}
-						// onClick={() => {
-						// 	setSelectedMarker(marker);
-						// }}
-						options={{
-							icon: require(`./${marker.open}.svg`),
-							// icon: require(`./blackmarker.svg`),
-							// origin: new window.google.maps.Point(0, 0),
-							// anchor: new window.google.maps.Point(15, 15),
-							// scaledSize: new window.google.maps.Size(30, 30),
-						}}
-						animation={2}
-					/>
-					{/* </OverlayTrigger> */}
-					{selectedMarker === marker ? (
-						<InfoWindow
+						<Marker
+							key={`${marker.lat}-${marker.lng}`}
 							position={{ lat: marker.lat, lng: marker.lng }}
-							onCloseClick={() => {
-								setSelectedMarker(null);
+							onClick={() => {
+								setSelectedMarker(marker);
 							}}
-						>
-							<div ref={ref} className="text-center">
-								<h6 className="text-center">{marker.name}</h6>
-								<CopyToClipboard text={marker.address}>
-									<p className="mb-2 address" onClick={notify}>
-										{marker.address}
-									</p>
-								</CopyToClipboard>
-								<ToastContainer
-									position="top-center"
-									autoClose={2000}
-									hideProgressBar={true}
-								/>
-								<a
-									className="viewTrailsLink"
-									onClick={() => {
-										selectTrail(marker);
-										setSelectedMarker(null);
-									}}
-								>
-									View Trails
-								</a>
-							</div>
-						</InfoWindow>
-					) : null}
-				</div>
-			))}
-			{/* <Marker
-				position={{ lat: userLocation.lat, lng: userLocation.lng }}
-				animation={2}
-				options={{
-					icon: require(`./button.svg`),
-				}}
-			/> */}
+							options={{
+								icon: require(`./${marker.open}.svg`),
+							}}
+							animation={2}
+						/>
+						{/* </OverlayTrigger> */}
+						{selectedMarker === marker ? (
+							<InfoWindow
+								position={{ lat: marker.lat, lng: marker.lng }}
+								onCloseClick={() => {
+									setSelectedMarker(null);
+								}}
+							>
+								<div ref={ref} className="text-center">
+									<h6 className="text-center">{marker.name}</h6>
+									<CopyToClipboard text={marker.address}>
+										<p className="mb-2 address" onClick={notify}>
+											{marker.address}
+										</p>
+									</CopyToClipboard>
+									<ToastContainer
+										position="top-center"
+										autoClose={2000}
+										hideProgressBar={true}
+										pauseOnHover={false}
+									/>
+									<a
+										className="viewTrailsLink"
+										onClick={() => {
+											selectTrail(marker);
+											setSelectedMarker(null);
+										}}
+									>
+										View Trails
+									</a>
+								</div>
+							</InfoWindow>
+						) : null}
+					</div>
+				);
+			})}
 		</GoogleMap>
-		// </LoadScript>
 	);
 }
 

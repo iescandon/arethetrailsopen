@@ -17,7 +17,6 @@ function Locate({ panTo, userLocation }) {
 		>
 			<button className="locate btn" onClick={() => panTo(userLocation)}>
 				<img src={require('./wheel.svg')} alt="wheel" />
-				{/* Go to Current Location */}
 			</button>
 		</OverlayTrigger>
 	);

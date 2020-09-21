@@ -11,10 +11,6 @@
 	height: 15vh;
 }
 
-button {
-	outline: none !important;
-}
-
-button:focus {
-	outline: 0 !important;
+.btn:focus {
+	box-shadow: none !important;
 }

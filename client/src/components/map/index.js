@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './style.css';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import useOnclickOutside from 'react-cool-onclickoutside';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import mapStyles from './mapStyles';
 
 import {
@@ -46,6 +49,8 @@ function MapComponent({
 	// 		Click Me!
 	// 	</Tooltip>
 	// );
+
+	const notify = () => toast.success('Address Copied!');
 
 	return (
 		// <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_API_KEY}>
@@ -93,7 +98,16 @@ function MapComponent({
 						>
 							<div ref={ref} className="text-center">
 								<h6 className="text-center">{marker.name}</h6>
-								<p className="mb-2">{marker.address}</p>
+								<CopyToClipboard text={marker.address}>
+									<p className="mb-2 address" onClick={notify}>
+										{marker.address}
+									</p>
+								</CopyToClipboard>
+								<ToastContainer
+									position="top-center"
+									autoClose={2000}
+									hideProgressBar={true}
+								/>
 								<a
 									className="viewTrailsLink"
 									onClick={() => {

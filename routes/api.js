@@ -18,6 +18,7 @@ router.put('/api/trails', (req, res) => {
 		{ $set: { open: req.body.status } }
 	)
 		.then((data) => {
+			// res.send(data);
 			console.log(data);
 		})
 		.catch((err) => {
@@ -28,17 +29,8 @@ router.put('/api/trails', (req, res) => {
 //TODO FIX API REQUEST...SEARCHING FOR TRAIL SYSTEM ID BUT DOENST EXIST
 router.put('/api/trails/:id', (req, res) => {
 	console.log(req.params.id, req.body);
-	// db.TrailSystem.findByIdAndUpdate(
-	// 	{ _id: req.body.selectedTrail, 'trails._id': req.params.id },
-	// 	{
-	// 		$set: {
-	// 			'trails.$.condition': req.body.condition,
-	// 			'trails.$.lastUpdated': Date.now(),
-	// 		},
-	// 	}
-	// )
 	db.TrailSystem.updateOne(
-		{ _id: req.body.selectedTrail, 'trails._id': req.params.id },
+		{ _id: req.body.selectedTrail, 'trails.trailId': req.params.id },
 		{
 			$set: {
 				'trails.$.condition': req.body.condition,
@@ -47,6 +39,7 @@ router.put('/api/trails/:id', (req, res) => {
 		}
 	)
 		.then((data) => {
+			// res.send(data);
 			console.log(data);
 		})
 		.catch((err) => {

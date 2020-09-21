@@ -16,12 +16,16 @@ function App() {
 		lat: 29.749907,
 		lng: -95.358421,
 	});
-	// const [userLocation, setUserLocation] = useState({});
+	const [userLocation, setUserLocation] = useState({});
 
 	const getUserLocation = () => {
 		navigator.geolocation.getCurrentPosition(
 			(position) => {
 				setCenterPoint({
+					lat: position.coords.latitude,
+					lng: position.coords.longitude,
+				});
+				setUserLocation({
 					lat: position.coords.latitude,
 					lng: position.coords.longitude,
 				});
@@ -114,7 +118,7 @@ function App() {
 			<div className="container-fluid">
 				<div className="row">
 					<div className="col">
-						<Locate panTo={panTo} centerPoint={centerPoint} />
+						<Locate panTo={panTo} userLocation={userLocation} />
 						<Map
 							centerPoint={centerPoint}
 							trails={trails}

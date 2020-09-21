@@ -10,8 +10,10 @@ import './style.css';
 
 function Home() {
 	const [trails, setTrails] = useState([]);
-	const [search, setSearch] = useState(null);
-	const [selectedTrail, setSelectedTrail] = useState(null);
+	const [search, setSearch] = useState('');
+	const [selectedTrail, setSelectedTrail] = useState({
+		trails: [],
+	});
 	const [centerPoint, setCenterPoint] = useState({
 		lat: 29.749907,
 		lng: -95.358421,

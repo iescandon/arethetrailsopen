@@ -8,7 +8,7 @@ function Information({
 	updateTrailStatus,
 	updateTrailCondition,
 }) {
-	if (!selectedTrail) {
+	if (!selectedTrail.name) {
 		return (
 			<div className="message text-center mt-5">
 				Search for a trail near you!

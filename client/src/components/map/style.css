@@ -1,6 +1,11 @@
 .viewTrailsLink {
 	font-size: 14.5px;
 	cursor: pointer;
+	color: #007bff;
+}
+
+.viewTrailsLink:hover {
+	text-decoration: underline;
 }
 
 .address:hover {

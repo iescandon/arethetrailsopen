@@ -26,9 +26,9 @@ const mapOptions = {
 };
 
 function MapComponent({ centerPoint, trails, selectTrail, onMapLoad }) {
-	const [selectedMarker, setSelectedMarker] = useState(null);
+	const [selectedMarker, setSelectedMarker] = useState({});
 	const ref = useOnclickOutside(() => {
-		setSelectedMarker(null);
+		setSelectedMarker({});
 	});
 	// const libraries = ['places'];
 	const { isLoaded, loadError } = useLoadScript({
@@ -36,7 +36,14 @@ function MapComponent({ centerPoint, trails, selectTrail, onMapLoad }) {
 		// libraries,
 	});
 	if (loadError) return 'Error';
-	if (!isLoaded) return 'Loading...';
+	if (!isLoaded) {
+		return (
+			<div className="my-auto mx-auto justify-content-center text-center">
+				<p>Loading... </p>
+				<i className="fas fa-cog fa-spin"></i>
+			</div>
+		);
+	}
 
 	// const renderTooltip = (props) => (
 	// 	<Tooltip id="button-tooltip" {...props}>
@@ -79,7 +86,7 @@ function MapComponent({ centerPoint, trails, selectTrail, onMapLoad }) {
 							<InfoWindow
 								position={{ lat: marker.lat, lng: marker.lng }}
 								onCloseClick={() => {
-									setSelectedMarker(null);
+									setSelectedMarker({});
 								}}
 							>
 								<div ref={ref} className="text-center">
@@ -95,15 +102,15 @@ function MapComponent({ centerPoint, trails, selectTrail, onMapLoad }) {
 										hideProgressBar={true}
 										pauseOnHover={false}
 									/>
-									<a
-										className="viewTrailsLink"
+									<p
+										className="viewTrailsLink mb-0"
 										onClick={() => {
 											selectTrail(marker);
-											setSelectedMarker(null);
+											setSelectedMarker({});
 										}}
 									>
 										View Trails
-									</a>
+									</p>
 								</div>
 							</InfoWindow>
 						) : null}

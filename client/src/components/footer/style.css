@@ -3,7 +3,8 @@
 	background-color: white;
 	/* margin-bottom: 0;
 	padding-top: 12px;
-	padding-bottom: 0.5px; */
+  padding-bottom: 0.5px; */
+	margin-top: 25px;
 }
 
 .fa-linkedin,
@@ -13,14 +14,14 @@
 	font-size: 20px;
 	text-align: center;
 	text-decoration: none;
-	color: grey;
+	color: #343a40;
 }
 
 .fa-linkedin:hover,
 .fa-github:hover,
 .fa-instagram:hover {
 	text-decoration: none;
-	color: black;
+	color: green;
 }
 
 .menu li {
@@ -32,14 +33,14 @@
 }
 
 .email {
-	color: grey;
+	color: #343a40;
 }
 
 .email:hover {
 	text-decoration: none;
-	color: black;
+	color: green;
 }
 
 .copyright {
-	color: grey;
+	color: #343a40;
 }

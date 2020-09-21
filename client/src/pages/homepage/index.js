@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Map from '../../components/map';
 import Jumbotron from '../../components/jumbotron';
 import Information from '../../components/information';
+import Footer from '../../components/footer';
 import Geocode from 'react-geocode';
 import API from '../../utils/API';
 import './style.css';
-// import Footer from '../../components/footer';
 
 function Home() {
 	const [trails, setTrails] = useState([]);
@@ -128,7 +128,6 @@ function Home() {
 							panTo={panTo}
 							userLocation={userLocation}
 						/>
-						{/* <Footer /> */}
 					</div>
 					<div className="col">
 						<Information
@@ -139,6 +138,7 @@ function Home() {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 }

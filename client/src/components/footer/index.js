@@ -31,13 +31,13 @@ function Footer() {
 					</ul>
 				</div>
 				<div className="col text-center pt-3">
-					<p className="copyright">© Copyright 2020</p>
+					<p className="copyright mb-1">© Copyright 2020</p>
 				</div>
 				<div className="col text-center pt-3">
-					<a className="email" href="mailto:iescan4@gmail.com">
+					{/* <a className="email" href="mailto:iescan4@gmail.com">
 						Contact the Developer
 						<i className="fa fa-envelope ml-1" aria-hidden="true"></i>
-					</a>
+					</a> */}
 				</div>
 			</div>
 		</footer>

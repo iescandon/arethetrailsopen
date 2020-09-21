@@ -78,7 +78,7 @@ function Contact() {
 						onChange={(event) => onMessageChange(event)}
 					/>
 				</div>
-				<button type="submit" className="btn btn-primary" onClick={notify}>
+				<button type="submit" className="btn btn-success" onClick={notify}>
 					Submit
 				</button>
 			</form>

@@ -14,4 +14,7 @@ export default {
 		console.log(id, status);
 		return axios.put(URL, { id, status });
 	},
+	sendMessage: function (message) {
+		return axios.post('/api/messages', { message });
+	},
 };

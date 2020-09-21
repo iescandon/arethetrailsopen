@@ -5,7 +5,7 @@ function Search({ search, handleInputChange, getLatAndLong }) {
 	return (
 		<form className="justify-content-center form-inline my-2 my-lg-0">
 			<input
-				className="form-control mr-sm-2"
+				className="form-control search-form mr-sm-2"
 				value={search}
 				type="search"
 				placeholder=""

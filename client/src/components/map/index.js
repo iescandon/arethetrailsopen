@@ -67,6 +67,7 @@ function MapComponent({ centerPoint, trails, selectTrail, onMapLoad }) {
 							position={{ lat: marker.lat, lng: marker.lng }}
 							onClick={() => {
 								setSelectedMarker(marker);
+								// selectTrail(marker);
 							}}
 							options={{
 								icon: require(`./${marker.open}.svg`),

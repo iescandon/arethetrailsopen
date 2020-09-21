@@ -1,0 +1,12 @@
+.selectedTrail {
+	font-size: 36px;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+.col {
+	padding-left: 0px !important;
+}
+
+.btn:focus {
+	box-shadow: none !important;
+}

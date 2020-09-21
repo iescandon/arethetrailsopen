@@ -19,7 +19,7 @@ function Information({
 					<div className="row mt-3 justify-content-center">
 						<ButtonGroup aria-label="Basic example">
 							<Button
-								variant="outline-dark"
+								variant="dark"
 								onClick={() => {
 									setPageState('About');
 								}}
@@ -27,7 +27,7 @@ function Information({
 								About
 							</Button>
 							<Button
-								variant="outline-dark"
+								variant="dark"
 								onClick={() => {
 									setPageState('Instructions');
 								}}
@@ -35,7 +35,7 @@ function Information({
 								Instructions
 							</Button>
 							<Button
-								variant="outline-dark"
+								variant="dark"
 								onClick={() => {
 									setPageState('Contact');
 								}}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import API from '../../utils/API';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { set } from 'mongoose';
 
 function Contact() {
 	const [message, setMessage] = useState({
@@ -27,6 +28,11 @@ function Contact() {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
+		setMessage({
+			name: '',
+			email: '',
+			message: '',
+		});
 		console.log(message);
 		API.sendMessage(message).then((res) => {
 			console.log(res);

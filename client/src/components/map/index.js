@@ -47,14 +47,14 @@ function MapComponent({
 	// if (!isLoaded) return 'Loading...';
 	if (!isLoaded) {
 		return (
-			<div className="col my-auto">
-				<div className="row justify-content-center">
+			<div className="col-lg-6 col-md-12 my-auto">
+				{/* <div className="row justify-content-center">
 					<img
 						src={require('./loading.png')}
 						alt="wheel"
 						className="fa-spin wheel"
 					/>
-				</div>
+				</div> */}
 				<div className="mt-3 row justify-content-center">
 					<p>Loading</p>
 				</div>

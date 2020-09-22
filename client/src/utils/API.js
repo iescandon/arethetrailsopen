@@ -7,11 +7,9 @@ export default {
 		return axios.get(URL);
 	},
 	updateCondition: function (id, condition, selectedTrail) {
-		console.log(id, condition, selectedTrail);
 		return axios.put(`${URL}/${id}`, { condition, selectedTrail });
 	},
 	updateStatus: function (id, status) {
-		console.log(id, status);
 		return axios.put(URL, { id, status });
 	},
 	sendMessage: function (message) {

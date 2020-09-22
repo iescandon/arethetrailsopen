@@ -6,7 +6,11 @@ function About() {
 		<div className="justify-content-center">
 			<div className="message text-center mt-3">About</div>
 			<div className="text-center">
-				<img src={require('./inez.jpg')} className="about-img" />
+				<img
+					src={require('./inez.jpg')}
+					className="about-img"
+					alt="girl with mountain bike"
+				/>
 				<p className="mt-4 px-5">
 					Various mountain bike trail facebook groups are littered with users
 					asking for the trail status. Although some people know the answers,

@@ -51,9 +51,20 @@ function Home() {
 	}, []);
 
 	const getTrails = () => {
-		API.search().then((res) => {
-			setTrails(res.data);
-		});
+		console.log('test');
+		API.search()
+			.then((res) => {
+				setTrails(res.data);
+				if (selectedTrail.trails.length > 0) {
+					const trail = res.data.filter(
+						(trail) => selectedTrail._id === trail._id
+					);
+					setSelectedTrail(trail[0]);
+				}
+			})
+			.catch((err) => {
+				console.log(err);
+			});
 	};
 
 	const selectTrail = (trail) => {
@@ -86,27 +97,26 @@ function Home() {
 
 	const updateTrailCondition = (id, event) => {
 		const condition = event.target.getAttribute('data-condition');
-		API.updateCondition(id, condition, selectedTrail._id).then((res) => {
-			console.log(res);
-			// setTrails(res);
-		});
-		// getTrails();
+		API.updateCondition(id, condition, selectedTrail._id)
+			.then((res) => {
+				console.log(res);
+				getTrails();
+			})
+			.catch((err) => {
+				console.log(err);
+			});
 	};
 
 	const updateTrailStatus = () => {
-		console.log('toggle');
-		if (selectedTrail.open === true) {
-			const newStatus = false;
-			API.updateStatus(selectedTrail._id, newStatus).then((res) => {
+		API.updateStatus(selectedTrail._id, !selectedTrail.open)
+			.then((res) => {
 				console.log(res);
+				getTrails();
+				// setTrails([res, ...trails]);
+			})
+			.catch((err) => {
+				console.log(err);
 			});
-		} else {
-			const newStatus = true;
-			API.updateStatus(selectedTrail._id, newStatus).then((res) => {
-				console.log(res);
-			});
-		}
-		getTrails();
 	};
 
 	return (

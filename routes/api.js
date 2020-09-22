@@ -19,7 +19,7 @@ router.put('/api/trails', (req, res) => {
 		{ $set: { open: req.body.status } }
 	)
 		.then((data) => {
-			// res.send(data);
+			res.json(data);
 			console.log(data);
 		})
 		.catch((err) => {
@@ -40,7 +40,7 @@ router.put('/api/trails/:id', (req, res) => {
 		}
 	)
 		.then((data) => {
-			// res.send(data);
+			res.json(data);
 			console.log(data);
 		})
 		.catch((err) => {

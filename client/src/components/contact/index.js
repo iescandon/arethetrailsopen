@@ -60,7 +60,7 @@ function Contact() {
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="exampleInputEmail1">Email address</label>
+					<label htmlFor="exampleInputEmail1">E-Mail</label>
 					<input
 						type="email"
 						className="form-control"
@@ -87,30 +87,20 @@ function Contact() {
 					<li>
 						<a
 							href="https://www.linkedin.com/in/iescandon/"
-							target="_blank"
 							className="fa fa-linkedin"
 						></a>
 					</li>
 					<li>
-						<a
-							href="https://github.com/iescandon"
-							target="_blank"
-							className="fa fa-github"
-						></a>
+						<a href="https://github.com/iescandon" className="fa fa-github"></a>
 					</li>
 					<li>
 						<a
 							href="https://www.instagram.com/inescandon/?hl=en"
-							target="_blank"
 							className="fa fa-instagram"
 						></a>
 					</li>
 					<li>
-						<a
-							href="mailto:iescan4@gmail.com"
-							target="_blank"
-							className="fa fa-envelope"
-						></a>
+						<a href="mailto:iescan4@gmail.com" className="fa fa-envelope"></a>
 					</li>
 				</ul>
 			</div>

@@ -144,6 +144,9 @@ function Home() {
 						onMapLoad={onMapLoad}
 						panTo={panTo}
 						userLocation={userLocation}
+						selectedTrail={selectedTrail}
+						updateTrailStatus={updateTrailStatus}
+						updateTrailCondition={updateTrailCondition}
 					/>
 					<Information
 						selectedTrail={selectedTrail}

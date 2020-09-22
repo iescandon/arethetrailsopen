@@ -18,6 +18,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/trailsDB', {
 app.use(require('./routes/api.js'));
 
 if (process.env.NODE_ENV === 'production') {
+	console.log(process.env.REACT_APP_GOOGLE_API_KEY);
 	app.use(express.static('client/build'));
 }
 

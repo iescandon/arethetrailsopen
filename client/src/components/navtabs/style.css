@@ -7,4 +7,18 @@
 	padding-left: 25px;
 	padding-right: 25px;
 	display: inline;
+	text-shadow: 5px 5px 10px #000000;
+}
+
+.nav-link {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.nav-link:hover {
+	border-radius: 0.25rem;
+	background-color: white;
+	color: black !important;
+	text-shadow: none;
+	opacity: 0.8;
 }

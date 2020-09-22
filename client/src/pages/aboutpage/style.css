@@ -1,5 +1,6 @@
 .about-img {
 	width: 80%;
+	margin-top: 40px;
 }
 
 .header {
@@ -10,5 +11,12 @@
 @media (max-width: 1199px) {
 	.header {
 		font-size: 36px;
+	}
+}
+
+@media (max-width: 991px) {
+	.about-img {
+		width: 100%;
+		margin-top: 40px;
 	}
 }

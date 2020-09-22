@@ -37,7 +37,7 @@ function ContactPage() {
 		});
 	};
 
-	const notify = () => toast.success('Message sent!');
+	const notify = () => toast.dark('Message sent!');
 
 	return (
 		<div>

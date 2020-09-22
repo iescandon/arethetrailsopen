@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Jumbotron from '../../components/jumbotron';
+import './style.css';
 
 function HelpPage() {
 	const [pageState, setPageState] = useState('');
@@ -11,7 +12,9 @@ function HelpPage() {
 	return (
 		<div>
 			<Jumbotron pageState={pageState} />
-			<h1>Help Page</h1>
+			<div className="container">
+				<div className="text-center message mt-3">Help</div>
+			</div>
 		</div>
 	);
 }

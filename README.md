@@ -2,7 +2,7 @@
 
 # Live Site
 
-www.arethetrailsopen.com
+https://arethetrailsopen.herokuapp.com/
 
 ## Description
 

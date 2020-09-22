@@ -4,6 +4,7 @@ import Jumbotron from '../../components/jumbotron';
 import Information from '../../components/information';
 import Footer from '../../components/footer';
 import Geocode from 'react-geocode';
+import { toast } from 'react-toastify';
 import API from '../../utils/API';
 import './style.css';
 
@@ -110,6 +111,11 @@ function Home() {
 	};
 
 	const updateTrailStatus = () => {
+		if (selectedTrail.open === true) {
+			toast.error(`${selectedTrail.name} is Closed!`);
+		} else {
+			toast.success(`${selectedTrail.name} is Open!`);
+		}
 		API.updateStatus(selectedTrail._id, !selectedTrail.open)
 			.then((res) => {
 				console.log(res);

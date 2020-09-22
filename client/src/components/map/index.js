@@ -68,7 +68,7 @@ function MapComponent({
 		</Tooltip>
 	);
 
-	const notify = () => toast.success('Address Copied!');
+	const notify = () => toast.dark('Address Copied!');
 
 	return (
 		<div className="col">

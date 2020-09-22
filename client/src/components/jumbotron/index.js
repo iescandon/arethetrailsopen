@@ -1,5 +1,6 @@
 import React from 'react';
 import Search from '../search';
+import NavTabs from '../navtabs';
 import './style.css';
 
 function Jumbotron({ search, handleInputChange, getLatAndLong }) {
@@ -7,17 +8,15 @@ function Jumbotron({ search, handleInputChange, getLatAndLong }) {
 		<div className="jumbotron jumbotron-fluid mb-0">
 			<div className="container">
 				<div className="row">
-					<div className="col">
-						<h1 className="display-4">
-							<a href="/" className="title">
-								Are the trails open?
-							</a>
-						</h1>
-						<ul className="nav-links">
+					<div className="col text-center">
+						<h1 className="display-4">Are the trails open?</h1>
+						{/* <ul className="nav-links">
+							<li>HOME</li>
 							<li>ABOUT</li>
 							<li>HELP</li>
 							<li>CONTACT</li>
-						</ul>
+						</ul> */}
+						<NavTabs />
 					</div>
 					<div className="col mt-4">
 						<Search

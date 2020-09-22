@@ -112,7 +112,6 @@ function Home() {
 			.then((res) => {
 				console.log(res);
 				getTrails();
-				// setTrails([res, ...trails]);
 			})
 			.catch((err) => {
 				console.log(err);

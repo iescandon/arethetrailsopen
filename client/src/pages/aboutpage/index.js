@@ -29,19 +29,30 @@ function AboutPage() {
 						<div className="row justify-content-center aboutheadertwo mt-3">
 							About
 						</div>
-						<p className="row mt-4">
-							Various mountain bike trail facebook groups are littered with
-							users asking for the trail status. Although some people know the
-							answers, they get frustrated by having to constantly answer the
-							same question over and over. There are apps that have that
-							information available, but they are flooded with too much
-							information that makes finding the trail status quite difficult
-							and hard to understand. Additionally it only provides you with one
-							trails status, so you have to go through the long process again to
-							find out the status of another trail nearby. This application is a
-							single paged full-stack application designed to find out whether
-							popular biking trails in Texas are open.
-						</p>
+						<div>
+							<p className="row mt-4 about-text">
+								Various mountain bike trail facebook groups are littered with
+								users asking for the trail status. Although some people know the
+								answers, they get frustrated by having to constantly answer the
+								same question over and over. When there are apps that have the
+								information readily available.
+							</p>
+							<p>
+								Unfortunately these apps are flooded with too much information
+								that makes finding the trail status quite difficult and hard to
+								understand. Additionally it only provides you with one trails
+								status, so you have to go through the long process again to find
+								out the status of another trail nearby.
+							</p>
+							<p>
+								The developer, Inez Escandon, loves to ride and noticed this
+								issue. Thus the idea to create "Are the trails open?" was born.
+								"Are the trails open?" is a full-stack MERN application designed
+								to create a simple way to find out whether popular biking trails
+								are open as well as provide users a simple way to update trail
+								status and conditions.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

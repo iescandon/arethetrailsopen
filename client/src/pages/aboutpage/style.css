@@ -35,8 +35,8 @@
 }
 
 @media (max-width: 575px) {
-	p {
-		padding-left: 30px;
-		padding-right: 30px;
+	.about-text {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }

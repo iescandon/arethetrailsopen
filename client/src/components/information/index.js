@@ -11,7 +11,7 @@ function Information({
 }) {
 	if (!selectedTrail.name) {
 		return (
-			<div className="col my-auto">
+			<div className="container col my-auto">
 				<div className="message text-center mt-3">Find a trail near you!</div>
 				<div className="text-center mt-3">
 					<p>

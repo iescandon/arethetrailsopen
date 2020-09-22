@@ -21,20 +21,22 @@
 	color: black !important;
 	text-shadow: none;
 	opacity: 0.8;
-	/* -webkit-transform: translateY(-8px);
-	transform: translateY(-8px); */
 }
 
 @media (max-width: 1199px) {
 	.nav-links > li {
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
 	}
 }
 
 @media (max-width: 414px) {
 	.nav-links > li {
-		padding-left: 5px;
-		padding-right: 5px;
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+	a.nav-link {
+		padding-left: 10px !important;
+		padding-right: 10px !important;
 	}
 }

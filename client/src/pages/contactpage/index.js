@@ -45,7 +45,7 @@ function ContactPage() {
 			<div className="container">
 				<div className="message text-center mt-3">Contact</div>
 				<p className="text-center">
-					Questions, comments, concerns, feedbacks, business inquiries,
+					Questions, comments, concerns, feedback, business inquiries,
 					collaborations?
 				</p>
 				<form

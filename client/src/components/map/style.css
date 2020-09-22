@@ -1,13 +1,3 @@
-.viewTrailsLink {
-	font-size: 14.5px;
-	cursor: pointer;
-	color: #007bff;
-}
-
-.viewTrailsLink:hover {
-	text-decoration: underline;
-}
-
 .address:hover {
 	cursor: pointer;
 	/* text-decoration: underline; */
@@ -19,11 +9,9 @@
 }
 
 .wheel {
-	width: 50px;
+	width: 35px;
 }
 
 .loading {
 	width: 50vw;
-	font-family: 'Fjalla One', sans-serif;
-	color: grey;
 }

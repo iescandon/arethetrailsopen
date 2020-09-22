@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
-// import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import useOnclickOutside from 'react-cool-onclickoutside';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ToastContainer, toast } from 'react-toastify';
@@ -44,36 +44,34 @@ function MapComponent({
 		// libraries,
 	});
 	if (loadError) return 'Error';
-	if (!isLoaded) return 'Loading...';
-	// if (!isLoaded) {
-	// 	return (
-	// 		<div className="row mt-5 pt-5">
-	// 			<div className="col">
-	// 				<div className="row justify-content-center">
-	// 					<p>Loading</p>
-	// 				</div>
-	// 				<div className="row justify-content-center">
-	// 					<img
-	// 						src={require('./loading.png')}
-	// 						alt="wheel"
-	// 						className="fa-spin wheel"
-	// 					/>
-	// 				</div>
-	// 			</div>
-	// 		</div>
-	// 	);
-	// }
+	// if (!isLoaded) return 'Loading...';
+	if (!isLoaded) {
+		return (
+			<div className="col my-auto">
+				<div className="row justify-content-center">
+					<img
+						src={require('./loading.png')}
+						alt="wheel"
+						className="fa-spin wheel"
+					/>
+				</div>
+				<div className="mt-3 row justify-content-center">
+					<p>Loading</p>
+				</div>
+			</div>
+		);
+	}
 
-	// const renderTooltip = (props) => (
-	// 	<Tooltip id="button-tooltip" {...props}>
-	// 		Click Me!
-	// 	</Tooltip>
-	// );
+	const renderTooltip = (props) => (
+		<Tooltip id="button-tooltip" {...props}>
+			Click to Copy
+		</Tooltip>
+	);
 
 	const notify = () => toast.success('Address Copied!');
 
 	return (
-		<div className='col'>
+		<div className="col">
 			<Locate panTo={panTo} userLocation={userLocation} />
 			<GoogleMap
 				mapContainerStyle={containerStyle}
@@ -85,11 +83,6 @@ function MapComponent({
 				{trails.map((marker) => {
 					return (
 						<div key={`${marker.lat}-${marker.lng}`}>
-							{/* <OverlayTrigger
-						placement="top"
-						delay={{ show: 250, hide: 400 }}
-						overlay={renderTooltip}
-					> */}
 							<Marker
 								key={`${marker.lat}-${marker.lng}`}
 								position={{ lat: marker.lat, lng: marker.lng }}
@@ -102,7 +95,6 @@ function MapComponent({
 								}}
 								animation={2}
 							/>
-							{/* </OverlayTrigger> */}
 							{selectedMarker === marker ? (
 								<InfoWindow
 									position={{ lat: marker.lat, lng: marker.lng }}
@@ -113,19 +105,16 @@ function MapComponent({
 									<div ref={ref} className="text-center">
 										<h6 className="text-center">{marker.name}</h6>
 										<CopyToClipboard text={marker.address}>
-											<p className="mb-2 address" onClick={notify}>
-												{marker.address}
-											</p>
+											<OverlayTrigger
+												placement="right"
+												delay={{ show: 250, hide: 400 }}
+												overlay={renderTooltip}
+											>
+												<p className="mb-2 address" onClick={notify}>
+													{marker.address}
+												</p>
+											</OverlayTrigger>
 										</CopyToClipboard>
-										{/* <p
-											className="viewTrailsLink mb-0"
-											onClick={() => {
-												selectTrail(marker);
-												setSelectedMarker({});
-											}}
-										>
-											View Trails
-										</p> */}
 									</div>
 								</InfoWindow>
 							) : null}

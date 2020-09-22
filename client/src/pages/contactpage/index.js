@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Jumbotron from '../../components/jumbotron';
 import API from '../../utils/API';
 import { ToastContainer, toast } from 'react-toastify';
@@ -11,6 +11,12 @@ function ContactPage() {
 		email: '',
 		message: '',
 	});
+
+	const [pageState, setPageState] = useState('');
+
+	useEffect(() => {
+		setPageState('contact');
+	}, []);
 
 	const handleChange = ({ target }) => {
 		const { name, value } = target;
@@ -34,7 +40,7 @@ function ContactPage() {
 
 	return (
 		<div>
-			<Jumbotron />
+			<Jumbotron pageState={pageState} />
 			<div className="container">
 				<div className="message text-center mt-3">Contact</div>
 				<form

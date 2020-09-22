@@ -18,6 +18,7 @@ function Home() {
 		lng: -95.358421,
 	});
 	const [userLocation, setUserLocation] = useState({});
+	const [pageState, setPageState] = useState('');
 
 	const getUserLocation = () => {
 		navigator.geolocation.getCurrentPosition(
@@ -48,6 +49,7 @@ function Home() {
 	useEffect(() => {
 		getTrails();
 		getUserLocation();
+		setPageState('home');
 	}, []);
 
 	const getTrails = () => {
@@ -124,6 +126,7 @@ function Home() {
 				search={search}
 				handleInputChange={handleInputChange}
 				getLatAndLong={getLatAndLong}
+				pageState={pageState}
 			/>
 			<div className="container-fluid">
 				<div className="row">

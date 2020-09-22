@@ -20,7 +20,7 @@ function AboutPage() {
 						className="about-img"
 						alt="girl with mountain bike"
 					/>
-					<p className="mt-4 px-5">
+					<p className="mt-4">
 						Various mountain bike trail facebook groups are littered with users
 						asking for the trail status. Although some people know the answers,
 						they get frustrated by having to constantly answer the same question

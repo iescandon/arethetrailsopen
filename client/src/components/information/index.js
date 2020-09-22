@@ -28,9 +28,9 @@ function Information({
 	return (
 		<div className="col-lg-6 col-md-12">
 			<div className="mt-3 row justify-content-center selectedTrail">
-				<div className="col-8 offset-2 text-center">{selectedTrail.name}</div>
-				<div className="col-2">
-					<label>
+				<div className="col-6 offset-3 text-center">{selectedTrail.name}</div>
+				<div className="col-3">
+					<label className="mr-3">
 						<Switch
 							onChange={updateTrailStatus}
 							checked={selectedTrail.open}

@@ -2,16 +2,17 @@ import React from 'react';
 import { Dropdown } from 'react-bootstrap';
 import './style.css';
 // import API from '../../utils/API';
-// import { formatRelative } from 'date-fns';
+import { formatRelative } from 'date-fns';
 
 function Table({ selectedTrail, updateTrailCondition }) {
 	const trailConditions = ['Dry', 'Hero', 'Tacky', 'Muddy', 'Wet'];
 
 	const updateCurrentDate = (lastDate) => {
-		// let currentDate = Date.now();
-		// let updatedDate = formatRelative(currentDate, lastDate);
-		console.log(lastDate);
-		console.log(Date());
+		const lastUpdatedDate = new Date(lastDate);
+		const currentDate = Date.now();
+		let newDate = formatRelative(lastUpdatedDate, currentDate);
+		console.log(newDate);
+		return newDate;
 	};
 
 	return (
@@ -44,7 +45,6 @@ function Table({ selectedTrail, updateTrailCondition }) {
 													key={condition}
 													onClick={(event) => {
 														updateTrailCondition(trail.trailId, event);
-														updateCurrentDate(trail.lastUpdated);
 													}}
 													data-condition={condition}
 												>
@@ -55,7 +55,7 @@ function Table({ selectedTrail, updateTrailCondition }) {
 									</Dropdown.Menu>
 								</Dropdown>
 							</td>
-							<td>{trail.lastUpdated}</td>
+							<td>{updateCurrentDate(trail.lastUpdated)}</td>
 							{/* <td>{formatRelative(trail.lastUpdated, new Date())}</td> */}
 						</tr>
 					);

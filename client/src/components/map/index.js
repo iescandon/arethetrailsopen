@@ -95,7 +95,7 @@ function MapComponent({
 								position={{ lat: marker.lat, lng: marker.lng }}
 								onClick={() => {
 									setSelectedMarker(marker);
-									// selectTrail(marker);
+									selectTrail(marker);
 								}}
 								options={{
 									icon: require(`./${marker.open}.svg`),
@@ -123,7 +123,7 @@ function MapComponent({
 											hideProgressBar={true}
 											pauseOnHover={false}
 										/>
-										<p
+										{/* <p
 											className="viewTrailsLink mb-0"
 											onClick={() => {
 												selectTrail(marker);
@@ -131,7 +131,7 @@ function MapComponent({
 											}}
 										>
 											View Trails
-										</p>
+										</p> */}
 									</div>
 								</InfoWindow>
 							) : null}

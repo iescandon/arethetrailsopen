@@ -1,26 +1,21 @@
-.Dry {
-	background-color: #28a745 !important;
-	color: white !important;
-}
-
+.Dry,
 .Hero {
 	background-color: #28a745 !important;
 	color: white !important;
+	width: 90px;
 }
 
 .Tacky {
 	background-color: rgb(255, 187, 0) !important;
 	color: white !important;
+	width: 90px;
 }
 
-.Muddy {
-	background-color: #e61d1d !important;
-	color: white !important;
-}
-
+.Muddy,
 .Wet {
 	background-color: #e61d1d !important;
 	color: white !important;
+	width: 90px;
 }
 
 #dropdown-basic {

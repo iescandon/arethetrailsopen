@@ -1,58 +1,47 @@
-import React, { useState } from 'react';
-import TrailData from '../traildata';
-import Instructions from '../instructions';
-import Contact from '../contact';
-import About from '../about';
-import { ButtonGroup, Button } from 'react-bootstrap';
+import React from 'react';
+import Switch from 'react-switch';
+import Table from '../table';
 
 function Information({
 	selectedTrail,
 	updateTrailStatus,
 	updateTrailCondition,
 }) {
-	const [pageState, setPageState] = useState('Instructions');
+	if (!selectedTrail.name) {
+		return (
+			<div>
+				<div className="message text-center mt-3">Find a trail near you!</div>
+				<div className="text-center mt-3">
+					<p>
+						Type in your zip code, city/state, or address in the search bar.
+					</p>
+				</div>
+				<div className="text-center mt-3">
+					<p>Or just click on one of the markers on the map!</p>
+				</div>
+			</div>
+		);
+	}
 
 	return (
 		<div>
-			{!selectedTrail.name ? (
-				<div>
-					<div className="row mt-3 justify-content-center">
-						{/* <ButtonGroup aria-label="Basic example">
-							<Button
-								variant="dark"
-								onClick={() => {
-									setPageState('About');
-								}}
-							>
-								About
-							</Button>
-							<Button
-								variant="dark"
-								onClick={() => {
-									setPageState('Instructions');
-								}}
-							>
-								Instructions
-							</Button>
-							<Button
-								variant="dark"
-								onClick={() => {
-									setPageState('Contact');
-								}}
-							>
-								Contact
-							</Button>
-						</ButtonGroup> */}
-					</div>
-					{pageState === 'Instructions' ? <Instructions /> : null}
-					{pageState === 'Contact' ? <Contact /> : null}
-					{pageState === 'About' ? <About /> : null}
+			<div className="mt-3 row justify-content-center selectedTrail">
+				<div className="col-8 offset-md-2 text-center">
+					{selectedTrail.name}
 				</div>
-			) : null}
-			<div>
-				<TrailData
+				<div className="col-2">
+					<label>
+						<Switch
+							onChange={updateTrailStatus}
+							checked={selectedTrail.open}
+							offColor="#e61d1d"
+						/>
+					</label>
+				</div>
+			</div>
+			<div className="row">
+				<Table
 					selectedTrail={selectedTrail}
-					updateTrailStatus={updateTrailStatus}
 					updateTrailCondition={updateTrailCondition}
 				/>
 			</div>

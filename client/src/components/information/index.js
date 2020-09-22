@@ -10,7 +10,7 @@ function Information({
 }) {
 	if (!selectedTrail.name) {
 		return (
-			<div>
+			<div className="col my-auto">
 				<div className="message text-center mt-3">Find a trail near you!</div>
 				<div className="text-center mt-3">
 					<p>
@@ -25,7 +25,7 @@ function Information({
 	}
 
 	return (
-		<div>
+		<div className="col">
 			<div className="mt-3 row justify-content-center selectedTrail">
 				<div className="col-8 offset-md-2 text-center">
 					{selectedTrail.name}

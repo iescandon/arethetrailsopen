@@ -73,7 +73,7 @@ function MapComponent({
 	const notify = () => toast.success('Address Copied!');
 
 	return (
-		<div>
+		<div className='col'>
 			<Locate panTo={panTo} userLocation={userLocation} />
 			<GoogleMap
 				mapContainerStyle={containerStyle}

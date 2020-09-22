@@ -130,24 +130,20 @@ function Home() {
 			/>
 			<div className="container-fluid">
 				<div className="row">
-					<div className="col">
-						<Map
-							centerPoint={centerPoint}
-							trails={trails}
-							selectedTrail={selectedTrail}
-							selectTrail={selectTrail}
-							onMapLoad={onMapLoad}
-							panTo={panTo}
-							userLocation={userLocation}
-						/>
-					</div>
-					<div className="col">
-						<Information
-							selectedTrail={selectedTrail}
-							updateTrailStatus={updateTrailStatus}
-							updateTrailCondition={updateTrailCondition}
-						/>
-					</div>
+					<Map
+						centerPoint={centerPoint}
+						trails={trails}
+						selectedTrail={selectedTrail}
+						selectTrail={selectTrail}
+						onMapLoad={onMapLoad}
+						panTo={panTo}
+						userLocation={userLocation}
+					/>
+					<Information
+						selectedTrail={selectedTrail}
+						updateTrailStatus={updateTrailStatus}
+						updateTrailCondition={updateTrailCondition}
+					/>
 				</div>
 			</div>
 			<Footer />

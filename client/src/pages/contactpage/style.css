@@ -7,10 +7,13 @@ ul {
 .fa-instagram,
 .fa-envelope {
 	padding: 10px;
-	font-size: 20px;
+	margin-left: 15px;
+	margin-right: 15px;
+	/* margin-bottom: 30px; */
+	font-size: 36px;
 	text-align: center;
 	text-decoration: none;
-	color: #343a40;
+	color: black;
 	width: 40px;
 	height: 40px;
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Jumbotron from '../../components/jumbotron';
+import Footer from '../../components/footer';
 import API from '../../utils/API';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -43,6 +44,10 @@ function ContactPage() {
 			<Jumbotron pageState={pageState} />
 			<div className="container">
 				<div className="message text-center mt-3">Contact</div>
+				<p className="text-center">
+					Questions, comments, concerns, feedbacks, business inquiries,
+					collaborations?
+				</p>
 				<form
 					className="mr-0"
 					id="contact-form"
@@ -116,6 +121,7 @@ function ContactPage() {
 					pauseOnHover={false}
 				/>
 			</div>
+			<Footer />
 		</div>
 	);
 }

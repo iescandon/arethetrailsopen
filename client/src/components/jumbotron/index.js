@@ -12,7 +12,7 @@ function Jumbotron({ search, handleInputChange, getLatAndLong, pageState }) {
 						<h1 className="display-4">Are the trails open?</h1>
 						<NavTabs />
 					</div>
-					<div className="col search-row">
+					<div className="col search-row my-auto">
 						{pageState === 'home' ? (
 							<Search
 								search={search}

@@ -117,12 +117,6 @@ function MapComponent({
 												{marker.address}
 											</p>
 										</CopyToClipboard>
-										<ToastContainer
-											position="top-center"
-											autoClose={2000}
-											hideProgressBar={true}
-											pauseOnHover={false}
-										/>
 										{/* <p
 											className="viewTrailsLink mb-0"
 											onClick={() => {
@@ -135,6 +129,12 @@ function MapComponent({
 									</div>
 								</InfoWindow>
 							) : null}
+							<ToastContainer
+								position="top-center"
+								autoClose={2000}
+								hideProgressBar={true}
+								pauseOnHover={false}
+							/>
 						</div>
 					);
 				})}

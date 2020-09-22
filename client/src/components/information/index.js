@@ -1,6 +1,7 @@
 import React from 'react';
 import Switch from 'react-switch';
 import Table from '../table';
+import './style.css';
 
 function Information({
 	selectedTrail,

@@ -130,7 +130,7 @@ function MapComponent({
 								</InfoWindow>
 							) : null}
 							<ToastContainer
-								position="top-center"
+								position="bottom-left"
 								autoClose={2000}
 								hideProgressBar={true}
 								pauseOnHover={false}

@@ -105,7 +105,7 @@ function Contact() {
 				</ul>
 			</div>
 			<ToastContainer
-				position="top-center"
+				position="bottom-left"
 				autoClose={2000}
 				hideProgressBar={true}
 				pauseOnHover={false}

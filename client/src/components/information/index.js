@@ -17,7 +17,7 @@ function Information({
 			{!selectedTrail.name ? (
 				<div>
 					<div className="row mt-3 justify-content-center">
-						<ButtonGroup aria-label="Basic example">
+						{/* <ButtonGroup aria-label="Basic example">
 							<Button
 								variant="dark"
 								onClick={() => {
@@ -42,7 +42,7 @@ function Information({
 							>
 								Contact
 							</Button>
-						</ButtonGroup>
+						</ButtonGroup> */}
 					</div>
 					{pageState === 'Instructions' ? <Instructions /> : null}
 					{pageState === 'Contact' ? <Contact /> : null}

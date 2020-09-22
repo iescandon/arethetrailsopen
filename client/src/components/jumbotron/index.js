@@ -9,12 +9,15 @@ function Jumbotron({ search, handleInputChange, getLatAndLong }) {
 				<div className="row">
 					<div className="col">
 						<h1 className="display-4">
-							{/* <Link to="/">Are the trails open?</Link> */}
 							<a href="/" className="title">
 								Are the trails open?
 							</a>
 						</h1>
-						{/* <p class="lead">Contact the Developer</p> */}
+						<ul className="nav-links">
+							<li>ABOUT</li>
+							<li>HELP</li>
+							<li>CONTACT</li>
+						</ul>
 					</div>
 					<div className="col mt-4">
 						<Search

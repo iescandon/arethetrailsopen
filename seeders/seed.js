@@ -34,12 +34,6 @@ let trailSystemSeed = [
 			},
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
-				name: 'Brazos Bend',
-				condition: 'Dry',
-				lastUpdated: Date.now(),
-			},
-			{
-				trailId: new mongoose.Types.ObjectId().toHexString(),
 				name: 'Barbed Wire',
 				condition: 'Dry',
 				lastUpdated: Date.now(),

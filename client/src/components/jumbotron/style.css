@@ -17,11 +17,14 @@
 	cursor: pointer;
 }
 
-.lead {
+.nav-links {
 	color: white;
-	font-weight: 900;
 	/* outline: white; */
 	/* opacity: 70%; */
+}
+.nav-links > li {
+	padding: 20px;
+	display: inline;
 }
 
 .title {

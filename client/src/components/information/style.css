@@ -16,3 +16,10 @@
 		font-size: 36px;
 	}
 }
+
+@media (max-width: 575px) {
+	p {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}

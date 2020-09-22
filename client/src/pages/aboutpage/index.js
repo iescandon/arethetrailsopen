@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Jumbotron from '../../components/jumbotron';
-// import Footer from '../../components/footer';
+import Footer from '../../components/footer';
 import './style.css';
 
 function AboutPage() {
@@ -16,6 +16,9 @@ function AboutPage() {
 			<div className="container">
 				<div className="row text-center">
 					<div className="col-lg-5 col-md-12">
+						<div className="row justify-content-center aboutheaderone mt-3">
+							About
+						</div>
 						<img
 							src={require('./trails.gif')}
 							className="about-img"
@@ -23,7 +26,9 @@ function AboutPage() {
 						/>
 					</div>
 					<div className="col-lg-7 col-md-12">
-						<div className="row justify-content-center header mt-3">About</div>
+						<div className="row justify-content-center aboutheadertwo mt-3">
+							About
+						</div>
 						<p className="row mt-4">
 							Various mountain bike trail facebook groups are littered with
 							users asking for the trail status. Although some people know the
@@ -40,7 +45,7 @@ function AboutPage() {
 					</div>
 				</div>
 			</div>
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 }

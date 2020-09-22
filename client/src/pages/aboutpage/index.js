@@ -13,7 +13,7 @@ function AboutPage() {
 		<div>
 			<Jumbotron pageState={pageState} />
 			<div className="container">
-				<div className="text-center message mt-3">About</div>
+				<div className="text-center header mt-3">About</div>
 				<div className="text-center">
 					<img
 						src={require('./inez.jpg')}

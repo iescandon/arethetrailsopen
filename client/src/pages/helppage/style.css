@@ -1,0 +1,10 @@
+.header {
+	font-size: 54px;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+@media (max-width: 1199px) {
+	.header {
+		font-size: 36px;
+	}
+}

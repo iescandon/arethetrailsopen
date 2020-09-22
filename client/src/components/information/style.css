@@ -1,4 +1,18 @@
+.selectedTrail {
+	font-size: 36px;
+	font-family: 'Fjalla One', sans-serif;
+}
+
 .message {
 	font-size: 48px;
 	font-family: 'Fjalla One', sans-serif;
+}
+
+@media (max-width: 1199px) {
+	.selectedTrail {
+		font-size: 28px;
+	}
+	.message {
+		font-size: 28px;
+	}
 }

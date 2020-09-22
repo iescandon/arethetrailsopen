@@ -11,10 +11,14 @@
 	text-decoration: none !important;
 }
 
-.search-row {
-	/* margin-top: 35px; */
+@media (max-width: 1199px) {
+	.display-4 {
+		font-size: 52px !important;
+	}
 }
-/* .display-4:hover {
-	opacity: 70%;
-	cursor: pointer;
-} */
+
+@media (max-width: 414px) {
+	.display-4 {
+		font-size: 42px !important;
+	}
+}

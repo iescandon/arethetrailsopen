@@ -26,13 +26,21 @@ ul {
 	color: green;
 }
 
-.fa-envelope {
-}
-
 .menu li {
 	display: inline;
 }
 
 .menu {
 	margin: 0 !important;
+}
+
+.header {
+	font-size: 54px;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+@media (max-width: 1199px) {
+	.header {
+		font-size: 36px;
+	}
 }

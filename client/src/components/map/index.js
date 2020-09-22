@@ -16,7 +16,7 @@ import {
 } from '@react-google-maps/api';
 
 const containerStyle = {
-	width: '50vw',
+	width: '100%',
 	height: '80vh',
 };
 
@@ -71,7 +71,7 @@ function MapComponent({
 	const notify = () => toast.dark('Address Copied!');
 
 	return (
-		<div className="col">
+		<div className="col-lg-6 col-md-12 px-0">
 			<Locate panTo={panTo} userLocation={userLocation} />
 			<GoogleMap
 				mapContainerStyle={containerStyle}

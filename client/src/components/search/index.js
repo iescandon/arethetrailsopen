@@ -13,7 +13,7 @@ function Search({ search, handleInputChange, getLatAndLong }) {
 				onChange={(event) => handleInputChange(event)}
 			/>
 			<button
-				className="btn btn-success my-2 my-sm-0"
+				className=" searchbtn btn btn-success my-2 my-sm-0"
 				onClick={(event) => getLatAndLong(search, event)}
 			>
 				<i className="fa fa-search" aria-hidden="true"></i>

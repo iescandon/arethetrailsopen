@@ -11,6 +11,9 @@
 	text-decoration: none !important;
 }
 
+.search-row {
+	margin-top: 35px;
+}
 /* .display-4:hover {
 	opacity: 70%;
 	cursor: pointer;

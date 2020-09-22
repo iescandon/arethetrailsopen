@@ -18,7 +18,7 @@ function Jumbotron({ search, handleInputChange, getLatAndLong }) {
 						</ul> */}
 						<NavTabs />
 					</div>
-					<div className="col mt-4">
+					<div className="col search-row">
 						<Search
 							search={search}
 							handleInputChange={handleInputChange}

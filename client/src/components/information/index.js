@@ -8,6 +8,7 @@ function Information({
 	selectedTrail,
 	updateTrailStatus,
 	updateTrailCondition,
+	results,
 }) {
 	if (!selectedTrail.name) {
 		return (
@@ -26,7 +27,7 @@ function Information({
 	}
 
 	return (
-		<div className="col-lg-6 col-md-12">
+		<div className="col-lg-6 col-md-12" ref={results}>
 			<div className="mt-3 row justify-content-center selectedTrail">
 				<div className="col-6 offset-3 text-center">{selectedTrail.name}</div>
 				<div className="col-3">

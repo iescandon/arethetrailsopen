@@ -15,3 +15,20 @@
 .loading {
 	width: 50vw;
 }
+
+.viewTrailsLink {
+	display: none;
+	font-size: 14.5px;
+	cursor: pointer;
+	color: #007bff;
+}
+
+.viewTrailsLink:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+	.viewTrailsLink {
+		display: block;
+	}
+}

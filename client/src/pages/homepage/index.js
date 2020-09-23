@@ -72,6 +72,7 @@ function Home() {
 
 	const selectTrail = (trail) => {
 		setSelectedTrail(trail);
+		// scrollToResults();
 	};
 
 	const handleInputChange = ({ target }) => {
@@ -126,6 +127,17 @@ function Home() {
 			});
 	};
 
+	const results = React.createRef();
+
+	function scrollToResults(event) {
+		if (results.current) {
+			results.current.scrollIntoView({
+				behavior: 'smooth',
+				block: 'nearest',
+			});
+		}
+	}
+
 	return (
 		<div>
 			<Jumbotron
@@ -147,11 +159,13 @@ function Home() {
 						selectedTrail={selectedTrail}
 						updateTrailStatus={updateTrailStatus}
 						updateTrailCondition={updateTrailCondition}
+						scrollToResults={scrollToResults}
 					/>
 					<Information
 						selectedTrail={selectedTrail}
 						updateTrailStatus={updateTrailStatus}
 						updateTrailCondition={updateTrailCondition}
+						results={results}
 					/>
 				</div>
 			</div>

@@ -33,6 +33,7 @@ function MapComponent({
 	onMapLoad,
 	panTo,
 	userLocation,
+	scrollToResults,
 }) {
 	const [selectedMarker, setSelectedMarker] = useState({});
 	const ref = useOnclickOutside(() => {
@@ -105,16 +106,24 @@ function MapComponent({
 									<div ref={ref} className="text-center">
 										<h6 className="text-center">{marker.name}</h6>
 										<CopyToClipboard text={marker.address}>
-											<OverlayTrigger
+											{/* <OverlayTrigger
 												placement="right"
 												delay={{ show: 250, hide: 400 }}
 												overlay={renderTooltip}
-											>
-												<p className="mb-2 address" onClick={notify}>
-													{marker.address}
-												</p>
-											</OverlayTrigger>
+											> */}
+											<p className="mb-2 address" onClick={notify}>
+												{marker.address}
+											</p>
+											{/* </OverlayTrigger> */}
 										</CopyToClipboard>
+										<p
+											className="viewTrailsLink mb-0"
+											onClick={() => {
+												scrollToResults();
+											}}
+										>
+											View Trails
+										</p>
 									</div>
 								</InfoWindow>
 							) : null}

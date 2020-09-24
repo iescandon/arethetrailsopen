@@ -1,7 +1,6 @@
 import React from 'react';
 import { Dropdown } from 'react-bootstrap';
 import './style.css';
-// import API from '../../utils/API';
 import { formatRelative } from 'date-fns';
 
 function Table({ selectedTrail, updateTrailCondition }) {
@@ -56,7 +55,6 @@ function Table({ selectedTrail, updateTrailCondition }) {
 								</Dropdown>
 							</td>
 							<td>{updateCurrentDate(trail.lastUpdated)}</td>
-							{/* <td>{formatRelative(trail.lastUpdated, new Date())}</td> */}
 						</tr>
 					);
 				})}

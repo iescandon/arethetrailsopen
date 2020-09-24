@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Jumbotron from '../../components/jumbotron';
-import Footer from '../../components/footer';
 import './style.css';
 
 function HelpPage() {

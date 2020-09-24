@@ -4,12 +4,6 @@
 	outline: none !important;
 	margin-left: 120px !important;
 }
-/* .searchbtn {
-	color: #fff !important;
-	background-color: #6fbb44 !important;
-	border-color: #6fbb44 !important;
-	font-weight: 900;
-} */
 
 @media (max-width: 1199px) {
 	.search-form {
@@ -20,9 +14,5 @@
 @media (max-width: 991px) {
 	.search-form {
 		margin-left: 0 !important;
-		/* margin-top: 15px; */
 	}
-	/* .searchbtn {
-		margin-top: 15px !important;
-	} */
 }

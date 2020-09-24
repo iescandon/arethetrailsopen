@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './style.css';
-// import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import useOnclickOutside from 'react-cool-onclickoutside';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ToastContainer, toast } from 'react-toastify';
@@ -39,19 +38,18 @@ function MapComponent({
 	const ref = useOnclickOutside(() => {
 		setSelectedMarker({});
 	});
-	// const libraries = ['places'];
+
 	const { isLoaded, loadError } = useLoadScript({
 		googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY,
-		// libraries,
 	});
 	if (loadError) return 'Error';
-	// if (!isLoaded) return 'Loading...';
+
 	if (!isLoaded) {
 		return (
 			<div className="col-12 my-auto">
 				<div className="mt-5 pt-5 row justify-content-center">
 					<img
-						src={require('./loading.png')}
+						src={require('../../assets/loading.png')}
 						alt="wheel"
 						className="fa-spin wheel"
 					/>
@@ -62,12 +60,6 @@ function MapComponent({
 			</div>
 		);
 	}
-
-	// const renderTooltip = (props) => (
-	// 	<Tooltip id="button-tooltip" {...props}>
-	// 		Click to Copy
-	// 	</Tooltip>
-	// );
 
 	const notify = () => toast.dark('Address Copied!');
 
@@ -92,7 +84,7 @@ function MapComponent({
 									selectTrail(marker);
 								}}
 								options={{
-									icon: require(`./${marker.open}.svg`),
+									icon: require(`../../assets/${marker.open}.svg`),
 								}}
 								animation={2}
 							/>
@@ -106,15 +98,9 @@ function MapComponent({
 									<div ref={ref} className="text-center">
 										<h6 className="text-center">{marker.name}</h6>
 										<CopyToClipboard text={marker.address}>
-											{/* <OverlayTrigger
-												placement="right"
-												delay={{ show: 250, hide: 400 }}
-												overlay={renderTooltip}
-											> */}
 											<p className="mb-2 address" onClick={notify}>
 												{marker.address}
 											</p>
-											{/* </OverlayTrigger> */}
 										</CopyToClipboard>
 										<p
 											className="viewTrailsLink mb-0"

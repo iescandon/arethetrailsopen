@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Map from '../../components/map';
 import Jumbotron from '../../components/jumbotron';
 import Information from '../../components/information';
-import Footer from '../../components/footer';
 import Geocode from 'react-geocode';
 import { toast } from 'react-toastify';
 import API from '../../utils/API';
@@ -24,9 +23,6 @@ function Home() {
 	const getUserLocation = () => {
 		navigator.geolocation.getCurrentPosition(
 			(position) => {
-				// alert(
-				// 	`lat: ${position.coords.latitude}, lng: ${position.coords.longitude}`
-				// );
 				setCenterPoint({
 					lat: position.coords.latitude,
 					lng: position.coords.longitude,
@@ -54,18 +50,9 @@ function Home() {
 		getTrails();
 		getUserLocation();
 		setPageState('home');
-		// console.log(window.navigator);
-		// alert(window.navigator.userAgent);
-		// if (
-		// 	window.navigator.userAgent.includes('Safari') &&
-		// 	window.navigator.userAgent.includes('iPhone')
-		// ) {
-		// 	alert('safari');
-		// }
 	}, []);
 
 	const getTrails = () => {
-		// console.log('test');
 		API.search()
 			.then((res) => {
 				setTrails(res.data);
@@ -83,7 +70,6 @@ function Home() {
 
 	const selectTrail = (trail) => {
 		setSelectedTrail(trail);
-		// scrollToResults();
 	};
 
 	const handleInputChange = ({ target }) => {
@@ -101,7 +87,6 @@ function Home() {
 					lat,
 					lng,
 				});
-				// console.log(lat, lng);
 			},
 			(error) => {
 				console.error(error);
@@ -162,14 +147,10 @@ function Home() {
 					<Map
 						centerPoint={centerPoint}
 						trails={trails}
-						selectedTrail={selectedTrail}
 						selectTrail={selectTrail}
 						onMapLoad={onMapLoad}
 						panTo={panTo}
 						userLocation={userLocation}
-						selectedTrail={selectedTrail}
-						updateTrailStatus={updateTrailStatus}
-						updateTrailCondition={updateTrailCondition}
 						scrollToResults={scrollToResults}
 					/>
 					<Information

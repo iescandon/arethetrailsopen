@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Jumbotron from '../../components/jumbotron';
-import Footer from '../../components/footer';
 import API from '../../utils/API';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -92,25 +91,24 @@ function ContactPage() {
 				<div className="text-center">
 					<ul className="navbar-brand menu">
 						<li>
-							<a
-								href="https://www.linkedin.com/in/iescandon/"
-								className="fa fa-linkedin"
-							></a>
+							<a href="https://www.linkedin.com/in/iescandon/">
+								<i className="fa fa-linkedin" aria-hidden="true"></i>
+							</a>
 						</li>
 						<li>
-							<a
-								href="https://github.com/iescandon"
-								className="fa fa-github"
-							></a>
+							<a href="https://github.com/iescandon">
+								<i className="fa fa-github" aria-hidden="true"></i>
+							</a>
 						</li>
 						<li>
-							<a
-								href="https://www.instagram.com/inescandon/?hl=en"
-								className="fa fa-instagram"
-							></a>
+							<a href="https://www.instagram.com/inescandon/?hl=en">
+								<i className="fa fa-instagram" aria-hidden="true"></i>
+							</a>
 						</li>
 						<li>
-							<a href="mailto:iescan4@gmail.com" className="fa fa-envelope"></a>
+							<a href="mailto:iescan4@gmail.com">
+								<i className="fa fa-envelope" aria-hidden="true"></i>
+							</a>
 						</li>
 					</ul>
 				</div>

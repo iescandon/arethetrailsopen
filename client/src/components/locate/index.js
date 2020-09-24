@@ -16,7 +16,7 @@ function Locate({ panTo, userLocation }) {
 			overlay={renderTooltip}
 		>
 			<button className="locate btn" onClick={() => panTo(userLocation)}>
-				<img src={require('./wheel.svg')} alt="wheel" />
+				<img src={require('../../assets/wheel.svg')} alt="wheel" />
 			</button>
 		</OverlayTrigger>
 	);

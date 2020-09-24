@@ -39,6 +39,10 @@ ul {
 	font-family: 'Fjalla One', sans-serif;
 }
 
+.body-container {
+	min-height: 65vh !important;
+}
+
 @media (max-width: 1199px) {
 	.header {
 		font-size: 36px;

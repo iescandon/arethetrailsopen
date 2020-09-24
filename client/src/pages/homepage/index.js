@@ -24,6 +24,9 @@ function Home() {
 	const getUserLocation = () => {
 		navigator.geolocation.getCurrentPosition(
 			(position) => {
+				// alert(
+				// 	`lat: ${position.coords.latitude}, lng: ${position.coords.longitude}`
+				// );
 				setCenterPoint({
 					lat: position.coords.latitude,
 					lng: position.coords.longitude,
@@ -51,10 +54,18 @@ function Home() {
 		getTrails();
 		getUserLocation();
 		setPageState('home');
+		// console.log(window.navigator);
+		// alert(window.navigator.userAgent);
+		// if (
+		// 	window.navigator.userAgent.includes('Safari') &&
+		// 	window.navigator.userAgent.includes('iPhone')
+		// ) {
+		// 	alert('safari');
+		// }
 	}, []);
 
 	const getTrails = () => {
-		console.log('test');
+		// console.log('test');
 		API.search()
 			.then((res) => {
 				setTrails(res.data);
@@ -90,7 +101,7 @@ function Home() {
 					lat,
 					lng,
 				});
-				console.log(lat, lng);
+				// console.log(lat, lng);
 			},
 			(error) => {
 				console.error(error);
@@ -169,7 +180,6 @@ function Home() {
 					/>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	);
 }

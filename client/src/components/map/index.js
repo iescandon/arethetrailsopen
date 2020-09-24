@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
-import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+// import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import useOnclickOutside from 'react-cool-onclickoutside';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ToastContainer, toast } from 'react-toastify';
@@ -17,7 +17,7 @@ import {
 
 const containerStyle = {
 	width: '100%',
-	height: '70vh',
+	height: '75vh',
 };
 
 const mapOptions = {
@@ -63,11 +63,11 @@ function MapComponent({
 		);
 	}
 
-	const renderTooltip = (props) => (
-		<Tooltip id="button-tooltip" {...props}>
-			Click to Copy
-		</Tooltip>
-	);
+	// const renderTooltip = (props) => (
+	// 	<Tooltip id="button-tooltip" {...props}>
+	// 		Click to Copy
+	// 	</Tooltip>
+	// );
 
 	const notify = () => toast.dark('Address Copied!');
 

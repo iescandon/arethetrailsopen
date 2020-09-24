@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import HomePage from './pages/homepage';
 import AboutPage from './pages/aboutpage';
 import HelpPage from './pages/helppage';
 import ContactPage from './pages/contactpage';
+import Footer from './components/footer';
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 				<Route exact path="/help" component={HelpPage} />
 				<Route exact path="/contact" component={ContactPage} />
 			</div>
+			<Footer path="/" />
 		</Router>
 	);
 }

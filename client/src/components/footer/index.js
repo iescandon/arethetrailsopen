@@ -4,8 +4,8 @@ import './style.css';
 function Footer() {
 	return (
 		<footer>
-			<div className="container footer">
-				<div className="text-center pb-3 pt-3">© Copyright 2020</div>
+			<div className="footer">
+				<div className="text-center pb-2 pt-2">© Copyright 2020</div>
 			</div>
 		</footer>
 	);

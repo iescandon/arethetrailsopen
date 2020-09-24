@@ -13,6 +13,10 @@
 	display: none !important;
 }
 
+.body-container {
+	min-height: 65vh !important;
+}
+
 @media (max-width: 1199px) {
 	.aboutheaderone,
 	.aboutheadertwo {

@@ -13,10 +13,9 @@ function HelpPage() {
 	return (
 		<div>
 			<Jumbotron pageState={pageState} />
-			<div className="container">
+			<div className="container body-container">
 				<div className="text-center header mt-3">Help</div>
 			</div>
-			<Footer />
 		</div>
 	);
 }

@@ -9,7 +9,8 @@
 		"express": "^4.17.1",
 		"if-env": "^1.0.4",
 		"mongoose": "^5.10.5",
-		"nodemailer": "^6.4.11"
+		"nodemailer": "^6.4.11",
+		"ssl-express-www": "^3.0.7"
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.4",

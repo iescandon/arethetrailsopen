@@ -33,6 +33,10 @@ a:hover img {
 	font-family: 'Fjalla One', sans-serif;
 }
 
+a:hover {
+	color: #007bff !important;
+}
+
 @media (max-width: 1199px) {
 	.header {
 		font-size: 36px;

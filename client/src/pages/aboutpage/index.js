@@ -22,7 +22,7 @@ function AboutPage() {
 						<img
 							src={require('../../assets/trails.gif')}
 							className="about-img"
-							alt="girl with mountain bike"
+							alt="gif of fb users asking for trail status"
 						/>
 					</div>
 					<div className="col-lg-7 col-md-12">

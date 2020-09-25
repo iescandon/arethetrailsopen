@@ -12,6 +12,12 @@
 	color: #007bff;
 }
 
+.help-header:hover {
+	cursor: pointer;
+	color: #007bff;
+	text-decoration: underline;
+}
+
 @media (max-width: 1199px) {
 	.header {
 		font-size: 36px;

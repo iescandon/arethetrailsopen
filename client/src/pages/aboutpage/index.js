@@ -53,7 +53,7 @@ function AboutPage() {
 								the idea to create "Are the trails open?" was born. "Are the
 								trails open?" is a full-stack MERN application designed to
 								quickly/painlessly find out what popular biking trails are open
-								in your area. Additionally, it also provides users a simple way
+								in the area. Additionally, it also provides users a simple way
 								to update trail status and conditions.
 							</p>
 						</div>

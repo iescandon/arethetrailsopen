@@ -106,7 +106,7 @@ function Home() {
 		const condition = event.target.getAttribute('data-condition');
 		API.updateCondition(id, condition, selectedTrail._id)
 			.then((res) => {
-				console.log(res);
+				// console.log(res);
 				getTrails();
 			})
 			.catch((err) => {
@@ -122,7 +122,7 @@ function Home() {
 		}
 		API.updateStatus(selectedTrail._id, !selectedTrail.open)
 			.then((res) => {
-				console.log(res);
+				// console.log(res);
 				getTrails();
 			})
 			.catch((err) => {

@@ -7,6 +7,11 @@
 	min-height: 65vh !important;
 }
 
+.help-header {
+	cursor: pointer;
+	color: #007bff;
+}
+
 @media (max-width: 1199px) {
 	.header {
 		font-size: 36px;

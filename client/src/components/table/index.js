@@ -10,7 +10,6 @@ function Table({ selectedTrail, updateTrailCondition }) {
 		const lastUpdatedDate = new Date(lastDate);
 		const currentDate = Date.now();
 		let newDate = formatRelative(lastUpdatedDate, currentDate);
-		console.log(newDate);
 		return newDate;
 	};
 

@@ -41,10 +41,17 @@ function Home() {
 		mapRef.current = map;
 	}, []);
 
-	const panTo = React.useCallback(({ lat, lng }) => {
-		mapRef.current.panTo({ lat, lng });
-		mapRef.current.setZoom(10);
-	}, []);
+	// const panTo = React.useCallback(({ lat, lng }) => {
+	// 	mapRef.current.panTo({ lat, lng });
+	// 	mapRef.current.setZoom(10);
+	// }, []);
+
+	const resetCenterPoint = (userLocation) => {
+		setCenterPoint({
+			lat: userLocation.lat,
+			lng: userLocation.lng,
+		});
+	};
 
 	useEffect(() => {
 		getTrails();
@@ -149,9 +156,10 @@ function Home() {
 						trails={trails}
 						selectTrail={selectTrail}
 						onMapLoad={onMapLoad}
-						panTo={panTo}
+						// panTo={panTo}
 						userLocation={userLocation}
 						scrollToResults={scrollToResults}
+						resetCenterPoint={resetCenterPoint}
 					/>
 					<Information
 						selectedTrail={selectedTrail}

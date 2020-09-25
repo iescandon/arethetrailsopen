@@ -8,7 +8,7 @@ function Search({ search, handleInputChange, getLatAndLong }) {
 				className="form-control search-form mr-sm-2"
 				value={search}
 				type="search"
-				placeholder="City, State or Zip Code"
+				// placeholder="City, State or Zip Code"
 				aria-label="Search"
 				onChange={(event) => handleInputChange(event)}
 			/>

@@ -30,9 +30,10 @@ function MapComponent({
 	trails,
 	selectTrail,
 	onMapLoad,
-	panTo,
+	// panTo,
 	userLocation,
 	scrollToResults,
+	resetCenterPoint,
 }) {
 	const [selectedMarker, setSelectedMarker] = useState({});
 	const ref = useOnclickOutside(() => {
@@ -47,13 +48,13 @@ function MapComponent({
 	if (!isLoaded) {
 		return (
 			<div className="col-12 my-auto">
-				<div className="mt-5 pt-5 row justify-content-center">
+				{/* <div className="mt-5 pt-5 row justify-content-center">
 					<img
 						src={require('../../assets/loading.png')}
 						alt="wheel"
 						className="fa-spin wheel"
 					/>
-				</div>
+				</div> */}
 				<div className="mt-3 row justify-content-center">
 					<p>Loading...</p>
 				</div>
@@ -65,7 +66,11 @@ function MapComponent({
 
 	return (
 		<div className="col-lg-6 col-md-12 px-0">
-			<Locate panTo={panTo} userLocation={userLocation} />
+			<Locate
+				// panTo={panTo}
+				userLocation={userLocation}
+				resetCenterPoint={resetCenterPoint}
+			/>
 			<GoogleMap
 				mapContainerStyle={containerStyle}
 				center={centerPoint}
@@ -122,6 +127,15 @@ function MapComponent({
 						</div>
 					);
 				})}
+				<div className="pulse">
+					<Marker
+						position={{ lat: userLocation.lat, lng: userLocation.lng }}
+						options={{
+							icon: require(`../../assets/userLocation.svg`),
+						}}
+						animation={2}
+					/>
+				</div>
 			</GoogleMap>
 		</div>
 	);

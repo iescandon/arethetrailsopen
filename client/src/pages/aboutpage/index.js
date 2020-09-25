@@ -13,7 +13,7 @@ function AboutPage() {
 		<div>
 			<Jumbotron pageState={pageState} />
 			<div className="container body-container">
-				<div className="text-center aboutheadertwo mt-3">About</div>
+				<div className="text-center header mt-3">About</div>
 				<div className="row text-center">
 					<div className="col-lg-5 col-md-12">
 						{/* <div className="row justify-content-center aboutheaderone mt-3">
@@ -45,13 +45,16 @@ function AboutPage() {
 								out the status of another trail nearby.
 							</p>
 							<p>
-								The developer, Inez Escandon, loves to ride and noticed this
-								issue in her community. Thus the idea to create "Are the trails
-								open?" was born. "Are the trails open?" is a full-stack MERN
-								application designed to quickly/painlessly find out what popular
-								biking trails are open in your area. Additionally, it also
-								provides users a simple way to update trail status and
-								conditions.
+								The developer,{' '}
+								<a href="https://www.instagram.com/inescandon/?hl=en">
+									Inez Escandon
+								</a>
+								, loves to ride and noticed this issue in her community. Thus
+								the idea to create "Are the trails open?" was born. "Are the
+								trails open?" is a full-stack MERN application designed to
+								quickly/painlessly find out what popular biking trails are open
+								in your area. Additionally, it also provides users a simple way
+								to update trail status and conditions.
 							</p>
 						</div>
 					</div>

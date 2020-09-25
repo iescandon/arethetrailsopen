@@ -2,8 +2,8 @@
 	color: white !important;
 }
 .nav-links > li {
-	padding-left: 25px;
-	padding-right: 25px;
+	padding-left: 35px;
+	padding-right: 35px;
 	display: inline;
 	text-shadow: 5px 5px 10px #000000;
 }
@@ -11,6 +11,7 @@
 .nav-link {
 	display: inline-block;
 	vertical-align: middle;
+	padding: 3px !important;
 }
 
 .nav-link:hover {
@@ -23,15 +24,15 @@
 
 @media (max-width: 1199px) {
 	.nav-links > li {
-		padding-left: 15px !important;
-		padding-right: 15px !important;
+		padding-left: 20px !important;
+		padding-right: 20px !important;
 	}
 }
 
 @media (max-width: 414px) {
 	.nav-links > li {
-		padding-left: 0px !important;
-		padding-right: 0px !important;
+		padding-left: 5px !important;
+		padding-right: 5px !important;
 	}
 	a.nav-link {
 		padding-left: 10px !important;

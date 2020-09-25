@@ -55,6 +55,26 @@ function HelpPage() {
 						<Accordion.Toggle
 							as={Card.Header}
 							variant="link"
+							eventKey="11"
+							className="help-header"
+						>
+							Why are no trails showing up near me on my map?
+						</Accordion.Toggle>
+						<Accordion.Collapse eventKey="11">
+							<Card.Body>
+								The developer is manually entering each trail into the database.
+								So if nothing is showing up, odds are that she hasn't added any
+								trails for your area yet. If you would like to request for
+								trails to be added for a specific area, please contact her using
+								the contact page or through email (also located on the contact
+								page).
+							</Card.Body>
+						</Accordion.Collapse>
+					</Card>
+					<Card>
+						<Accordion.Toggle
+							as={Card.Header}
+							variant="link"
 							eventKey="10"
 							className="help-header"
 						>

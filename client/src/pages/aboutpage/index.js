@@ -16,19 +16,13 @@ function AboutPage() {
 				<div className="text-center header mt-3">About</div>
 				<div className="row text-center">
 					<div className="col-lg-5 col-md-12">
-						{/* <div className="row justify-content-center aboutheaderone mt-3">
-							About
-						</div> */}
 						<img
-							src={require('../../assets/trails.gif')}
+							src={require('../../assets/inez.jpeg')}
 							className="about-img"
 							alt="gif of fb users asking for trail status"
 						/>
 					</div>
 					<div className="col-lg-7 col-md-12">
-						{/* <div className="row justify-content-center aboutheadertwo mt-3">
-							About
-						</div> */}
 						<div>
 							<p className="row mt-4 about-text">
 								Various mountain bike trail facebook groups are littered with

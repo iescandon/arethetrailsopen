@@ -9,7 +9,6 @@ function ContactPage() {
 	const [message, setMessage] = useState({
 		name: '',
 		email: '',
-		subject: '',
 		message: '',
 	});
 
@@ -29,7 +28,6 @@ function ContactPage() {
 		setMessage({
 			name: '',
 			email: '',
-			subject: '',
 			message: '',
 		});
 		console.log(message);
@@ -80,16 +78,6 @@ function ContactPage() {
 							className="form-control"
 							aria-describedby="emailHelp"
 							value={message.email}
-							onChange={(event) => handleChange(event)}
-						/>
-					</div>
-					<div className="form-group">
-						<label htmlFor="exampleInputEmail1">Subject</label>
-						<input
-							name="subject"
-							type="text"
-							className="form-control"
-							value={message.subject}
 							onChange={(event) => handleChange(event)}
 						/>
 					</div>

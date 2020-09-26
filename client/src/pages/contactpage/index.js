@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Jumbotron from '../../components/jumbotron';
 import API from '../../utils/API';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './style.css';
 
@@ -9,6 +9,7 @@ function ContactPage() {
 	const [message, setMessage] = useState({
 		name: '',
 		email: '',
+		subject: '',
 		message: '',
 	});
 
@@ -28,6 +29,7 @@ function ContactPage() {
 		setMessage({
 			name: '',
 			email: '',
+			subject: '',
 			message: '',
 		});
 		console.log(message);
@@ -82,6 +84,16 @@ function ContactPage() {
 						/>
 					</div>
 					<div className="form-group">
+						<label htmlFor="exampleInputEmail1">Subject</label>
+						<input
+							name="subject"
+							type="text"
+							className="form-control"
+							value={message.subject}
+							onChange={(event) => handleChange(event)}
+						/>
+					</div>
+					<div className="form-group">
 						<label htmlFor="message">Message</label>
 						<textarea
 							name="message"
@@ -119,13 +131,6 @@ function ContactPage() {
 						</li>
 					</ul>
 				</div>
-				<ToastContainer
-					position="bottom-left"
-					autoClose={2000}
-					hideProgressBar={true}
-					pauseOnHover={false}
-					closeOnClick={true}
-				/>
 			</div>
 		</div>
 	);

@@ -3,7 +3,7 @@ import Map from '../../components/map';
 import Jumbotron from '../../components/jumbotron';
 import Information from '../../components/information';
 import Geocode from 'react-geocode';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import API from '../../utils/API';
 import './style.css';
 
@@ -184,13 +184,6 @@ function Home() {
 					/>
 				</div>
 			</div>
-			<ToastContainer
-				position="bottom-left"
-				autoClose={2000}
-				hideProgressBar={true}
-				pauseOnHover={false}
-				closeOnClick={true}
-			/>
 		</div>
 	);
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.css';
 import useOnclickOutside from 'react-cool-onclickoutside';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import mapStyles from './mapStyles';
 import Locate from '../locate';
@@ -138,13 +138,6 @@ function MapComponent({
 					);
 				})}
 			</GoogleMap>
-			<ToastContainer
-				position="bottom-left"
-				autoClose={2000}
-				hideProgressBar={true}
-				pauseOnHover={false}
-				closeOnClick={true}
-			/>
 		</div>
 	);
 }

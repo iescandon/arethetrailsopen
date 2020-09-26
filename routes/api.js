@@ -67,12 +67,13 @@ router.post('/api/messages', (req, res) => {
 			// res.send(data);
 			var name = req.body.message.name;
 			var email = req.body.message.email;
+			var subject = req.body.message.subject;
 			var message = req.body.message.message;
 			var content = `name: ${name} \n email: ${email} \n message: ${message} `;
 			var mail = {
-				from: name,
+				from: email,
 				to: creds.USER,
-				subject: 'Are the trails open?',
+				subject: subject,
 				text: content,
 			};
 			console.log(mail);

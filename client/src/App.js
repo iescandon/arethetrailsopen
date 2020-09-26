@@ -6,6 +6,7 @@ import HelpPage from './pages/helppage';
 import ContactPage from './pages/contactpage';
 import Footer from './components/footer';
 import PullToRefresh from 'react-simple-pull-to-refresh';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
 	const handleRefresh = () => {
@@ -21,6 +22,13 @@ function App() {
 					<Route exact path="/help" component={HelpPage} />
 					<Route exact path="/contact" component={ContactPage} />
 				</PullToRefresh>
+				<ToastContainer
+					position="bottom-left"
+					autoClose={2000}
+					hideProgressBar={true}
+					pauseOnHover={false}
+					closeOnClick={true}
+				/>
 			</div>
 			<Footer path="/" />
 		</Router>

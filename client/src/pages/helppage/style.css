@@ -20,8 +20,17 @@
 	padding-left: 15px;
 }
 
+.googlediv {
+}
+
 @media (max-width: 1199px) {
 	.header {
 		font-size: 36px;
+	}
+}
+
+@media (max-width: 991px) {
+	.googlediv {
+		margin-top: 25px;
 	}
 }

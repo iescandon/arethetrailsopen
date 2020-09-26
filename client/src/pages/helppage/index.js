@@ -217,7 +217,7 @@ function HelpPage() {
 						<Accordion.Collapse eventKey="7">
 							<Card.Body>
 								<div className="row">
-									<div className="col text-center">
+									<div className="col-lg-6 col-md-12 text-center">
 										<p>IOS</p>
 										<img
 											className="ios"
@@ -225,7 +225,7 @@ function HelpPage() {
 											alt="ios download instructions"
 										/>
 									</div>
-									<div className="col text-center">
+									<div className="col-lg-6 col-md-12 text-center googlediv">
 										<p>Google/Android</p>
 										<img
 											className="google"

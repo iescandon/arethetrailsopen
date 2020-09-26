@@ -41,11 +41,6 @@ function Home() {
 		mapRef.current = map;
 	}, []);
 
-	// const panTo = React.useCallback(({ lat, lng }) => {
-	// 	mapRef.current.panTo({ lat, lng });
-	// 	mapRef.current.setZoom(10);
-	// }, []);
-
 	const resetCenterPoint = (userLocation) => {
 		setCenterPoint({
 			lat: userLocation.lat,
@@ -106,7 +101,6 @@ function Home() {
 		const condition = event.target.getAttribute('data-condition');
 		API.updateCondition(id, condition, selectedTrail._id)
 			.then((res) => {
-				// console.log(res);
 				getTrails();
 			})
 			.catch((err) => {
@@ -134,7 +128,6 @@ function Home() {
 		}
 		API.updateStatus(selectedTrail._id, !selectedTrail.open)
 			.then((res) => {
-				// console.log(res);
 				getTrails();
 			})
 			.catch((err) => {
@@ -168,7 +161,6 @@ function Home() {
 						trails={trails}
 						selectTrail={selectTrail}
 						onMapLoad={onMapLoad}
-						// panTo={panTo}
 						userLocation={userLocation}
 						scrollToResults={scrollToResults}
 						resetCenterPoint={resetCenterPoint}

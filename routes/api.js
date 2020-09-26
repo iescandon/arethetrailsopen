@@ -48,23 +48,12 @@ router.put('/api/trails/:id', (req, res) => {
 		});
 });
 
-// router.get('/api/messages', (req, res) => {
-// 	db.NewMessage.find({})
-// 		.then((data) => {
-// 			res.json(data);
-// 		})
-// 		.catch((err) => {
-// 			res.status(400).json(err);
-// 		});
-// });
-
 router.post('/api/messages', (req, res) => {
 	db.NewMessage.create(req.body.message, (error, data) => {
 		if (error) {
 			console.log(error);
 			res.send(error);
 		} else {
-			// res.send(data);
 			var name = req.body.message.name;
 			var email = req.body.message.email;
 			var message = req.body.message.message;

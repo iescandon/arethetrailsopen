@@ -3,15 +3,11 @@ import './style.css';
 
 function Search({ search, handleInputChange, getLatAndLong }) {
 	return (
-		<form
-			// onSubmit={(event) => getLatAndLong(search, event)}
-			className="justify-content-center form-inline my-2 my-lg-0 search"
-		>
+		<form className="justify-content-center form-inline my-2 my-lg-0 search">
 			<input
 				className="form-control search-form mr-sm-2"
 				value={search}
 				type="search"
-				// placeholder="City, State or Zip Code"
 				aria-label="Search"
 				onChange={(event) => handleInputChange(event)}
 			/>

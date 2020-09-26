@@ -4,7 +4,6 @@ import useOnclickOutside from 'react-cool-onclickoutside';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import mapStyles from './mapStyles';
 import Locate from '../locate';
 import MapSearch from '../mapSearch';
 
@@ -21,7 +20,6 @@ const containerStyle = {
 };
 
 const mapOptions = {
-	// styles: mapStyles,
 	disableDefaultUI: true,
 	zoomControl: true,
 };
@@ -31,7 +29,6 @@ function MapComponent({
 	trails,
 	selectTrail,
 	onMapLoad,
-	// panTo,
 	userLocation,
 	scrollToResults,
 	resetCenterPoint,
@@ -52,13 +49,6 @@ function MapComponent({
 	if (!isLoaded) {
 		return (
 			<div className="col-12 my-auto">
-				{/* <div className="mt-5 pt-5 row justify-content-center">
-					<img
-						src={require('../../assets/loading.png')}
-						alt="wheel"
-						className="fa-spin wheel"
-					/>
-				</div> */}
 				<div className="mt-3 row justify-content-center">
 					<p>Loading...</p>
 				</div>
@@ -75,11 +65,7 @@ function MapComponent({
 				handleInputChange={handleInputChange}
 				getLatAndLong={getLatAndLong}
 			/>
-			<Locate
-				// panTo={panTo}
-				userLocation={userLocation}
-				resetCenterPoint={resetCenterPoint}
-			/>
+			<Locate userLocation={userLocation} resetCenterPoint={resetCenterPoint} />
 			<GoogleMap
 				mapContainerStyle={containerStyle}
 				center={centerPoint}

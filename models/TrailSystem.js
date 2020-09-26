@@ -17,12 +17,6 @@ const TrailSystemSchema = new Schema({
 	trails: [IndividualTrailSchema],
 });
 
-// TrailSystemSchema.methods.lastUpdatedDate = function () {
-// 	this.lastUpdated = Date.now();
-
-// 	return this.lastUpdated;
-// };
-
 const TrailSystem = mongoose.model('TrailSystem', TrailSystemSchema);
 
 module.exports = TrailSystem;

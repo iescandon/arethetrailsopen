@@ -141,6 +141,23 @@ function HelpPage() {
 						<Accordion.Toggle
 							as={Card.Header}
 							variant="link"
+							eventKey="8"
+							className="help-header"
+						>
+							Why is the data not being updated?
+						</Accordion.Toggle>
+						<Accordion.Collapse eventKey="8">
+							<Card.Body>
+								You must either refresh the page or close/reopen the app to get
+								the most updated data. Try pulling down to refresh! Works on
+								both computers and mobile devices.
+							</Card.Body>
+						</Accordion.Collapse>
+					</Card>
+					<Card>
+						<Accordion.Toggle
+							as={Card.Header}
+							variant="link"
 							eventKey="4"
 							className="help-header"
 						>
@@ -198,23 +215,25 @@ function HelpPage() {
 							How do I download the app to my mobile device?
 						</Accordion.Toggle>
 						<Accordion.Collapse eventKey="7">
-							<Card.Body>...</Card.Body>
-						</Accordion.Collapse>
-					</Card>
-					<Card>
-						<Accordion.Toggle
-							as={Card.Header}
-							variant="link"
-							eventKey="8"
-							className="help-header"
-						>
-							Why is the data not being updated?
-						</Accordion.Toggle>
-						<Accordion.Collapse eventKey="8">
 							<Card.Body>
-								You must either refresh the page or close/reopen the app to get
-								the most updated data. Try pulling down to refresh! (Works on
-								computers and mobile devices)
+								<div className="row">
+									<div className="col text-center">
+										<p>IOS</p>
+										<img
+											className="ios"
+											src={require('../../assets/ios.png')}
+											alt="ios download instructions"
+										/>
+									</div>
+									<div className="col text-center">
+										<p>Google/Android</p>
+										<img
+											className="google"
+											src={require('../../assets/google.png')}
+											alt="google/android download instructions"
+										/>
+									</div>
+								</div>
 							</Card.Body>
 						</Accordion.Collapse>
 					</Card>

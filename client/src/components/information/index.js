@@ -1,7 +1,6 @@
 import React from 'react';
 import Switch from 'react-switch';
 import Table from '../table';
-// import { ToastContainer } from 'react-toastify';
 import './style.css';
 
 function Information({
@@ -44,13 +43,6 @@ function Information({
 					updateTrailCondition={updateTrailCondition}
 				/>
 			</div>
-			{/* <ToastContainer
-				position="bottom-left"
-				autoClose={2000}
-				hideProgressBar={true}
-				pauseOnHover={false}
-				closeOnClick={true}
-			/> */}
 		</div>
 	);
 }

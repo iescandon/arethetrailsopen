@@ -15,7 +15,6 @@ input.form-control {
 
 .mapsearch input {
 	padding: 0.5rem;
-	/* font-size: 1.5rem; */
 	width: 100%;
 }
 
@@ -31,12 +30,6 @@ form.mapsearch {
 		display: inline !important;
 	}
 }
-
-/* @media (max-width: 1199px) {
-.search-form {
-  width: 250px! important;
-}
-} */
 
 @media (max-width: 414px) {
 	input.search-form {

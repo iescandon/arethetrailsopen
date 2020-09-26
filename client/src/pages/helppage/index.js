@@ -198,7 +198,7 @@ function HelpPage() {
 							How do I download the app to my mobile device?
 						</Accordion.Toggle>
 						<Accordion.Collapse eventKey="7">
-							<Card.Body></Card.Body>
+							<Card.Body>...</Card.Body>
 						</Accordion.Collapse>
 					</Card>
 					<Card>

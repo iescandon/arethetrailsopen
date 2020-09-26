@@ -4,19 +4,19 @@ input.form-control {
 }
 
 .mapsearch {
-	/* position: absolute;
-	top: 1rem;
+	position: absolute;
+	top: 0.5rem;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 100%;
 	max-width: 400px;
-	z-index: 10; */
-	position: absolute;
-	top: 1rem;
+	z-index: 10;
+	/* position: absolute;
+	top: 0.5rem;
 	left: 1rem;
 	background: none;
 	border: none;
-	z-index: 10;
+	z-index: 10; */
 }
 
 .mapsearch input {
@@ -32,5 +32,20 @@ form.mapsearch {
 @media (max-width: 991px) {
 	form.mapsearch {
 		display: block;
+	}
+	.form-control {
+		display: inline !important;
+	}
+}
+
+/* @media (max-width: 1199px) {
+.search-form {
+  width: 250px! important;
+}
+} */
+
+@media (max-width: 414px) {
+	input.search-form {
+		width: 200px !important;
 	}
 }

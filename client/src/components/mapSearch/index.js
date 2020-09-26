@@ -5,7 +5,7 @@ function MapSearch({ search, handleInputChange, getLatAndLong }) {
 	return (
 		<form
 			onSubmit={(event) => getLatAndLong(search, event)}
-			className="justify-content-center form-inline my-2 my-lg-0 mapsearch"
+			className="justify-content-center text-center form-inline my-2 my-lg-0 mapsearch"
 		>
 			<input
 				className="form-control search-form mr-sm-2"

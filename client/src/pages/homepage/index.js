@@ -3,7 +3,7 @@ import Map from '../../components/map';
 import Jumbotron from '../../components/jumbotron';
 import Information from '../../components/information';
 import Geocode from 'react-geocode';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import API from '../../utils/API';
 import './style.css';
 
@@ -116,9 +116,21 @@ function Home() {
 
 	const updateTrailStatus = () => {
 		if (selectedTrail.open === true) {
-			toast.error(`${selectedTrail.name} is Closed!`);
+			toast.error(`${selectedTrail.name} is Closed!`, {
+				position: 'bottom-left',
+				autoClose: 2000,
+				hideProgressBar: true,
+				closeOnClick: true,
+				pauseOnHover: false,
+			});
 		} else {
-			toast.success(`${selectedTrail.name} is Open!`);
+			toast.success(`${selectedTrail.name} is Open!`, {
+				position: 'bottom-left',
+				autoClose: 2000,
+				hideProgressBar: true,
+				closeOnClick: true,
+				pauseOnHover: false,
+			});
 		}
 		API.updateStatus(selectedTrail._id, !selectedTrail.open)
 			.then((res) => {
@@ -172,6 +184,13 @@ function Home() {
 					/>
 				</div>
 			</div>
+			<ToastContainer
+				position="bottom-left"
+				autoClose={2000}
+				hideProgressBar={true}
+				pauseOnHover={false}
+				closeOnClick={true}
+			/>
 		</div>
 	);
 }

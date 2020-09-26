@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const db = require('../models');
+const transporter = require('../transporter');
+const creds = require('../config');
 
 router.get('/api/trails', (req, res) => {
 	db.TrailSystem.find({})
@@ -11,7 +13,6 @@ router.get('/api/trails', (req, res) => {
 		});
 });
 
-//TODO FIX API REQUEST
 router.put('/api/trails', (req, res) => {
 	console.log(req.body);
 	db.TrailSystem.update(
@@ -27,7 +28,6 @@ router.put('/api/trails', (req, res) => {
 		});
 });
 
-//TODO FIX API REQUEST
 router.put('/api/trails/:id', (req, res) => {
 	console.log(req.params.id, req.body);
 	db.TrailSystem.updateOne(
@@ -48,23 +48,47 @@ router.put('/api/trails/:id', (req, res) => {
 		});
 });
 
-router.get('/api/messages', (req, res) => {
-	db.NewMessage.find({})
-		.then((data) => {
-			res.json(data);
-		})
-		.catch((err) => {
-			res.status(400).json(err);
-		});
-});
+// router.get('/api/messages', (req, res) => {
+// 	db.NewMessage.find({})
+// 		.then((data) => {
+// 			res.json(data);
+// 		})
+// 		.catch((err) => {
+// 			res.status(400).json(err);
+// 		});
+// });
 
 router.post('/api/messages', (req, res) => {
-	console.log(req.body);
 	db.NewMessage.create(req.body.message, (error, data) => {
 		if (error) {
+			console.log(error);
 			res.send(error);
 		} else {
-			res.send(data);
+			// res.send(data);
+			var name = req.body.message.name;
+			var email = req.body.message.email;
+			var message = req.body.message.message;
+			var content = `name: ${name} \n email: ${email} \n message: ${message} `;
+			var mail = {
+				from: name,
+				to: creds.USER,
+				subject: 'Are the trails open?',
+				text: content,
+			};
+			console.log(mail);
+			transporter.sendMail(mail, (err, data) => {
+				if (err) {
+					console.log(err);
+					res.json({
+						status: 'fail',
+					});
+				} else {
+					console.log('success');
+					res.json({
+						status: 'success',
+					});
+				}
+			});
 		}
 	});
 });

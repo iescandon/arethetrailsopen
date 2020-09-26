@@ -87,6 +87,13 @@ function MapComponent({
 				onLoad={onMapLoad}
 				options={mapOptions}
 			>
+				<Marker
+					position={{ lat: userLocation.lat, lng: userLocation.lng }}
+					options={{
+						icon: require(`../../assets/userLocation.svg`),
+					}}
+					animation={2}
+				/>
 				{trails.map((marker) => {
 					return (
 						<div key={`${marker.lat}-${marker.lng}`}>
@@ -127,25 +134,17 @@ function MapComponent({
 									</div>
 								</InfoWindow>
 							) : null}
-							<ToastContainer
-								position="bottom-left"
-								autoClose={2000}
-								hideProgressBar={true}
-								pauseOnHover={false}
-							/>
 						</div>
 					);
 				})}
-				<div className="pulse">
-					<Marker
-						position={{ lat: userLocation.lat, lng: userLocation.lng }}
-						options={{
-							icon: require(`../../assets/userLocation.svg`),
-						}}
-						animation={2}
-					/>
-				</div>
 			</GoogleMap>
+			<ToastContainer
+				position="bottom-left"
+				autoClose={2000}
+				hideProgressBar={true}
+				pauseOnHover={false}
+				closeOnClick={true}
+			/>
 		</div>
 	);
 }

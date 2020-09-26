@@ -36,12 +36,19 @@ function ContactPage() {
 		});
 	};
 
-	const notify = () => toast.dark('Message sent!');
+	const notify = () =>
+		toast.dark('Message sent!', {
+			position: 'bottom-left',
+			autoClose: 2000,
+			hideProgressBar: true,
+			closeOnClick: true,
+			pauseOnHover: false,
+		});
 
 	return (
 		<div>
 			<Jumbotron pageState={pageState} />
-			<div className="container body-container">
+			<div className="container">
 				<div className="header text-center mt-3">Contact</div>
 				<p className="text-center">
 					Questions, comments, concerns, feedback, business inquiries,
@@ -117,6 +124,7 @@ function ContactPage() {
 					autoClose={2000}
 					hideProgressBar={true}
 					pauseOnHover={false}
+					closeOnClick={true}
 				/>
 			</div>
 		</div>

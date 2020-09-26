@@ -11,12 +11,6 @@ input.form-control {
 	width: 100%;
 	max-width: 400px;
 	z-index: 10;
-	/* position: absolute;
-	top: 0.5rem;
-	left: 1rem;
-	background: none;
-	border: none;
-	z-index: 10; */
 }
 
 .mapsearch input {

@@ -12,7 +12,7 @@ function AboutPage() {
 	return (
 		<div>
 			<Jumbotron pageState={pageState} />
-			<div className="container body-container">
+			<div className="container">
 				<div className="text-center header mt-3">About</div>
 				<div className="row text-center">
 					<div className="col-lg-5 col-md-12">

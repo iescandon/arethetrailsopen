@@ -13,7 +13,7 @@ function HelpPage() {
 	return (
 		<div>
 			<Jumbotron pageState={pageState} />
-			<div className="container body-container">
+			<div className="container">
 				<div className="text-center header mt-3">Help</div>
 				<Accordion className="mt-3">
 					<Card>

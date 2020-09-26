@@ -18,25 +18,12 @@ a:hover {
 	}
 }
 
-/* @media (max-width: 1199px) {
-	.aboutheaderone,
-	.aboutheadertwo {
-		font-size: 36px;
-	}
-} */
-
 @media (max-width: 991px) {
 	.about-img {
 		width: 100%;
 		margin-top: 20px;
 		margin-bottom: 10px;
 	}
-	/* .aboutheadertwo {
-		display: none !important;
-	}
-	.aboutheaderone {
-		display: block !important;
-	} */
 }
 
 @media (max-width: 575px) {

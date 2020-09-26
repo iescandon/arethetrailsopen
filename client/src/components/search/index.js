@@ -3,7 +3,10 @@ import './style.css';
 
 function Search({ search, handleInputChange, getLatAndLong }) {
 	return (
-		<form className="justify-content-center form-inline my-2 my-lg-0">
+		<form
+			// onSubmit={(event) => getLatAndLong(search, event)}
+			className="justify-content-center form-inline my-2 my-lg-0 search"
+		>
 			<input
 				className="form-control search-form mr-sm-2"
 				value={search}

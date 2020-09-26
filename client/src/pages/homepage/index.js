@@ -160,6 +160,9 @@ function Home() {
 						userLocation={userLocation}
 						scrollToResults={scrollToResults}
 						resetCenterPoint={resetCenterPoint}
+						search={search}
+						handleInputChange={handleInputChange}
+						getLatAndLong={getLatAndLong}
 					/>
 					<Information
 						selectedTrail={selectedTrail}

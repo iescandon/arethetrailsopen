@@ -15,4 +15,7 @@
 	.search-form {
 		margin-left: 0 !important;
 	}
+	form.search {
+		display: none;
+	}
 }

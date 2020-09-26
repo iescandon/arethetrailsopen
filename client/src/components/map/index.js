@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import mapStyles from './mapStyles';
 import Locate from '../locate';
+import MapSearch from '../mapSearch';
 
 import {
 	GoogleMap,
@@ -34,6 +35,9 @@ function MapComponent({
 	userLocation,
 	scrollToResults,
 	resetCenterPoint,
+	search,
+	handleInputChange,
+	getLatAndLong,
 }) {
 	const [selectedMarker, setSelectedMarker] = useState({});
 	const ref = useOnclickOutside(() => {
@@ -66,6 +70,11 @@ function MapComponent({
 
 	return (
 		<div className="col-lg-6 col-md-12 px-0">
+			<MapSearch
+				search={search}
+				handleInputChange={handleInputChange}
+				getLatAndLong={getLatAndLong}
+			/>
 			<Locate
 				// panTo={panTo}
 				userLocation={userLocation}

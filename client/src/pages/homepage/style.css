@@ -5,7 +5,3 @@
 .btn:focus {
 	box-shadow: none !important;
 }
-
-.body-container {
-	min-height: 65vh !important;
-}

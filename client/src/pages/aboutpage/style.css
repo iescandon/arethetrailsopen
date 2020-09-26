@@ -3,31 +3,6 @@
 	margin-top: 40px;
 }
 
-/* .inez-pic {
-	width: 100%;
-}
-
-a img {
-	display: none;
-}
-a:hover img {
-	display: block;
-} */
-
-/* .aboutheaderone,
-.aboutheadertwo {
-	font-size: 54px;
-	font-family: 'Fjalla One', sans-serif;
-}
-
-.aboutheaderone {
-	display: none !important;
-} */
-
-.body-container {
-	min-height: 65vh !important;
-}
-
 .header {
 	font-size: 54px;
 	font-family: 'Fjalla One', sans-serif;

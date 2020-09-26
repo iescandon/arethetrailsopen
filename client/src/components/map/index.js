@@ -17,7 +17,7 @@ import {
 
 const containerStyle = {
 	width: '100%',
-	height: '75vh',
+	height: '80vh',
 };
 
 const mapOptions = {

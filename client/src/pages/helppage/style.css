@@ -3,10 +3,6 @@
 	font-family: 'Fjalla One', sans-serif;
 }
 
-.body-container {
-	min-height: 65vh !important;
-}
-
 .help-header {
 	cursor: pointer;
 	color: #007bff;

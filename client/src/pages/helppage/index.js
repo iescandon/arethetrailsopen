@@ -165,10 +165,9 @@ function HelpPage() {
 						</Accordion.Toggle>
 						<Accordion.Collapse eventKey="5">
 							<Card.Body>
-								The wheel icon brings you back to your current location. You
-								would typically use this if you moved the map to a different
-								location and wanted to return the map back to your current
-								location.
+								The wheel icon uses your devices geolocation tracking service to
+								get your current location. When you click the icon, it brings
+								you back to your current location on the map.
 							</Card.Body>
 						</Accordion.Collapse>
 					</Card>
@@ -209,12 +208,13 @@ function HelpPage() {
 							eventKey="8"
 							className="help-header"
 						>
-							Why is the data not being updated on my mobile app?
+							Why is the data not being updated?
 						</Accordion.Toggle>
 						<Accordion.Collapse eventKey="8">
 							<Card.Body>
-								You must either refresh the page or close the app and reopen it
-								if you have downloaded it as an app to your mobile device.
+								You must either refresh the page or close/reopen the app to get
+								the most updated data. Try pulling down to refresh! (Works on
+								computers and mobile devices)
 							</Card.Body>
 						</Accordion.Collapse>
 					</Card>

@@ -1,11 +1,15 @@
 .about-img {
 	width: 85%;
-	/* margin-top: 40px; */
+	margin-top: 40px;
 }
 
 .header {
 	font-size: 54px;
 	font-family: 'Fjalla One', sans-serif;
+}
+
+.about1 {
+	display: none;
 }
 
 a:hover {
@@ -20,9 +24,15 @@ a:hover {
 
 @media (max-width: 991px) {
 	.about-img {
-		width: 100%;
+		width: 60%;
 		margin-top: 20px;
 		margin-bottom: 10px;
+	}
+	.about1 {
+		display: block;
+	}
+	.about2 {
+		display: none;
 	}
 }
 

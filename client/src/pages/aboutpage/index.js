@@ -13,17 +13,18 @@ function AboutPage() {
 		<div>
 			<Jumbotron pageState={pageState} />
 			<div className="container">
-				<div className="text-center header mt-3">About</div>
+				<div className="text-center header about1 mt-3">About</div>
 				<div className="row text-center">
 					<div className="col-lg-5 col-md-12">
 						<img
 							src={require('../../assets/inez.jpeg')}
 							className="about-img"
-							alt="gif of fb users asking for trail status"
+							alt="girl on mountain bike"
 						/>
 					</div>
-					<div className="col-lg-7 col-md-12">
+					<div className="col-lg-7 col-md-12 my-auto">
 						<div>
+							<p className="text-center header about2 mt-3">About</p>
 							<p className="row mt-4 about-text">
 								Various mountain bike trail facebook groups are littered with
 								users asking for the trail status. Although some people know the

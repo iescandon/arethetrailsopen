@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const secure = require('ssl-express-www');
 const mongoose = require('mongoose');
@@ -33,6 +34,8 @@ app.listen(PORT, () => {
 			console.log(error);
 		} else {
 			console.log('Server is ready to take messages');
+			// console.log(process.env.USERNAME);
+			// console.log(process.env.PASSWORD);
 		}
 	});
 });

@@ -43,7 +43,7 @@ Simply click on the live link listed above and use the website as normal. Type i
 - React
 - React Google Maps API
 - Axios
-- React Switch
+- Nodemailer
 
 ## License
 

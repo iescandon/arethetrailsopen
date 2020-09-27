@@ -94,6 +94,10 @@ function MapComponent({
 									icon: require(`../../assets/${marker.open}.svg`),
 								}}
 								animation={2}
+								// label={marker.name}
+								// labelAnchor={
+								// 	new window.google.maps.Point(marker.lat, marker.lng)
+								// }
 							/>
 							{selectedMarker === marker ? (
 								<InfoWindow
@@ -128,4 +132,4 @@ function MapComponent({
 	);
 }
 
-export default React.memo(MapComponent);
+export default MapComponent;

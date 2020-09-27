@@ -30,9 +30,8 @@ function ContactPage() {
 			email: '',
 			message: '',
 		});
-		console.log(message);
 		API.sendMessage(message).then((res) => {
-			console.log(res);
+			// console.log(res);
 		});
 	};
 

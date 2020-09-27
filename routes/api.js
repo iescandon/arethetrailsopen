@@ -64,7 +64,6 @@ router.post('/api/messages', (req, res) => {
 				subject: 'Are the trails open?: Inquiry',
 				text: content,
 			};
-			console.log(mail);
 			transporter.sendMail(mail, (err, data) => {
 				if (err) {
 					console.log(err);

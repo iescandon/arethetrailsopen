@@ -41,7 +41,11 @@ function AboutPage() {
 							</p>
 							<p>
 								The developer,{' '}
-								<a href="https://www.instagram.com/inescandon/?hl=en">
+								<a
+									href="https://github.com/iescandon"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
 									Inez Escandon
 								</a>
 								, loves to ride and noticed this issue in her community. Thus

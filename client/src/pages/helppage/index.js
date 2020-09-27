@@ -217,8 +217,8 @@ function HelpPage() {
 						<Accordion.Collapse eventKey="10">
 							<Card.Body>
 								The wheel icon uses your devices geolocation tracking service to
-								get your current location. When you click the icon, it brings
-								you back to your current location on the map.
+								get your current location. When you click the icon, it renders
+								the map in your current location.
 							</Card.Body>
 						</Accordion.Collapse>
 					</Card>

@@ -97,17 +97,29 @@ function ContactPage() {
 				<div className="text-center">
 					<ul className="navbar-brand menu">
 						<li>
-							<a href="https://www.linkedin.com/in/iescandon/">
+							<a
+								href="https://www.linkedin.com/in/iescandon/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<i className="fa fa-linkedin" aria-hidden="true"></i>
 							</a>
 						</li>
 						<li>
-							<a href="https://github.com/iescandon">
+							<a
+								href="https://github.com/iescandon"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<i className="fa fa-github" aria-hidden="true"></i>
 							</a>
 						</li>
 						<li>
-							<a href="https://www.instagram.com/inescandon/?hl=en">
+							<a
+								href="https://www.instagram.com/inescandon/?hl=en"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<i className="fa fa-instagram" aria-hidden="true"></i>
 							</a>
 						</li>

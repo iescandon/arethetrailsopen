@@ -15,7 +15,7 @@ function App() {
 	return (
 		<Router>
 			<div>
-				<PullToRefresh onRefresh={handleRefresh}>
+				<PullToRefresh path="/" onRefresh={handleRefresh}>
 					<Route exact path="/" component={HomePage} />
 					<Route exact path="/home" component={HomePage} />
 					<Route exact path="/about" component={AboutPage} />

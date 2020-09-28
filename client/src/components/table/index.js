@@ -4,7 +4,15 @@ import './style.css';
 import { formatRelative } from 'date-fns';
 
 function Table({ selectedTrail, updateTrailCondition }) {
-	const trailConditions = ['Dry', 'Hero', 'Tacky', 'Muddy', 'Wet'];
+	const trailConditions = [
+		'Dry',
+		'Hero',
+		'Tacky',
+		'Muddy',
+		'Wet',
+		'CLOSED: Under Construction',
+		'Unknown',
+	];
 
 	const updateCurrentDate = (lastDate) => {
 		const lastUpdatedDate = new Date(lastDate);

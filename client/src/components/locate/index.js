@@ -19,7 +19,7 @@ function Locate({ panTo, userLocation, resetCenterPoint }) {
 				className="locate btn"
 				onClick={() => resetCenterPoint(userLocation)}
 			>
-				<img src={require('../../assets/wheel.svg')} alt="wheel" />
+				<img src={require('../../assets/locate.svg')} alt="locate button" />
 			</button>
 		</OverlayTrigger>
 	);

@@ -1,0 +1,16 @@
+.list-view {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.true {
+	color: #28a745;
+}
+
+.unknown {
+	color: black;
+}
+
+.false {
+	color: #e61d1d;
+}

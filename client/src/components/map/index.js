@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Locate from '../locate';
 import MapSearch from '../mapSearch';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 import {
 	GoogleMap,
@@ -35,6 +36,7 @@ function MapComponent({
 	search,
 	handleInputChange,
 	getLatAndLong,
+	clearSelectedTrail,
 }) {
 	const [selectedMarker, setSelectedMarker] = useState({});
 	const ref = useOnclickOutside(() => {
@@ -56,6 +58,12 @@ function MapComponent({
 		);
 	}
 
+	const renderTooltip = (props) => (
+		<Tooltip id="button-tooltip" {...props}>
+			List View
+		</Tooltip>
+	);
+
 	const notify = () => toast.dark('Address Copied!');
 
 	return (
@@ -66,6 +74,21 @@ function MapComponent({
 				getLatAndLong={getLatAndLong}
 			/>
 			<Locate userLocation={userLocation} resetCenterPoint={resetCenterPoint} />
+			<OverlayTrigger
+				placement="top"
+				delay={{ show: 250, hide: 400 }}
+				overlay={renderTooltip}
+			>
+				<button
+					className="list btn"
+					onClick={() => {
+						clearSelectedTrail();
+						// scrollToResults();
+					}}
+				>
+					<img src={require('../../assets/list.svg')} alt="list icon" />
+				</button>
+			</OverlayTrigger>
 			<GoogleMap
 				mapContainerStyle={containerStyle}
 				center={centerPoint}

@@ -1,0 +1,75 @@
+.toggle-wrapper {
+	/* margin: 0.5em auto; */
+}
+
+.toggle-wrapper label {
+	padding: 0.3em;
+	font-size: 17px;
+	display: block;
+}
+
+.toggleContainer {
+	width: 100%;
+	position: relative;
+	background: #ffffff;
+	border: 1px solid #eeeeee;
+	border-radius: 75px !important;
+}
+
+.toggleContainer .toggleOption {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	vertical-align: middle;
+	/* height: 40px; */
+	/* line-height: 1.15 !important; */
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+	color: #807b77;
+	/* font-size: 1em; */
+	font-size: 24px;
+	font-weight: 800;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.toggle {
+	border-radius: 50%;
+}
+
+.toggleContainer .toggleOption.selected {
+	color: #ffffff;
+	cursor: initial;
+}
+
+.toggleContainer .toggle {
+	position: absolute;
+	height: 100%;
+	bottom: 0;
+	left: 0;
+	transition: all 0.4s ease-in-out;
+	background: #df5d5d;
+}
+
+.optionDisabled {
+	background: #e6e6e6;
+	cursor: no-drop !important;
+}
+
+.toggle.questionmark {
+	background: rgb(175, 175, 175);
+}
+
+.toggle.xmark {
+	background: #e61d1d;
+}
+
+.toggle.checkmark {
+	background: #28a745;
+}
+
+.toggle-wrapper {
+	line-height: 1.15 !important;
+}

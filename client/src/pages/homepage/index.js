@@ -5,6 +5,8 @@ import Information from '../../components/information';
 import Geocode from 'react-geocode';
 import { toast } from 'react-toastify';
 import API from '../../utils/API';
+import PullToRefresh from 'react-simple-pull-to-refresh';
+import { formatRelative } from 'date-fns';
 import './style.css';
 
 function Home() {
@@ -108,8 +110,8 @@ function Home() {
 			});
 	};
 
-	const updateTrailStatus = () => {
-		if (selectedTrail.open === true) {
+	const updateTrailStatus = (value) => {
+		if (value === 'false') {
 			toast.error(`${selectedTrail.name} is Closed!`, {
 				position: 'bottom-left',
 				autoClose: 2000,
@@ -117,7 +119,8 @@ function Home() {
 				closeOnClick: true,
 				pauseOnHover: false,
 			});
-		} else {
+		}
+		if (value === 'true') {
 			toast.success(`${selectedTrail.name} is Open!`, {
 				position: 'bottom-left',
 				autoClose: 2000,
@@ -125,14 +128,35 @@ function Home() {
 				closeOnClick: true,
 				pauseOnHover: false,
 			});
+		} else {
+			// toast.dark(`${selectedTrail.name}'s Status is Unknown!`, {
+			// 	position: 'bottom-left',
+			// 	autoClose: 2000,
+			// 	hideProgressBar: true,
+			// 	closeOnClick: true,
+			// 	pauseOnHover: false,
+			// });
 		}
-		API.updateStatus(selectedTrail._id, !selectedTrail.open)
+		API.updateStatus(selectedTrail._id, value)
 			.then((res) => {
 				getTrails();
 			})
 			.catch((err) => {
 				console.log(err);
 			});
+	};
+
+	const updateCurrentDate = (lastDate) => {
+		const lastUpdatedDate = new Date(lastDate);
+		const currentDate = Date.now();
+		let newDate = formatRelative(lastUpdatedDate, currentDate);
+		return newDate;
+	};
+
+	const clearSelectedTrail = () => {
+		setSelectedTrail({
+			trails: [],
+		});
 	};
 
 	const results = React.createRef();
@@ -146,36 +170,45 @@ function Home() {
 		}
 	}
 
+	const handleRefresh = () => {
+		window.location.reload(false);
+	};
+
 	return (
 		<div>
-			<Jumbotron
-				search={search}
-				handleInputChange={handleInputChange}
-				getLatAndLong={getLatAndLong}
-				pageState={pageState}
-			/>
-			<div className="container-fluid">
-				<div className="row">
-					<Map
-						centerPoint={centerPoint}
-						trails={trails}
-						selectTrail={selectTrail}
-						onMapLoad={onMapLoad}
-						userLocation={userLocation}
-						scrollToResults={scrollToResults}
-						resetCenterPoint={resetCenterPoint}
-						search={search}
-						handleInputChange={handleInputChange}
-						getLatAndLong={getLatAndLong}
-					/>
-					<Information
-						selectedTrail={selectedTrail}
-						updateTrailStatus={updateTrailStatus}
-						updateTrailCondition={updateTrailCondition}
-						results={results}
-					/>
+			<PullToRefresh onRefresh={handleRefresh}>
+				<Jumbotron
+					search={search}
+					handleInputChange={handleInputChange}
+					getLatAndLong={getLatAndLong}
+					pageState={pageState}
+				/>
+				<div className="container-fluid">
+					<div className="row">
+						<Map
+							centerPoint={centerPoint}
+							trails={trails}
+							selectTrail={selectTrail}
+							onMapLoad={onMapLoad}
+							userLocation={userLocation}
+							scrollToResults={scrollToResults}
+							resetCenterPoint={resetCenterPoint}
+							search={search}
+							handleInputChange={handleInputChange}
+							getLatAndLong={getLatAndLong}
+							clearSelectedTrail={clearSelectedTrail}
+						/>
+						<Information
+							trails={trails}
+							selectedTrail={selectedTrail}
+							updateTrailStatus={updateTrailStatus}
+							updateTrailCondition={updateTrailCondition}
+							results={results}
+							updateCurrentDate={updateCurrentDate}
+						/>
+					</div>
 				</div>
-			</div>
+			</PullToRefresh>
 		</div>
 	);
 }

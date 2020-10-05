@@ -16,6 +16,15 @@
 	width: 35px;
 }
 
+.list {
+	position: absolute;
+	top: 0.75rem;
+	left: 1rem;
+	background: none;
+	border: none;
+	z-index: 10;
+}
+
 .loading {
 	width: 50vw;
 }

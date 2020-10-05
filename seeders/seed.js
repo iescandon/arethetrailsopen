@@ -11,8 +11,9 @@ let trailSystemSeed = [
 		name: 'Brazos River Park/New Territory Trails',
 		lat: 29.568817,
 		lng: -95.660302,
-		open: true,
+		open: 'true',
 		address: '18427 Southwest Fwy, Sugar Land, TX 77479',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -110,8 +111,9 @@ let trailSystemSeed = [
 		name: 'Memorial Park',
 		lat: 29.764972,
 		lng: -95.441725,
-		open: true,
+		open: 'false',
 		address: '7575 N Picnic Ln, Houston, TX 77007',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -227,8 +229,9 @@ let trailSystemSeed = [
 		name: 'Cypress Creek',
 		lat: 29.98352,
 		lng: -95.57724,
-		open: true,
+		open: 'unknown',
 		address: '14234 W Cypress Forest Dr, Houston, TX 77070',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -386,8 +389,9 @@ let trailSystemSeed = [
 		name: 'River Park Trails/River Bend',
 		lat: 29.575953,
 		lng: -95.683112,
-		open: true,
+		open: 'unknown',
 		address: '5653 W Riverpark Dr, Sugar Land, TX 77479',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -431,8 +435,9 @@ let trailSystemSeed = [
 		name: 'Jack Brooks',
 		lat: 29.362338,
 		lng: -95.041002,
-		open: true,
+		open: 'unknown',
 		address: 'Jack Brooks Road, Hitchcock, TX 77563',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -578,8 +583,9 @@ let trailSystemSeed = [
 		name: 'Anthills/Terry Hershey Park',
 		lat: 29.761634,
 		lng: -95.604678,
-		open: true,
+		open: 'unknown',
 		address: '1001 S Dairy Ashford Rd, Houston, TX 77077',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -599,8 +605,9 @@ let trailSystemSeed = [
 		name: 'Justin Brindley Memorial Park',
 		lat: 29.556111,
 		lng: -95.641165,
-		open: true,
+		open: 'unknown',
 		address: 'Sugar Land, TX 77479',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -620,8 +627,9 @@ let trailSystemSeed = [
 		name: 'Oyster Creek',
 		lat: 29.587867,
 		lng: -95.592315,
-		open: true,
+		open: 'unknown',
 		address: '15300 University Blvd, Sugar Land, TX 77479',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -719,8 +727,9 @@ let trailSystemSeed = [
 		name: 'Cullinan Park',
 		lat: 29.635845,
 		lng: -95.660365,
-		open: true,
+		open: 'unknown',
 		address: '12414 Highway 6 S, Sugar Land, TX 77498',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -824,8 +833,9 @@ let trailSystemSeed = [
 		name: 'Brazos Bend State Park',
 		lat: 29.375059,
 		lng: -95.596581,
-		open: true,
+		open: 'unknown',
 		address: '21901 Farm to Market Rd 762, Needville, TX 77461',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -959,8 +969,9 @@ let trailSystemSeed = [
 		name: 'Pasadena Trails',
 		lat: 29.637021,
 		lng: -95.130311,
-		open: true,
+		open: 'unknown',
 		address: '7102 Crenshaw Rd, Pasadena, TX 77505',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -986,8 +997,9 @@ let trailSystemSeed = [
 		name: 'Mason Creek Trails',
 		lat: 29.755734,
 		lng: -95.709844,
-		open: true,
+		open: 'unknown',
 		address: '2500 Porter Rd, Katy, TX 77493',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -1007,8 +1019,9 @@ let trailSystemSeed = [
 		name: 'Cypresswood',
 		lat: 30.011266,
 		lng: -95.506544,
-		open: true,
+		open: 'unknown',
 		address: '6727 Cypresswood Dr, Spring, TX 77379',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -1142,8 +1155,9 @@ let trailSystemSeed = [
 		name: 'Timberlane',
 		lat: 30.043888,
 		lng: -95.389244,
-		open: true,
+		open: 'unknown',
 		address: '22700 Lemon Grove Dr, Spring, TX 77373',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -1175,8 +1189,9 @@ let trailSystemSeed = [
 		name: 'Spring Creek Park',
 		lat: 30.106155,
 		lng: -95.652646,
-		open: true,
+		open: 'unknown',
 		address: '15012 Brown Rd, Tomball, TX 77377',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -1208,8 +1223,9 @@ let trailSystemSeed = [
 		name: 'George Mitchell Preserve Trails',
 		lat: 30.162452,
 		lng: -95.517182,
-		open: true,
+		open: 'unknown',
 		address: 'The Woodlands, TX 77381',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -1313,8 +1329,9 @@ let trailSystemSeed = [
 		name: 'Lake Houston Wilderness Park',
 		lat: 30.144466,
 		lng: -95.168704,
-		open: true,
+		open: 'unknown',
 		address: '25840 FM 1485, New Caney, TX 77357',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -1370,8 +1387,9 @@ let trailSystemSeed = [
 		name: 'Stephen F. Austin State Park',
 		lat: 29.821765,
 		lng: -96.112717,
-		open: true,
+		open: 'unknown',
 		address: 'Park Rd 38, San Felipe, TX 77473',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -1439,8 +1457,9 @@ let trailSystemSeed = [
 		name: 'Double Lake Recreation Area',
 		lat: 30.549113,
 		lng: -95.129706,
-		open: true,
+		open: 'unknown',
 		address: '301 FM 2025 Rd, Coldspring, TX 77331',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -1550,8 +1569,9 @@ let trailSystemSeed = [
 		name: 'Bridgeland',
 		lat: 29.96074,
 		lng: -95.7405,
-		open: true,
+		open: 'unknown',
 		address: '19019 N Bridgeland Lake Pkwy, Cypress, TX 77433',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),
@@ -1565,8 +1585,9 @@ let trailSystemSeed = [
 		name: 'Jim and JoAnn Fonteno Family Park',
 		lat: 29.80595,
 		lng: -95.19452,
-		open: true,
+		open: 'unknown',
 		address: '14350 1/2 Wallisville Rd, Houston, TX 77049',
+		lastToggled: Date.now(),
 		trails: [
 			{
 				trailId: new mongoose.Types.ObjectId().toHexString(),

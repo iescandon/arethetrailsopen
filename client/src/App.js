@@ -5,23 +5,23 @@ import AboutPage from './pages/aboutpage';
 import HelpPage from './pages/helppage';
 import ContactPage from './pages/contactpage';
 import Footer from './components/footer';
-import PullToRefresh from 'react-simple-pull-to-refresh';
+// import PullToRefresh from 'react-simple-pull-to-refresh';
 import { ToastContainer } from 'react-toastify';
 
 function App() {
-	const handleRefresh = () => {
-		window.location.reload(false);
-	};
+	// const handleRefresh = () => {
+	// 	window.location.reload(false);
+	// };
 	return (
 		<Router>
 			<div>
-				<PullToRefresh path="/" onRefresh={handleRefresh}>
-					<Route exact path="/" component={HomePage} />
-					<Route exact path="/home" component={HomePage} />
-					<Route exact path="/about" component={AboutPage} />
-					<Route exact path="/help" component={HelpPage} />
-					<Route exact path="/contact" component={ContactPage} />
-				</PullToRefresh>
+				{/* <PullToRefresh path="/" onRefresh={handleRefresh}> */}
+				<Route exact path="/" component={HomePage} />
+				<Route exact path="/home" component={HomePage} />
+				<Route exact path="/about" component={AboutPage} />
+				<Route exact path="/help" component={HelpPage} />
+				<Route exact path="/contact" component={ContactPage} />
+				{/* </PullToRefresh> */}
 				<ToastContainer
 					position="bottom-left"
 					autoClose={2000}

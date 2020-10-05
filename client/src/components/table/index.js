@@ -1,25 +1,25 @@
 import React from 'react';
 import { Dropdown } from 'react-bootstrap';
 import './style.css';
-import { formatRelative } from 'date-fns';
+// import { formatRelative } from 'date-fns';
 
-function Table({ selectedTrail, updateTrailCondition }) {
+function Table({ selectedTrail, updateTrailCondition, updateCurrentDate }) {
 	const trailConditions = [
+		'Unknown',
 		'Dry',
 		'Hero',
 		'Tacky',
 		'Muddy',
 		'Wet',
-		'CLOSED: Under Construction',
-		'Unknown',
+		'Under Construction',
 	];
 
-	const updateCurrentDate = (lastDate) => {
-		const lastUpdatedDate = new Date(lastDate);
-		const currentDate = Date.now();
-		let newDate = formatRelative(lastUpdatedDate, currentDate);
-		return newDate;
-	};
+	// const updateCurrentDate = (lastDate) => {
+	// 	const lastUpdatedDate = new Date(lastDate);
+	// 	const currentDate = Date.now();
+	// 	let newDate = formatRelative(lastUpdatedDate, currentDate);
+	// 	return newDate;
+	// };
 
 	return (
 		<table className="table table-striped mt-3">

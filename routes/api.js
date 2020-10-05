@@ -17,7 +17,7 @@ router.put('/api/trails', (req, res) => {
 	console.log(req.body);
 	db.TrailSystem.update(
 		{ _id: req.body.id },
-		{ $set: { open: req.body.status } }
+		{ $set: { open: req.body.status, lastToggled: Date.now() } }
 	)
 		.then((data) => {
 			res.json(data);

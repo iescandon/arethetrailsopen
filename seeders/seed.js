@@ -11,7 +11,7 @@ let trailSystemSeed = [
 		name: 'Brazos River Park/New Territory Trails',
 		lat: 29.568817,
 		lng: -95.660302,
-		open: 'true',
+		open: 'unknown',
 		address: '18427 Southwest Fwy, Sugar Land, TX 77479',
 		lastToggled: Date.now(),
 		trails: [
@@ -111,7 +111,7 @@ let trailSystemSeed = [
 		name: 'Memorial Park',
 		lat: 29.764972,
 		lng: -95.441725,
-		open: 'false',
+		open: 'unknown',
 		address: '7575 N Picnic Ln, Houston, TX 77007',
 		lastToggled: Date.now(),
 		trails: [

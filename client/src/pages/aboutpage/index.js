@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Jumbotron from '../../components/jumbotron';
 import './style.css';
 
 function AboutPage() {
@@ -11,7 +10,7 @@ function AboutPage() {
 
 	return (
 		<div>
-			<Jumbotron pageState={pageState} />
+			{/* <Jumbotron pageState={pageState} /> */}
 			<div className="container">
 				<div className="text-center header about1 mt-3">About</div>
 				<div className="row text-center">

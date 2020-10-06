@@ -1,0 +1,21 @@
+.rightbtns {
+	position: absolute !important;
+	top: 0.2rem;
+	right: 1rem;
+	background: none;
+	border: none;
+	z-index: 10;
+}
+
+.leftbtns {
+	position: absolute !important;
+	top: 0.2rem;
+	left: 1rem;
+	background: none;
+	border: none;
+	z-index: 10;
+}
+
+.hide {
+	display: none !important;
+}

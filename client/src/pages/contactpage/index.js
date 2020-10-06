@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Jumbotron from '../../components/jumbotron';
 import API from '../../utils/API';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -46,7 +45,7 @@ function ContactPage() {
 
 	return (
 		<div>
-			<Jumbotron pageState={pageState} />
+			{/* <Jumbotron pageState={pageState} /> */}
 			<div className="container">
 				<div className="header text-center mt-3">Contact</div>
 				<p className="text-center">

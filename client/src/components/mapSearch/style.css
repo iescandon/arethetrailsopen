@@ -1,38 +1,44 @@
 input.form-control {
 	margin-left: 0 !important;
 	margin-right: 0 !important;
+	width: 20vw !important;
 }
 
 .mapsearch {
 	position: absolute;
-	top: 0.5rem;
+	top: 0.35rem;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 100%;
-	max-width: 400px;
+	/* width: 100%;
+	max-width: 400px; */
 	z-index: 10;
 }
 
 .mapsearch input {
 	padding: 0.5rem;
-	width: 100%;
+	/* width: 100%; */
 }
 
 form.mapsearch {
-	display: none;
+	/* display: none; */
 }
 
 @media (max-width: 991px) {
 	form.mapsearch {
-		display: block;
+		top: 0.05rem;
+		/* display: block; */
+		/* padding: 0 !important; */
 	}
-	.form-control {
+	input.form-control {
 		display: inline !important;
+		/* padding: 5px !important; */
+		height: 33px !important;
+		width: 40vw !important;
 	}
 }
 
 @media (max-width: 414px) {
 	input.search-form {
-		width: 200px !important;
+		/* width: 200px !important; */
 	}
 }

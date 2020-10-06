@@ -4,9 +4,10 @@ import useOnclickOutside from 'react-cool-onclickoutside';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Locate from '../locate';
+import MapBtns from '../mapbtns';
 import MapSearch from '../mapSearch';
-import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import ListView from '../listview';
+import { OverlayTrigger, Tooltip, InputGroup, Button } from 'react-bootstrap';
 
 import {
 	GoogleMap,
@@ -17,7 +18,7 @@ import {
 
 const containerStyle = {
 	width: '100%',
-	height: '80vh',
+	height: '86.5vh',
 };
 
 const mapOptions = {
@@ -37,8 +38,13 @@ function MapComponent({
 	handleInputChange,
 	getLatAndLong,
 	clearSelectedTrail,
+	handleRefresh,
+	updateCurrentDate,
 }) {
 	const [selectedMarker, setSelectedMarker] = useState({});
+	const [viewChoice, setViewChoice] = useState('map');
+	const [mapClass, setMapClass] = useState('hide');
+	const [listClass, setListClass] = useState('');
 	const ref = useOnclickOutside(() => {
 		setSelectedMarker({});
 	});
@@ -58,11 +64,26 @@ function MapComponent({
 		);
 	}
 
-	const renderTooltip = (props) => (
-		<Tooltip id="button-tooltip" {...props}>
-			List View
-		</Tooltip>
-	);
+	const changeView = ({ target }) => {
+		const view = target.getAttribute('data-name');
+		console.log(this);
+		if (view === 'list') {
+			console.log('change to list');
+			setViewChoice('list');
+			setMapClass('');
+			setListClass('hide');
+		} else {
+			console.log('change to map');
+			setViewChoice('map');
+			setListClass('');
+			setMapClass('hide');
+		}
+	};
+	// const renderTooltip = (props) => (
+	// 	<Tooltip id="button-tooltip" {...props}>
+	// 		List View
+	// 	</Tooltip>
+	// );
 
 	const notify = () => toast.dark('Address Copied!');
 
@@ -73,84 +94,86 @@ function MapComponent({
 				handleInputChange={handleInputChange}
 				getLatAndLong={getLatAndLong}
 			/>
-			<Locate userLocation={userLocation} resetCenterPoint={resetCenterPoint} />
-			<OverlayTrigger
-				placement="top"
-				delay={{ show: 250, hide: 400 }}
-				overlay={renderTooltip}
-			>
-				<button
-					className="list btn"
-					onClick={() => {
-						clearSelectedTrail();
-						// scrollToResults();
-					}}
+			<MapBtns
+				userLocation={userLocation}
+				resetCenterPoint={resetCenterPoint}
+				handleRefresh={handleRefresh}
+				changeView={changeView}
+				mapClass={mapClass}
+				listClass={listClass}
+			/>
+			{viewChoice === 'map' ? (
+				<GoogleMap
+					mapContainerStyle={containerStyle}
+					center={centerPoint}
+					zoom={10}
+					onLoad={onMapLoad}
+					options={mapOptions}
 				>
-					<img src={require('../../assets/list.svg')} alt="list icon" />
-				</button>
-			</OverlayTrigger>
-			<GoogleMap
-				mapContainerStyle={containerStyle}
-				center={centerPoint}
-				zoom={10}
-				onLoad={onMapLoad}
-				options={mapOptions}
-			>
-				<Marker
-					position={{ lat: userLocation.lat, lng: userLocation.lng }}
-					options={{
-						icon: require(`../../assets/userLocation.svg`),
-					}}
-					animation={2}
-				/>
-				{trails.map((marker) => {
-					return (
-						<div key={`${marker.lat}-${marker.lng}`}>
-							<Marker
-								key={`${marker.lat}-${marker.lng}`}
-								position={{ lat: marker.lat, lng: marker.lng }}
-								onClick={() => {
-									setSelectedMarker(marker);
-									selectTrail(marker);
-								}}
-								options={{
-									icon: require(`../../assets/${marker.open}.svg`),
-								}}
-								animation={2}
-								// label={marker.name}
-								// labelAnchor={
-								// 	new window.google.maps.Point(marker.lat, marker.lng)
-								// }
-							/>
-							{selectedMarker === marker ? (
-								<InfoWindow
+					<Marker
+						position={{ lat: userLocation.lat, lng: userLocation.lng }}
+						options={{
+							icon: require(`../../assets/userLocation.svg`),
+						}}
+						animation={2}
+					/>
+					{trails.map((marker) => {
+						return (
+							<div key={`${marker.lat}-${marker.lng}`}>
+								<Marker
+									key={`${marker.lat}-${marker.lng}`}
 									position={{ lat: marker.lat, lng: marker.lng }}
-									onCloseClick={() => {
-										setSelectedMarker({});
+									onClick={() => {
+										setSelectedMarker(marker);
+										selectTrail(marker);
 									}}
-								>
-									<div ref={ref} className="text-center">
-										<h6 className="text-center">{marker.name}</h6>
-										<CopyToClipboard text={marker.address}>
-											<p className="mb-2 address" onClick={notify}>
-												{marker.address}
+									options={{
+										icon: require(`../../assets/${marker.open}.svg`),
+									}}
+									animation={2}
+									// label={marker.name}
+									// labelAnchor={
+									// 	new window.google.maps.Point(marker.lat, marker.lng)
+									// }
+								/>
+								{selectedMarker === marker ? (
+									<InfoWindow
+										position={{ lat: marker.lat, lng: marker.lng }}
+										onCloseClick={() => {
+											setSelectedMarker({});
+										}}
+									>
+										<div ref={ref} className="text-center">
+											<h6 className="text-center">{marker.name}</h6>
+											<CopyToClipboard text={marker.address}>
+												<p className="mb-2 address" onClick={notify}>
+													{marker.address}
+												</p>
+											</CopyToClipboard>
+											<p
+												className="viewTrailsLink mb-0"
+												onClick={() => {
+													// scrollToResults();
+													// selectTrail(marker);
+												}}
+											>
+												View Trail Info
 											</p>
-										</CopyToClipboard>
-										<p
-											className="viewTrailsLink mb-0"
-											onClick={() => {
-												scrollToResults();
-											}}
-										>
-											View Trails
-										</p>
-									</div>
-								</InfoWindow>
-							) : null}
-						</div>
-					);
-				})}
-			</GoogleMap>
+										</div>
+									</InfoWindow>
+								) : null}
+							</div>
+						);
+					})}
+				</GoogleMap>
+			) : (
+				<ListView
+					trails={trails}
+					updateCurrentDate={updateCurrentDate}
+					viewChoice={viewChoice}
+					selectTrail={selectTrail}
+				/>
+			)}
 		</div>
 	);
 }

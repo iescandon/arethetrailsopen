@@ -5,6 +5,7 @@ import AboutPage from './pages/aboutpage';
 import HelpPage from './pages/helppage';
 import ContactPage from './pages/contactpage';
 import Footer from './components/footer';
+import Navbar from './components/navbar';
 // import PullToRefresh from 'react-simple-pull-to-refresh';
 import { ToastContainer } from 'react-toastify';
 
@@ -14,6 +15,7 @@ function App() {
 	// };
 	return (
 		<Router>
+			<Navbar path="/" />
 			<div>
 				{/* <PullToRefresh path="/" onRefresh={handleRefresh}> */}
 				<Route exact path="/" component={HomePage} />

@@ -1,16 +1,16 @@
 import React from 'react';
+import Table from 'react-bootstrap/Table';
 import './style.css';
 
-function ListView({ trails, updateCurrentDate }) {
+function ListView({ trails, updateCurrentDate, selectTrail }) {
 	return (
-		<table className="table table-striped mt-3 list-view">
-			<thead>
-				<tr>
-					<th scope="col">Trail System</th>
-					<th scope="col">Status</th>
-					<th scope="col">Last Updated</th>
-				</tr>
-			</thead>
+		<Table
+			striped
+			// bordered
+			hover
+			// variant="dark"
+			className="table mt-5 list-view"
+		>
 			<tbody>
 				{trails.map((trail) => {
 					let status = '';
@@ -25,15 +25,36 @@ function ListView({ trails, updateCurrentDate }) {
 					}
 					return (
 						<tr key={trail.trailId}>
-							<td>{trail.name}</td>
-							<td className={trail.open}>{status}</td>
-							{/* <td>{trail.lastToggled}</td> */}
-							<td>{updateCurrentDate(trail.lastToggled)}</td>
+							<td className="trailRow" onClick={() => selectTrail(trail)}>
+								<div className="row">
+									<div className="col-10">
+										<div className="row pl-4" id="listrow">
+											<div>
+												<span className={`trailStatus ${trail.open}`}>
+													{status}
+												</span>
+												<span className="pl-3 trailUpdated">
+													{updateCurrentDate(trail.lastToggled)}
+												</span>
+											</div>
+										</div>
+										<div className="row pl-4 trailName" id="listrow">
+											{trail.name}
+										</div>
+										<div className="row pl-4 trailDistance" id="listrow">
+											1.1 mi away
+										</div>
+									</div>
+									<div className="col-2 my-auto">
+										<i className="fa fa-angle-right" aria-hidden="true"></i>
+									</div>
+								</div>
+							</td>
 						</tr>
 					);
 				})}
 			</tbody>
-		</table>
+		</Table>
 	);
 }
 

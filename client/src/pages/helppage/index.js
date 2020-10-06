@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Jumbotron from '../../components/jumbotron';
 import './style.css';
 import { Card, Accordion } from 'react-bootstrap';
 import Google from '../../assets/google.png';
@@ -15,7 +14,7 @@ function HelpPage() {
 
 	return (
 		<div>
-			<Jumbotron pageState={pageState} />
+			{/* <Jumbotron pageState={pageState} /> */}
 			<div className="container">
 				<div className="text-center header mt-3">Help</div>
 				<Accordion className="mt-3">

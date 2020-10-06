@@ -9,7 +9,8 @@
 }
 
 .toggleContainer {
-	width: 100%;
+	/* width: 100%; */
+	width: 85px;
 	position: relative;
 	background: #ffffff;
 	border: 1px solid #eeeeee;
@@ -34,6 +35,10 @@
 		'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
 		'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+/* .togglesize {
+	font-size: 24px;
+} */
 
 .toggle {
 	border-radius: 50%;
@@ -71,5 +76,9 @@
 }
 
 .toggle-wrapper {
+	/* line-height: 1 !important; */
 	line-height: 1.15 !important;
+	/* width: 100% !important; */
+	align-items: center !important;
+	align-content: center !important;
 }

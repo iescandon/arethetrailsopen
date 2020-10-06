@@ -1,0 +1,31 @@
+.Dry,
+.Hero {
+	/* background-color: #28a745 !important;
+	color: white !important; */
+	color: #28a745 !important;
+	width: 90px;
+}
+
+.Tacky {
+	/* background-color: rgb(255, 187, 0) !important;
+	color: white !important; */
+	color: rgb(255, 187, 0) !important;
+	width: 90px;
+}
+
+.Muddy,
+.Wet {
+	/* background-color: #e61d1d !important;
+	color: white !important; */
+	color: #e61d1d !important;
+	width: 90px;
+}
+
+.Unknown {
+	width: 90px;
+}
+
+#dropdown-basic {
+	padding-top: 1px;
+	padding-bottom: 1px;
+}

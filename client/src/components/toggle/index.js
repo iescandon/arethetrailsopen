@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
 import MultiToggle from 'react-multi-toggle';
-import { roundToNearestMinutes } from 'date-fns/fp';
 
 // const green = { GreenCheck };
 
@@ -31,25 +30,12 @@ function Toggle({ selectedTrail, updateTrailStatus }) {
 		updateTrailStatus(value);
 	};
 
-	// const setSelected = () => {
-	// 	// console.log('no selected trails');
-	// 	if (selectedTrail.open === true || selectedTrail.open === false) {
-	// 		// console.log('selected trails');
-	// 		setSelectedState(selectedTrail.open);
-	// 	}
-	// };
-
-	// useEffect(() => {
-	// 	// console.log('hello');
-	// 	setSelected();
-	// }, []);
-
 	return (
 		<MultiToggle
 			options={groupOptions}
 			selectedOption={selectedTrail.open}
 			onSelectOption={onToggle}
-			// label="Select Group Size"
+			className="togglesize"
 		/>
 	);
 }

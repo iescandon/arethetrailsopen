@@ -1,17 +1,22 @@
 import React from 'react';
 import { Dropdown } from 'react-bootstrap';
 import './style.css';
+import Table from 'react-bootstrap/Table';
 // import { formatRelative } from 'date-fns';
 
-function Table({ selectedTrail, updateTrailCondition, updateCurrentDate }) {
+function TrailsTable({
+	selectedTrail,
+	updateTrailCondition,
+	updateCurrentDate,
+}) {
 	const trailConditions = [
 		'Unknown',
-		'Dry',
-		'Hero',
-		'Tacky',
-		'Muddy',
-		'Wet',
-		'Under Construction',
+		'✓ Dry',
+		'✓ Hero',
+		'- Tacky',
+		'✗ Muddy',
+		'✗ Wet',
+		'✗ Under Construction',
 	];
 
 	// const updateCurrentDate = (lastDate) => {
@@ -22,7 +27,7 @@ function Table({ selectedTrail, updateTrailCondition, updateCurrentDate }) {
 	// };
 
 	return (
-		<table className="table table-striped mt-3">
+		<Table className="table table-striped mt-3">
 			<thead>
 				<tr>
 					<th scope="col">Trail</th>
@@ -41,10 +46,12 @@ function Table({ selectedTrail, updateTrailCondition, updateCurrentDate }) {
 										variant=""
 										id="dropdown-basic"
 										className={trail.condition}
+										// className="btn-outline-secondary"
 									>
 										{trail.condition}
 									</Dropdown.Toggle>
 									<Dropdown.Menu>
+										{/* <Dropdown.Header>Update the status:</Dropdown.Header> */}
 										{trailConditions.map((condition) => {
 											return (
 												<Dropdown.Item
@@ -66,8 +73,8 @@ function Table({ selectedTrail, updateTrailCondition, updateCurrentDate }) {
 					);
 				})}
 			</tbody>
-		</table>
+		</Table>
 	);
 }
 
-export default Table;
+export default TrailsTable;

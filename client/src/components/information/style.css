@@ -1,11 +1,42 @@
 .selectedTrail {
-	font-size: 36px;
-	font-family: 'Fjalla One', sans-serif;
+	font-size: 28px;
+	font-weight: 800;
 }
 
 .message {
-	font-size: 48px;
+	font-size: 64px !important;
 	font-family: 'Fjalla One', sans-serif;
+}
+
+.trailCard {
+	border-radius: 0 !important;
+}
+
+.trailImg {
+	height: 25vh !important;
+	object-fit: cover;
+	width: 100%;
+	background-position: center;
+}
+
+.card-title {
+	font-size: 24px !important;
+	font-weight: 800 !important;
+	position: absolute !important;
+}
+
+.circle-icon {
+	color: white !important;
+	font-size: 24px;
+}
+
+.circle-icon:hover {
+	color: #d3d3d3 !important;
+	cursor: pointer;
+}
+
+.weatherimg {
+	width: 85%;
 }
 
 @media (max-width: 1199px) {
@@ -13,6 +44,6 @@
 		font-size: 28px;
 	}
 	.message {
-		font-size: 36px;
+		font-size: 56px !important;
 	}
 }

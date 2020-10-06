@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Map from '../../components/map';
-import Jumbotron from '../../components/jumbotron';
 import Information from '../../components/information';
 import Geocode from 'react-geocode';
 import { toast } from 'react-toastify';
 import API from '../../utils/API';
 import PullToRefresh from 'react-simple-pull-to-refresh';
+import Navbar from '../../components/navbar';
 import { formatRelative } from 'date-fns';
 import './style.css';
 
@@ -176,13 +176,14 @@ function Home() {
 
 	return (
 		<div>
-			<PullToRefresh onRefresh={handleRefresh}>
-				<Jumbotron
+			<div>
+				{/* <PullToRefresh onRefresh={handleRefresh}> */}
+				{/* <Jumbotron
 					search={search}
 					handleInputChange={handleInputChange}
 					getLatAndLong={getLatAndLong}
 					pageState={pageState}
-				/>
+				/> */}
 				<div className="container-fluid">
 					<div className="row">
 						<Map
@@ -196,7 +197,9 @@ function Home() {
 							search={search}
 							handleInputChange={handleInputChange}
 							getLatAndLong={getLatAndLong}
-							clearSelectedTrail={clearSelectedTrail}
+							// clearSelectedTrail={clearSelectedTrail}
+							handleRefresh={handleRefresh}
+							updateCurrentDate={updateCurrentDate}
 						/>
 						<Information
 							trails={trails}
@@ -205,10 +208,13 @@ function Home() {
 							updateTrailCondition={updateTrailCondition}
 							results={results}
 							updateCurrentDate={updateCurrentDate}
+							clearSelectedTrail={clearSelectedTrail}
 						/>
 					</div>
 				</div>
-			</PullToRefresh>
+				{/* </PullToRefresh> */}
+			</div>
+			<div></div>
 		</div>
 	);
 }

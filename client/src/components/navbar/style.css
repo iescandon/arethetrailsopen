@@ -1,0 +1,66 @@
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	background-color: black;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 18px;
+	color: white;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenav a:hover {
+	color: rgb(30, 105, 190);
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+	text-decoration: none;
+}
+
+.hamburger-icon {
+	padding-left: 24px;
+	font-size: 30px;
+	cursor: pointer;
+	/* color: white; */
+}
+
+.navbar {
+	background-color: #101010;
+	height: 8vh !important;
+}
+
+.navbarTitle {
+	display: none;
+	color: white !important;
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 36px !important;
+	text-decoration: none !important;
+	top: 0;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 10px;
+}
+
+.navbar-brand {
+	/* height: 10px !important; */
+	/* top: 0; */
+	/* margin-top: 10px; */
+}

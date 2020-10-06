@@ -1,6 +1,7 @@
 .list-view {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
+	/* margin-top: 4rem !important; */
 }
 
 .true {
@@ -13,4 +14,22 @@
 
 .false {
 	color: #e61d1d;
+}
+
+.trailStatus {
+	font-weight: 650;
+	font-size: 14px;
+}
+
+.trailName {
+	font-weight: 800;
+}
+
+.trailUpdated,
+.trailDistance {
+	font-size: 14px;
+}
+
+.trailRow:hover {
+	cursor: pointer;
 }

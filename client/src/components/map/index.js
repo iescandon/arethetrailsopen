@@ -32,14 +32,15 @@ function MapComponent({
 	selectTrail,
 	onMapLoad,
 	userLocation,
-	scrollToResults,
+	// scrollToResults,
 	resetCenterPoint,
 	search,
 	handleInputChange,
 	getLatAndLong,
-	clearSelectedTrail,
+	// clearSelectedTrail,
 	handleRefresh,
 	updateCurrentDate,
+	resultsClass,
 }) {
 	const [selectedMarker, setSelectedMarker] = useState({});
 	const [viewChoice, setViewChoice] = useState('map');
@@ -88,7 +89,7 @@ function MapComponent({
 	const notify = () => toast.dark('Address Copied!');
 
 	return (
-		<div className="col-lg-6 col-md-12 px-0">
+		<div className={`col-lg-6 col-md-12 px-0 ${resultsClass}`}>
 			<MapSearch
 				search={search}
 				handleInputChange={handleInputChange}
@@ -125,7 +126,7 @@ function MapComponent({
 									position={{ lat: marker.lat, lng: marker.lng }}
 									onClick={() => {
 										setSelectedMarker(marker);
-										selectTrail(marker);
+										// selectTrail(marker);
 									}}
 									options={{
 										icon: require(`../../assets/${marker.open}.svg`),
@@ -154,7 +155,7 @@ function MapComponent({
 												className="viewTrailsLink mb-0"
 												onClick={() => {
 													// scrollToResults();
-													// selectTrail(marker);
+													selectTrail(marker);
 												}}
 											>
 												View Trail Info

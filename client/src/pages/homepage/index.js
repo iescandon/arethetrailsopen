@@ -4,8 +4,6 @@ import Information from '../../components/information';
 import Geocode from 'react-geocode';
 import { toast } from 'react-toastify';
 import API from '../../utils/API';
-import PullToRefresh from 'react-simple-pull-to-refresh';
-import Navbar from '../../components/navbar';
 import { formatRelative } from 'date-fns';
 import './style.css';
 
@@ -21,6 +19,23 @@ function Home() {
 	});
 	const [userLocation, setUserLocation] = useState({});
 	const [pageState, setPageState] = useState('');
+	const [resultsClass, setResultsClass] = useState('');
+	const [selectedClass, setSelectedClass] = useState('hideWhenMobile');
+
+	//TODO FIX PROMISE ISSUE
+	const changePageView = () => {
+		if (selectedTrail.name) {
+			console.log('selected a trail');
+			console.log(selectedTrail);
+			setResultsClass('hideWhenMobile');
+			setSelectedClass('');
+		} else {
+			console.log('no trail selected');
+			console.log(selectedTrail);
+			setResultsClass('');
+			setSelectedClass('hideWhenMobile');
+		}
+	};
 
 	const getUserLocation = () => {
 		navigator.geolocation.getCurrentPosition(
@@ -72,8 +87,10 @@ function Home() {
 			});
 	};
 
-	const selectTrail = (trail) => {
-		setSelectedTrail(trail);
+	//TODO FIX PROMISE ISSUE
+	const selectTrail = async (trail) => {
+		await setSelectedTrail(trail);
+		await changePageView();
 	};
 
 	const handleInputChange = ({ target }) => {
@@ -153,10 +170,12 @@ function Home() {
 		return newDate;
 	};
 
+	//TODO FIX PROMISE ISSUE
 	const clearSelectedTrail = () => {
 		setSelectedTrail({
 			trails: [],
 		});
+		changePageView();
 	};
 
 	const results = React.createRef();
@@ -200,6 +219,8 @@ function Home() {
 							// clearSelectedTrail={clearSelectedTrail}
 							handleRefresh={handleRefresh}
 							updateCurrentDate={updateCurrentDate}
+							changePageView={changePageView}
+							resultsClass={resultsClass}
 						/>
 						<Information
 							trails={trails}
@@ -209,6 +230,7 @@ function Home() {
 							results={results}
 							updateCurrentDate={updateCurrentDate}
 							clearSelectedTrail={clearSelectedTrail}
+							selectedClass={selectedClass}
 						/>
 					</div>
 				</div>

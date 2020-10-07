@@ -11,9 +11,6 @@ function MapBtns({
 	mapClass,
 	listClass,
 }) {
-	// const [mapDisplay, setMapDisplay] = useEffect('');
-	// const [listDisplay, setListDisplay] = useEffect('');
-
 	return (
 		<div>
 			<div

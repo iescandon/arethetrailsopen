@@ -14,10 +14,11 @@ function Information({
 	updateCurrentDate,
 	results,
 	clearSelectedTrail,
+	selectedClass,
 }) {
 	if (!selectedTrail.name) {
 		return (
-			<div className="container col my-auto mt-5">
+			<div className={`container col my-auto mt-5 ${selectedClass}`}>
 				<div className="message text-center mt-3">Are the trails open?</div>
 				<div className="text-center mt-3">
 					<p>Type in your city/state or zip code in the search bar.</p>
@@ -30,7 +31,10 @@ function Information({
 	}
 
 	return (
-		<div className="col-lg-6 col-md-12 infoDiv" ref={results}>
+		<div
+			className={`col-lg-6 col-md-12 infoDiv ${selectedClass}`}
+			ref={results}
+		>
 			<div className="row px-3 mt-4 selectedTrail justify-content-center">
 				<div className="col-1">
 					<p onClick={clearSelectedTrail}>

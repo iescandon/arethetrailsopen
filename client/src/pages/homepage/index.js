@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Map from '../../components/map';
 import Information from '../../components/information';
+import Navbar from '../../components/navbar';
 import Geocode from 'react-geocode';
 import { toast } from 'react-toastify';
 import API from '../../utils/API';
@@ -18,24 +19,9 @@ function Home() {
 		lng: -95.358421,
 	});
 	const [userLocation, setUserLocation] = useState({});
-	const [pageState, setPageState] = useState('');
 	const [resultsClass, setResultsClass] = useState('');
 	const [selectedClass, setSelectedClass] = useState('hideWhenMobile');
-
-	//TODO FIX PROMISE ISSUE
-	const changePageView = () => {
-		if (selectedTrail.name) {
-			console.log('selected a trail');
-			console.log(selectedTrail);
-			setResultsClass('hideWhenMobile');
-			setSelectedClass('');
-		} else {
-			console.log('no trail selected');
-			console.log(selectedTrail);
-			setResultsClass('');
-			setSelectedClass('hideWhenMobile');
-		}
-	};
+	const [pageState, setPageState] = useState('results');
 
 	const getUserLocation = () => {
 		navigator.geolocation.getCurrentPosition(
@@ -68,8 +54,25 @@ function Home() {
 	useEffect(() => {
 		getTrails();
 		getUserLocation();
-		setPageState('home');
 	}, []);
+
+	useEffect(() => {
+		if (selectedTrail.name) {
+			console.log('selected a trail');
+			console.log(selectedTrail);
+			setResultsClass('hideWhenMobile');
+			setSelectedClass('');
+			setPageState('selection');
+			window.scrollTo(0, 0);
+		} else {
+			console.log('no trail selected');
+			console.log(selectedTrail);
+			setResultsClass('');
+			setSelectedClass('hideWhenMobile');
+			setPageState('results');
+			window.scrollTo(0, 0);
+		}
+	}, [selectedTrail]);
 
 	const getTrails = () => {
 		API.search()
@@ -87,10 +90,8 @@ function Home() {
 			});
 	};
 
-	//TODO FIX PROMISE ISSUE
-	const selectTrail = async (trail) => {
-		await setSelectedTrail(trail);
-		await changePageView();
+	const selectTrail = (trail) => {
+		setSelectedTrail(trail);
 	};
 
 	const handleInputChange = ({ target }) => {
@@ -170,24 +171,22 @@ function Home() {
 		return newDate;
 	};
 
-	//TODO FIX PROMISE ISSUE
 	const clearSelectedTrail = () => {
 		setSelectedTrail({
 			trails: [],
 		});
-		changePageView();
 	};
 
 	const results = React.createRef();
 
-	function scrollToResults(event) {
-		if (results.current) {
-			results.current.scrollIntoView({
-				behavior: 'smooth',
-				block: 'nearest',
-			});
-		}
-	}
+	// function scrollToResults(event) {
+	// 	if (results.current) {
+	// 		results.current.scrollIntoView({
+	// 			behavior: 'smooth',
+	// 			block: 'nearest',
+	// 		});
+	// 	}
+	// }
 
 	const handleRefresh = () => {
 		window.location.reload(false);
@@ -196,13 +195,7 @@ function Home() {
 	return (
 		<div>
 			<div>
-				{/* <PullToRefresh onRefresh={handleRefresh}> */}
-				{/* <Jumbotron
-					search={search}
-					handleInputChange={handleInputChange}
-					getLatAndLong={getLatAndLong}
-					pageState={pageState}
-				/> */}
+				<Navbar pageState={pageState} clearSelectedTrail={clearSelectedTrail} />
 				<div className="container-fluid">
 					<div className="row">
 						<Map
@@ -211,7 +204,7 @@ function Home() {
 							selectTrail={selectTrail}
 							onMapLoad={onMapLoad}
 							userLocation={userLocation}
-							scrollToResults={scrollToResults}
+							// scrollToResults={scrollToResults}
 							resetCenterPoint={resetCenterPoint}
 							search={search}
 							handleInputChange={handleInputChange}
@@ -219,7 +212,7 @@ function Home() {
 							// clearSelectedTrail={clearSelectedTrail}
 							handleRefresh={handleRefresh}
 							updateCurrentDate={updateCurrentDate}
-							changePageView={changePageView}
+							// changePageView={changePageView}
 							resultsClass={resultsClass}
 						/>
 						<Information
@@ -234,7 +227,6 @@ function Home() {
 						/>
 					</div>
 				</div>
-				{/* </PullToRefresh> */}
 			</div>
 			<div></div>
 		</div>

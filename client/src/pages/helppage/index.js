@@ -4,6 +4,7 @@ import { Card, Accordion } from 'react-bootstrap';
 import Google from '../../assets/google.png';
 import IOS from '../../assets/ios.png';
 import Trailforks from '../../assets/trailforks.png';
+import Navbar from '../../components/navbar';
 
 function HelpPage() {
 	const [pageState, setPageState] = useState('');
@@ -14,10 +15,11 @@ function HelpPage() {
 
 	return (
 		<div>
+			<Navbar />
 			{/* <Jumbotron pageState={pageState} /> */}
 			<div className="container">
 				<div className="text-center header mt-3">Help</div>
-				<Accordion className="mt-3">
+				<Accordion className="mt-4">
 					<Card>
 						<Accordion.Toggle
 							as={Card.Header}

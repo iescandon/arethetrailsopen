@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './style.css';
 import useOnclickOutside from 'react-cool-onclickoutside';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { toast } from 'react-toastify';
+// import { CopyToClipboard } from 'react-copy-to-clipboard';
+// import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import MapBtns from '../mapbtns';
 import MapSearch from '../mapSearch';
@@ -86,7 +86,7 @@ function MapComponent({
 	// 	</Tooltip>
 	// );
 
-	const notify = () => toast.dark('Address Copied!');
+	// const notify = () => toast.dark('Address Copied!');
 
 	return (
 		<div className={`col-lg-6 col-md-12 px-0 ${resultsClass}`}>
@@ -146,11 +146,11 @@ function MapComponent({
 									>
 										<div ref={ref} className="text-center">
 											<h6 className="text-center">{marker.name}</h6>
-											<CopyToClipboard text={marker.address}>
+											{/* <CopyToClipboard text={marker.address}>
 												<p className="mb-2 address" onClick={notify}>
 													{marker.address}
 												</p>
-											</CopyToClipboard>
+											</CopyToClipboard> */}
 											<p
 												className="viewTrailsLink mb-0"
 												onClick={() => {
@@ -173,6 +173,7 @@ function MapComponent({
 					updateCurrentDate={updateCurrentDate}
 					viewChoice={viewChoice}
 					selectTrail={selectTrail}
+					// scrollToResults={scrollToResults}
 				/>
 			)}
 		</div>

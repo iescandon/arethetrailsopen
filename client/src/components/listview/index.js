@@ -25,7 +25,13 @@ function ListView({ trails, updateCurrentDate, selectTrail }) {
 					}
 					return (
 						<tr key={trail.trailId}>
-							<td className="trailRow" onClick={() => selectTrail(trail)}>
+							<td
+								className="trailRow"
+								onClick={() => {
+									selectTrail(trail);
+									// scrollToResults();
+								}}
+							>
 								<div className="row">
 									<div className="col-10">
 										<div className="row pl-4" id="listrow">

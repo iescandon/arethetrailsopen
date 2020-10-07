@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
+import Navbar from '../../components/navbar';
 
 function AboutPage() {
 	const [pageState, setPageState] = useState('');
@@ -10,6 +11,7 @@ function AboutPage() {
 
 	return (
 		<div>
+			<Navbar pageState={pageState} />
 			{/* <Jumbotron pageState={pageState} /> */}
 			<div className="container">
 				<div className="text-center header about1 mt-3">About</div>

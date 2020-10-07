@@ -3,6 +3,7 @@ import API from '../../utils/API';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './style.css';
+import Navbar from '../../components/navbar';
 
 function ContactPage() {
 	const [message, setMessage] = useState({
@@ -51,10 +52,11 @@ function ContactPage() {
 
 	return (
 		<div>
+			<Navbar pageState={pageState} />
 			{/* <Jumbotron pageState={pageState} /> */}
 			<div className="container body-container">
 				<div className="header text-center mt-3">Contact</div>
-				<p className="text-center">
+				<p className="text-center mt-3">
 					Questions, comments, concerns, feedback, business inquiries,
 					collaborations?
 				</p>

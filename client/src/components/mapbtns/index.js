@@ -17,10 +17,10 @@ function MapBtns({
 				className="btn-group btn-group-toggle rightbtns"
 				data-toggle="buttons"
 			>
-				<Button variant="btn" className="pr-0">
+				<Button variant="btn" className="pr-0 mapbtn">
 					<img src={require('../../assets/filter.svg')} alt="filter button" />
 				</Button>
-				<Button variant="btn" className="pr-0">
+				<Button variant="btn" className="pr-0 mapbtn">
 					<img
 						src={require('../../assets/refresh.svg')}
 						alt="refresh button"
@@ -29,7 +29,7 @@ function MapBtns({
 				</Button>
 				<Button
 					variant="btn"
-					className="pr-0"
+					className="pr-0 mapbtn"
 					onClick={() => resetCenterPoint(userLocation)}
 				>
 					<img src={require('../../assets/locate.svg')} alt="locate button" />

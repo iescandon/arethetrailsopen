@@ -12,10 +12,11 @@ import { ToastContainer } from 'react-toastify';
 function App() {
 	// const handleRefresh = () => {
 	// 	window.location.reload(false);
+	// const [pageState, setPageState] = useState('results');
 	// };
 	return (
 		<Router>
-			<Navbar path="/" />
+			{/* <Navbar path="/" /> */}
 			<div>
 				{/* <PullToRefresh path="/" onRefresh={handleRefresh}> */}
 				<Route exact path="/" component={HomePage} />

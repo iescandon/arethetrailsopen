@@ -63,12 +63,13 @@ a.nav-link {
 	margin-top: 10px;
 }
 
-.navbar-brand {
-	/* height: 10px !important; */
-	/* top: 0; */
-	/* margin-top: 10px; */
+.circle-back-nav {
+	color: white !important;
+	font-size: 32px;
+	padding-top: 8px;
 }
 
-/* .attologo {
-	pl
-} */
+.circle-icon {
+	color: white !important;
+	cursor: pointer;
+}

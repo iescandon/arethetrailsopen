@@ -4,8 +4,8 @@
 }
 
 .header {
-	font-size: 54px;
-	font-family: 'Fjalla One', sans-serif;
+	font-size: 56px !important;
+	font-weight: 800;
 }
 
 .about1 {
@@ -22,7 +22,7 @@
 
 @media (max-width: 1199px) {
 	.header {
-		font-size: 36px;
+		font-size: 48px !important;
 	}
 }
 

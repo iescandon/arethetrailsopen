@@ -19,3 +19,9 @@
 .hide {
 	display: none !important;
 }
+
+@media (max-width: 414px) {
+	.mapbtn {
+		padding-left: 10px !important;
+	}
+}

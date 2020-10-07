@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import useOnclickOutside from 'react-cool-onclickoutside';
 import './style.css';
 
-function Nav() {
+function Nav({ pageState, clearSelectedTrail }) {
 	const location = useLocation();
 
 	function openNav() {
@@ -22,15 +22,24 @@ function Nav() {
 	return (
 		<Navbar variant="dark" className="sticky-top">
 			<Navbar.Brand>
-				<Link
-					to="/"
-					className={`pl-1 ${
-						location.pathname === '/' ? 'nav-link active' : 'nav-link'
-					}`}
-					onClick={() => closeNav()}
-				>
-					<img src={require('../../assets/open.svg')} />
-				</Link>
+				{pageState === 'selection' ? (
+					<Link onClick={clearSelectedTrail}>
+						<i
+							class="fa fa-arrow-circle-left circle-back-nav"
+							aria-hidden="true"
+						></i>
+					</Link>
+				) : (
+					<Link
+						to="/"
+						className={`pl-1 ${
+							location.pathname === '/' ? 'nav-link active' : 'nav-link'
+						}`}
+						onClick={() => closeNav()}
+					>
+						<img src={require('../../assets/open.svg')} />
+					</Link>
+				)}
 			</Navbar.Brand>
 			<Navbar.Text>
 				<a className="navbarTitle">Are the trails open?</a>

@@ -59,8 +59,12 @@ function Information({
 						updateTrailStatus={updateTrailStatus}
 					/>
 				</div>
-				<div className="col-4 my-auto text-center">{selectedTrail.address}</div>
-				<div className="col-4 my-auto text-center">Trailhead coordinate</div>
+				<div className="col-4 my-auto text-center address">
+					{selectedTrail.address}
+				</div>
+				<div className="col-4 my-auto text-center coordinate">
+					Trailhead coordinate
+				</div>
 			</div>
 			<div className="row px-3 mt-3 text-center">
 				<div className="col">

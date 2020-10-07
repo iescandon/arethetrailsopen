@@ -4,6 +4,7 @@
 	color: white !important; */
 	color: #28a745 !important;
 	width: 90px;
+	/* font-weight: 600 !important; */
 }
 
 .Tacky {
@@ -11,6 +12,7 @@
 	color: white !important; */
 	color: rgb(255, 187, 0) !important;
 	width: 90px;
+	/* font-weight: 600 !important; */
 }
 
 .Muddy,
@@ -19,13 +21,21 @@
 	color: white !important; */
 	color: #e61d1d !important;
 	width: 90px;
+	/* font-weight: 600 !important; */
 }
 
 .Unknown {
 	width: 90px;
+	/* font-weight: 700 !important; */
 }
 
 #dropdown-basic {
 	padding-top: 1px;
 	padding-bottom: 1px;
+}
+
+.tableTrailName,
+.tableTrailCondition,
+.tableTrailUpdated {
+	/* font-size: 14px !important; */
 }

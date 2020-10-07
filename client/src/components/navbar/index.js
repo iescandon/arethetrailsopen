@@ -24,7 +24,9 @@ function Nav() {
 			<Navbar.Brand>
 				<Link
 					to="/"
-					className={location.pathname === '/' ? 'nav-link active' : 'nav-link'}
+					className={`pl-1 ${
+						location.pathname === '/' ? 'nav-link active' : 'nav-link'
+					}`}
 					onClick={() => closeNav()}
 				>
 					<img src={require('../../assets/open.svg')} />

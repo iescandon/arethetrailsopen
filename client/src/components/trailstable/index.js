@@ -39,8 +39,8 @@ function TrailsTable({
 				{selectedTrail.trails.map((trail) => {
 					return (
 						<tr key={trail.trailId}>
-							<td>{trail.name}</td>
-							<td>
+							<td className="tableTrailName">{trail.name}</td>
+							<td className="tableTrailCondition">
 								<Dropdown>
 									<Dropdown.Toggle
 										variant=""
@@ -68,7 +68,9 @@ function TrailsTable({
 									</Dropdown.Menu>
 								</Dropdown>
 							</td>
-							<td>{updateCurrentDate(trail.lastUpdated)}</td>
+							<td className="tableTrailUpdated">
+								{updateCurrentDate(trail.lastUpdated)}
+							</td>
 						</tr>
 					);
 				})}

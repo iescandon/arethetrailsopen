@@ -4,7 +4,7 @@ import HomePage from './pages/homepage';
 import AboutPage from './pages/aboutpage';
 import HelpPage from './pages/helppage';
 import ContactPage from './pages/contactpage';
-import Footer from './components/footer';
+// import Footer from './components/footer';
 import Navbar from './components/navbar';
 // import PullToRefresh from 'react-simple-pull-to-refresh';
 import { ToastContainer } from 'react-toastify';
@@ -32,7 +32,7 @@ function App() {
 					closeOnClick={true}
 				/>
 			</div>
-			<Footer path="/" />
+			{/* <Footer path="/" /> */}
 		</Router>
 	);
 }

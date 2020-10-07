@@ -54,6 +54,10 @@ function AboutPage() {
 								in the area. Additionally, it also provides users a simple way
 								to update trail status and conditions.
 							</p>
+
+							<p className="copyright">
+								Copyright © 2020 - All rights reserved
+							</p>
 						</div>
 					</div>
 				</div>

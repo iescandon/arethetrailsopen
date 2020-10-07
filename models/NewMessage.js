@@ -5,15 +5,15 @@ const Schema = mongoose.Schema;
 const NewMessageSchema = new Schema({
 	name: {
 		type: String,
-		required: [true, 'Please type in a name'],
+		// required: [true, 'Please type in a name'],
 	},
 	email: {
 		type: String,
-		required: [true, 'Please type in an email address'],
+		// required: [true, 'Please type in an email address'],
 	},
 	message: {
 		type: String,
-		required: [true, 'Please type in a message'],
+		// required: [true, 'Please type in a message'],
 	},
 });
 

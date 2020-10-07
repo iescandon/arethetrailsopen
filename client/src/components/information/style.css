@@ -25,13 +25,13 @@
 	position: absolute !important;
 }
 
-.circle-icon {
-	color: white !important;
+.circle-back {
+	color: black !important;
 	font-size: 24px;
 }
 
-.circle-icon:hover {
-	color: #d3d3d3 !important;
+.circle-back:hover {
+	color: darkgray !important;
 	cursor: pointer;
 }
 

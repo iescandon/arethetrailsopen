@@ -30,29 +30,20 @@ function Information({
 	}
 
 	return (
-		<div className="col-lg-6 col-md-12 infoDiv px-0" ref={results}>
-			<Card className="bg-dark text-white trailCard">
-				<Card.Img
-					// src="https://via.placeholder.com/350x150.png"
-					src={require('../../assets/trailimg.jpg')}
-					alt="Card image"
-					className="trailImg"
-				/>
-				<Card.ImgOverlay>
-					<Card.Title>
-						<p onClick={clearSelectedTrail}>
-							<i
-								class="fa fa-arrow-circle-left circle-icon"
-								aria-hidden="true"
-							></i>
-						</p>
-					</Card.Title>
-				</Card.ImgOverlay>
-			</Card>
-			<div className="row px-3 mt-3 selectedTrail justify-content-center">
-				<div className="px-3 text-center">{selectedTrail.name}</div>
+		<div className="col-lg-6 col-md-12 infoDiv" ref={results}>
+			<div className="row px-3 mt-4 selectedTrail justify-content-center">
+				<div className="col-1">
+					<p onClick={clearSelectedTrail}>
+						<i
+							class="fa fa-arrow-circle-left circle-back"
+							aria-hidden="true"
+						></i>
+					</p>
+				</div>
+				<div className="col-10 px-3 text-center">{selectedTrail.name}</div>
+				<div className="col-1"></div>
 			</div>
-			<div className="row px-5 mt-3">
+			<div className="row pl-4 mt-3">
 				<div className="col-4 my-auto justify-content-center">
 					<Toggle
 						selectedTrail={selectedTrail}
@@ -66,7 +57,7 @@ function Information({
 					Trailhead coordinate
 				</div>
 			</div>
-			<div className="row px-3 mt-3 text-center">
+			<div className="row px-2 mt-3 text-center">
 				<div className="col">
 					<img
 						src={require('../../assets/weather.jpg')}
@@ -75,7 +66,7 @@ function Information({
 					/>
 				</div>
 			</div>
-			<div className="row pl-3 mt-3">
+			<div className="row mt-3">
 				<TrailsTable
 					selectedTrail={selectedTrail}
 					updateTrailCondition={updateTrailCondition}

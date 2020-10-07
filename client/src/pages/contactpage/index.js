@@ -52,7 +52,7 @@ function ContactPage() {
 	return (
 		<div>
 			{/* <Jumbotron pageState={pageState} /> */}
-			<div className="container">
+			<div className="container body-container">
 				<div className="header text-center mt-3">Contact</div>
 				<p className="text-center">
 					Questions, comments, concerns, feedback, business inquiries,

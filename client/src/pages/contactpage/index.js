@@ -29,9 +29,15 @@ function ContactPage() {
 			email: '',
 			message: '',
 		});
-		API.sendMessage(message).then((res) => {
-			// console.log(res);
-		});
+		API.sendMessage(message)
+			.then((res) => {
+				console.log(res);
+				notify();
+				// console.log(res);
+			})
+			.catch((err) => {
+				// console.log(err);
+			});
 	};
 
 	const notify = () =>
@@ -89,7 +95,7 @@ function ContactPage() {
 							onChange={(event) => handleChange(event)}
 						/>
 					</div>
-					<button type="submit" className="btn btn-success" onClick={notify}>
+					<button type="submit" className="btn btn-success">
 						Submit
 					</button>
 				</form>

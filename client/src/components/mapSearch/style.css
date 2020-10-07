@@ -1,4 +1,4 @@
-input.form-control {
+input.form-control.search-form {
 	margin-left: 0 !important;
 	margin-right: 0 !important;
 	width: 20vw !important;
@@ -29,7 +29,7 @@ form.mapsearch {
 		/* display: block; */
 		/* padding: 0 !important; */
 	}
-	input.form-control {
+	input.form-control.search-form {
 		display: inline !important;
 		/* padding: 5px !important; */
 		height: 33px !important;

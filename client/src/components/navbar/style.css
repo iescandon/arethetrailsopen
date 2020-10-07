@@ -2,27 +2,31 @@
 	height: 100%;
 	width: 0;
 	position: fixed;
-	z-index: 1;
+	z-index: 12;
 	top: 0;
 	right: 0;
-	background-color: black;
+	background-color: #101010;
 	overflow-x: hidden;
 	transition: 0.5s;
 	padding-top: 60px;
 	font-family: 'Montserrat', sans-serif;
 }
 
-.sidenav a {
+.sidenav ul {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
 	font-size: 18px;
-	color: white;
 	display: block;
 	transition: 0.3s;
 }
 
-.sidenav a:hover {
-	color: rgb(30, 105, 190);
+.sidenav li:hover {
+	color: grey;
+}
+
+a.nav-link {
+	color: white !important;
+	font-weight: 600;
 }
 
 .sidenav .closebtn {

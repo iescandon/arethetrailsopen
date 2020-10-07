@@ -8,19 +8,27 @@ function Nav() {
 	const location = useLocation();
 
 	function openNav() {
-		document.getElementById('mySidenav').style.width = '250px';
+		document.getElementById('mySidenav').style.width = '200px';
 	}
 
 	function closeNav() {
 		document.getElementById('mySidenav').style.width = '0';
 	}
 
-	const ref = useOnclickOutside(() => {});
+	const ref = useOnclickOutside(() => {
+		closeNav();
+	});
 
 	return (
 		<Navbar variant="dark" className="sticky-top">
 			<Navbar.Brand>
-				<img src={require('../../assets/open.svg')} />
+				<Link
+					to="/"
+					className={location.pathname === '/' ? 'nav-link active' : 'nav-link'}
+					onClick={() => closeNav()}
+				>
+					<img src={require('../../assets/open.svg')} />
+				</Link>
 			</Navbar.Brand>
 			<Navbar.Text>
 				<a className="navbarTitle">Are the trails open?</a>
@@ -37,8 +45,9 @@ function Nav() {
 								className={
 									location.pathname === '/' ? 'nav-link active' : 'nav-link'
 								}
+								onClick={() => closeNav()}
 							>
-								HOME
+								Home
 							</Link>
 						</li>
 						<li className="nav-item">
@@ -49,8 +58,9 @@ function Nav() {
 										? 'nav-link active'
 										: 'nav-link'
 								}
+								onClick={() => closeNav()}
 							>
-								ABOUT
+								About
 							</Link>
 						</li>
 						<li className="nav-item">
@@ -59,8 +69,9 @@ function Nav() {
 								className={
 									location.pathname === '/help' ? 'nav-link active' : 'nav-link'
 								}
+								onClick={() => closeNav()}
 							>
-								HELP
+								Help
 							</Link>
 						</li>
 						<li className="nav-item">
@@ -71,8 +82,9 @@ function Nav() {
 										? 'nav-link active'
 										: 'nav-link'
 								}
+								onClick={() => closeNav()}
 							>
-								CONTACT
+								Contact
 							</Link>
 						</li>
 					</ul>

@@ -1,10 +1,24 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Navbar from 'react-bootstrap/Navbar';
+import { Navbar, InputGroup, Button, Form, FormControl } from 'react-bootstrap';
 import useOnclickOutside from 'react-cool-onclickoutside';
 import './style.css';
+import MobileNav from '../mobileNavbar';
 
-function Nav({ pageState, clearSelectedTrail }) {
+function Nav({
+	pageState,
+	clearSelectedTrail,
+	mapClass,
+	changeView,
+	listClass,
+	filterTrails,
+	handleRefresh,
+	resetCenterPoint,
+	search,
+	getLatAndLong,
+	handleInputChange,
+	userLocation,
+}) {
 	const location = useLocation();
 
 	function openNav() {
@@ -20,7 +34,7 @@ function Nav({ pageState, clearSelectedTrail }) {
 	});
 
 	return (
-		<Navbar variant="dark" className="sticky-top">
+		<Navbar variant="dark" className="sticky-top hideWhenMobile">
 			<Navbar.Brand>
 				{pageState === 'selection' ? (
 					<Link onClick={clearSelectedTrail}>

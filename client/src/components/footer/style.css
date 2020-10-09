@@ -1,7 +1,8 @@
 .footer {
-	background-color: #f8f8f8;
-	margin-top: 5px;
+	background-color: white;
+	/* margin-top: 5px; */
 	font-size: 14px;
+	height: 8vh;
 }
 
 /* @media (max-width: 991px) {
@@ -9,3 +10,27 @@
 		font-size: 14px;
 	}
 } */
+
+.footermenu {
+	font-size: 12px;
+}
+
+.menuicons {
+	font-size: 24px;
+}
+
+a.nav-link {
+	color: rgb(161, 160, 160) !important;
+}
+
+a.nav-link.active {
+	/* background-color: green !important; */
+	color: black !important;
+	font-weight: 600;
+}
+
+#envelope {
+	padding-top: 2px;
+	padding-bottom: 4px;
+	font-size: 20px;
+}

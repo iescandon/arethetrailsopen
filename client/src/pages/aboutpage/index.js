@@ -1,20 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
 import Navbar from '../../components/navbar';
+import Footer from '../../components/footer';
+import MobileNav from '../../components/mobileNavbar';
 
 function AboutPage() {
 	const [pageState, setPageState] = useState('');
 
 	useEffect(() => {
-		setPageState('about');
+		setPageState('other');
 	}, []);
 
 	return (
 		<div>
 			<Navbar pageState={pageState} />
+			<MobileNav pageState={pageState} />
 			{/* <Jumbotron pageState={pageState} /> */}
-			<div className="container">
-				<div className="text-center header about1 mt-3">About</div>
+			<div className="container padbtm">
+				<div className="text-center header about1 mt-3 hideWhenMobile">
+					About
+				</div>
 				<div className="row text-center">
 					<div className="col-lg-5 col-md-12">
 						<img
@@ -64,6 +69,7 @@ function AboutPage() {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 }

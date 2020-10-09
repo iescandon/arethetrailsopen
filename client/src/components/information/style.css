@@ -49,8 +49,8 @@
 	}
 
 	.address {
-		padding-left: 0 !important;
-		padding-right: 0 !important;
+		/* padding-left: 0 !important;
+		padding-right: 0 !important; */
 	}
 
 	.message {
@@ -58,8 +58,13 @@
 	}
 }
 
-@media (max-width: 991px) {
+/* .closedSign {
+	width: 60%;
+	object-fit: contain;
+} */
+
+/* @media (max-width: 991px) {
 	.hideWhenMobile {
 		display: none !important;
 	}
-}
+} */

@@ -14,11 +14,12 @@ import {
 	useLoadScript,
 	Marker,
 	InfoWindow,
+	OverlayView,
 } from '@react-google-maps/api';
 
 const containerStyle = {
 	width: '100%',
-	height: '92vh',
+	height: '84vh',
 };
 
 const mapOptions = {
@@ -41,11 +42,16 @@ function MapComponent({
 	handleRefresh,
 	updateCurrentDate,
 	resultsClass,
+	filterTrails,
+	changeView,
+	mapClass,
+	listClass,
+	viewChoice,
 }) {
 	const [selectedMarker, setSelectedMarker] = useState({});
-	const [viewChoice, setViewChoice] = useState('map');
-	const [mapClass, setMapClass] = useState('hide');
-	const [listClass, setListClass] = useState('');
+	// const [viewChoice, setViewChoice] = useState('map');
+	// const [mapClass, setMapClass] = useState('hide');
+	// const [listClass, setListClass] = useState('');
 	const ref = useOnclickOutside(() => {
 		setSelectedMarker({});
 	});
@@ -65,21 +71,21 @@ function MapComponent({
 		);
 	}
 
-	const changeView = ({ target }) => {
-		const view = target.getAttribute('data-name');
-		console.log(this);
-		if (view === 'list') {
-			console.log('change to list');
-			setViewChoice('list');
-			setMapClass('');
-			setListClass('hide');
-		} else {
-			console.log('change to map');
-			setViewChoice('map');
-			setListClass('');
-			setMapClass('hide');
-		}
-	};
+	// const changeView = ({ target }) => {
+	// 	const view = target.getAttribute('data-name');
+	// 	console.log(this);
+	// 	if (view === 'list') {
+	// 		console.log('change to list');
+	// 		setViewChoice('list');
+	// 		setMapClass('');
+	// 		setListClass('hide');
+	// 	} else {
+	// 		console.log('change to map');
+	// 		setViewChoice('map');
+	// 		setListClass('');
+	// 		setMapClass('hide');
+	// 	}
+	// };
 	// const renderTooltip = (props) => (
 	// 	<Tooltip id="button-tooltip" {...props}>
 	// 		List View
@@ -87,6 +93,13 @@ function MapComponent({
 	// );
 
 	// const notify = () => toast.dark('Address Copied!');
+
+	// const getPixelPositionOffset = (offsetWidth, offsetHeight, labelAnchor) => {
+	// 	return {
+	// 		x: offsetWidth + labelAnchor.x,
+	// 		y: offsetHeight + labelAnchor.y,
+	// 	};
+	// };
 
 	return (
 		<div className={`col-lg-6 col-md-12 px-0 ${resultsClass}`}>
@@ -102,6 +115,7 @@ function MapComponent({
 				changeView={changeView}
 				mapClass={mapClass}
 				listClass={listClass}
+				filterTrails={filterTrails}
 			/>
 			{viewChoice === 'map' ? (
 				<GoogleMap
@@ -117,6 +131,7 @@ function MapComponent({
 							icon: require(`../../assets/userLocation.svg`),
 						}}
 						animation={2}
+						// labelAnchor={{ lat: userLocation.lat, lng: userLocation.lng }}
 					/>
 					{trails.map((marker) => {
 						return (
@@ -137,6 +152,36 @@ function MapComponent({
 									// 	new window.google.maps.Point(marker.lat, marker.lng)
 									// }
 								/>
+								{/* <OverlayView
+									key="mwl"
+									position={{ lat: marker.lat, lng: marker.lng }}
+									mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}
+									getPixelPositionOffset={(x, y) =>
+										getPixelPositionOffset(x, y, { x: -30, y: -15 })
+									}
+								>
+									<div
+										style={{
+											background: `#203254`,
+											padding: `7px 12px`,
+											fontSize: '11px',
+											color: `white`,
+											borderRadius: '4px',
+										}}
+									>
+										{marker.name}
+									</div>
+								</OverlayView> */}
+								{/* <InfoWindow
+									pixelOffset={'10'}
+									marker={marker}
+									visible={true}
+									position={{ lat: marker.lat, lng: marker.lng }}
+								>
+									<div>
+										<h1>{marker.name}</h1>
+									</div>
+								</InfoWindow> */}
 								{selectedMarker === marker ? (
 									<InfoWindow
 										position={{ lat: marker.lat, lng: marker.lng }}
@@ -168,13 +213,15 @@ function MapComponent({
 					})}
 				</GoogleMap>
 			) : (
-				<ListView
-					trails={trails}
-					updateCurrentDate={updateCurrentDate}
-					viewChoice={viewChoice}
-					selectTrail={selectTrail}
-					// scrollToResults={scrollToResults}
-				/>
+				<div className="padbtm">
+					<ListView
+						trails={trails}
+						updateCurrentDate={updateCurrentDate}
+						viewChoice={viewChoice}
+						selectTrail={selectTrail}
+						// scrollToResults={scrollToResults}
+					/>
+				</div>
 			)}
 		</div>
 	);

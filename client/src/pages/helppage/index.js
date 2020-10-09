@@ -5,20 +5,23 @@ import Google from '../../assets/google.png';
 import IOS from '../../assets/ios.png';
 import Trailforks from '../../assets/trailforks.png';
 import Navbar from '../../components/navbar';
+import Footer from '../../components/footer';
+import MobileNav from '../../components/mobileNavbar';
 
 function HelpPage() {
 	const [pageState, setPageState] = useState('');
 
 	useEffect(() => {
-		setPageState('help');
+		setPageState('other');
 	}, []);
 
 	return (
 		<div>
-			<Navbar />
+			<Navbar pageState={pageState} />
+			<MobileNav pageState={pageState} />
 			{/* <Jumbotron pageState={pageState} /> */}
-			<div className="container">
-				<div className="text-center header mt-3">Help</div>
+			<div className="container padbtm">
+				<div className="text-center header mt-3 hideWhenMobile">Help</div>
 				<Accordion className="mt-4">
 					<Card>
 						<Accordion.Toggle
@@ -278,6 +281,7 @@ function HelpPage() {
 					</Card>
 				</Accordion>
 			</div>
+			<Footer />
 		</div>
 	);
 }

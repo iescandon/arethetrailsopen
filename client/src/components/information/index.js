@@ -22,7 +22,7 @@ function Information({
 
 	if (!selectedTrail.name) {
 		return (
-			<div className={`container col my-auto mt-5 ${selectedClass}`}>
+			<div className={`container col my-auto mt-5 ${selectedClass} padbtm`}>
 				<div className="message text-center mt-3">Are the trails open?</div>
 				<div className="text-center mt-3">
 					<p>Type in your city/state or zip code in the search bar.</p>
@@ -36,7 +36,7 @@ function Information({
 
 	return (
 		<div
-			className={`col-lg-6 col-md-12 infoDiv ${selectedClass}`}
+			className={`col-lg-6 col-md-12 infoDiv ${selectedClass} padbtm`}
 			// ref={results}
 		>
 			<div
@@ -72,24 +72,40 @@ function Information({
 			</div>
 			<div className="row mt-3">
 				<CopyToClipboard text={selectedTrail.address}>
-					<div className="col-6 my-auto text-center address" onClick={notify}>
+					<div className="col my-auto text-center address" onClick={notify}>
 						{selectedTrail.address}
 					</div>
 				</CopyToClipboard>
 				{/* <div className="col-6 my-auto text-center address">
 					{selectedTrail.address}
 				</div> */}
-				<div className="col-6 my-auto text-center coordinate">
+				{/* <div className="col-5 my-auto text-center coordinate">
 					Trailhead coordinate
-				</div>
+				</div> */}
 			</div>
-			<div className="row mt-3">
-				<TrailsTable
+			{selectedTrail.open === 'false' ? null : (
+				// <div className="row mt-5 justify-content-center">
+				// 	<img
+				// 		src={require('../../assets/closed.png')}
+				// 		alt="closed sign"
+				// 		className="closedSign"
+				// 	/>
+				// </div>
+				<div className="row mt-3">
+					<TrailsTable
+						selectedTrail={selectedTrail}
+						updateTrailCondition={updateTrailCondition}
+						updateCurrentDate={updateCurrentDate}
+					/>
+				</div>
+				//
+			)}
+			{/* <TrailsTable
+
 					selectedTrail={selectedTrail}
 					updateTrailCondition={updateTrailCondition}
 					updateCurrentDate={updateCurrentDate}
-				/>
-			</div>
+				/> */}
 		</div>
 	);
 }

@@ -4,6 +4,8 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './style.css';
 import Navbar from '../../components/navbar';
+import Footer from '../../components/footer';
+import MobileNav from '../../components/mobileNavbar';
 
 function ContactPage() {
 	const [message, setMessage] = useState({
@@ -15,7 +17,7 @@ function ContactPage() {
 	const [pageState, setPageState] = useState('');
 
 	useEffect(() => {
-		setPageState('contact');
+		setPageState('other');
 	}, []);
 
 	const handleChange = ({ target }) => {
@@ -53,9 +55,10 @@ function ContactPage() {
 	return (
 		<div>
 			<Navbar pageState={pageState} />
+			<MobileNav pageState={pageState} />
 			{/* <Jumbotron pageState={pageState} /> */}
-			<div className="container body-container">
-				<div className="header text-center mt-3">Contact</div>
+			<div className="container padbtm">
+				<div className="header text-center mt-3 hideWhenMobile">Contact</div>
 				<p className="text-center mt-3">
 					Questions, comments, concerns, feedback, business inquiries,
 					collaborations?
@@ -104,21 +107,32 @@ function ContactPage() {
 				<div className="text-center">
 					<ul className="navbar-brand menu">
 						<li>
+							<a href="mailto:iescan4@gmail.com">
+								<i
+									className="fa fa-envelope contacticons"
+									aria-hidden="true"
+								></i>
+							</a>
+						</li>
+						{/* <li>
 							<a
 								href="https://www.linkedin.com/in/iescandon/"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<i className="fa fa-linkedin" aria-hidden="true"></i>
+								<i
+									className="fa fa-linkedin contacticons"
+									aria-hidden="true"
+								></i>
 							</a>
-						</li>
+						</li> */}
 						<li>
 							<a
 								href="https://github.com/iescandon"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<i className="fa fa-github" aria-hidden="true"></i>
+								<i className="fa fa-github contacticons" aria-hidden="true"></i>
 							</a>
 						</li>
 						<li>
@@ -127,17 +141,36 @@ function ContactPage() {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<i className="fa fa-instagram" aria-hidden="true"></i>
+								<i
+									className="fa fa-instagram contacticons"
+									aria-hidden="true"
+								></i>
 							</a>
 						</li>
 						<li>
-							<a href="mailto:iescan4@gmail.com">
-								<i className="fa fa-envelope" aria-hidden="true"></i>
+							<a
+								href="https://www.linkedin.com/in/iescandon/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<i
+									className="fa fa-linkedin contacticons"
+									aria-hidden="true"
+								></i>
 							</a>
 						</li>
+						{/* <li>
+							<a href="mailto:iescan4@gmail.com">
+								<i
+									className="fa fa-envelope contacticons"
+									aria-hidden="true"
+								></i>
+							</a>
+						</li> */}
 					</ul>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 }

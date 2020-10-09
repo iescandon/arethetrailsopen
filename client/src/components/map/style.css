@@ -44,7 +44,4 @@
 	.viewTrailsLink {
 		/* display: block; */
 	}
-	.hideWhenMobile {
-		display: none !important;
-	}
 }

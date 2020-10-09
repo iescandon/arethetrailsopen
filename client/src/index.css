@@ -18,3 +18,32 @@ code {
 .Toastify__toast--error {
 	background: #e61d1d !important;
 }
+
+.padbtm {
+	padding-bottom: 60px !important;
+}
+
+/* td {
+	background-color: rgb(245, 243, 243);
+}
+
+td:hover {
+	background-color: rgb(223, 219, 219);
+} */
+
+.showWhenMobile {
+	display: none !important;
+}
+
+@media (max-width: 991px) {
+	.hideWhenMobile {
+		display: none !important;
+	}
+	.showWhenMobile {
+		display: block !important;
+	}
+}
+
+/* .navbar {
+	position: relative !important;
+} */

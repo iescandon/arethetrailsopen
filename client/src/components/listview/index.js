@@ -9,7 +9,7 @@ function ListView({ trails, updateCurrentDate, selectTrail }) {
 			// bordered
 			hover
 			// variant="dark"
-			className="table mt-5 list-view"
+			className="table list-view"
 		>
 			<tbody>
 				{trails.map((trail) => {
@@ -33,7 +33,7 @@ function ListView({ trails, updateCurrentDate, selectTrail }) {
 								}}
 							>
 								<div className="row">
-									<div className="col-10">
+									<div className="col-11">
 										<div className="row pl-4" id="listrow">
 											<div>
 												<span className={`trailStatus ${trail.open}`}>
@@ -51,7 +51,7 @@ function ListView({ trails, updateCurrentDate, selectTrail }) {
 											1.1 mi away
 										</div>
 									</div>
-									<div className="col-2 my-auto">
+									<div className="col-1 my-auto">
 										<i className="fa fa-angle-right" aria-hidden="true"></i>
 									</div>
 								</div>

@@ -24,10 +24,10 @@
 	color: grey;
 }
 
-a.nav-link {
+/* a.nav-link {
 	color: white !important;
 	font-weight: 600;
-}
+} */
 
 .sidenav .closebtn {
 	position: absolute;
@@ -73,3 +73,18 @@ a.nav-link {
 	color: white !important;
 	cursor: pointer;
 }
+
+/* .mobileview {
+	display: none !important;
+}
+
+@media (max-width: 991px) {
+	.mobileview {
+		display: inline-flex !important;
+		width: 100vw;
+	}
+} */
+
+/* .navsearchbar {
+	width: 40vw !important;
+} */

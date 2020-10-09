@@ -2,10 +2,7 @@ ul {
 	padding-inline-start: 0 !important;
 }
 
-.fa-linkedin,
-.fa-github,
-.fa-instagram,
-.fa-envelope {
+.contacticons {
 	padding: 10px;
 	margin-left: 15px;
 	margin-right: 15px;
@@ -17,10 +14,7 @@ ul {
 	height: 40px;
 }
 
-.fa-linkedin:hover,
-.fa-github:hover,
-.fa-instagram:hover,
-.fa-envelope:hover {
+.contacticons:hover {
 	text-decoration: none;
 	color: green;
 }

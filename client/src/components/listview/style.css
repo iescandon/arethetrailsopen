@@ -1,7 +1,7 @@
 .list-view {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
-	/* margin-top: 4rem !important; */
+	margin-top: 3.2rem !important;
 }
 
 .true {
@@ -9,7 +9,7 @@
 }
 
 .unknown {
-	color: black;
+	color: rgb(161, 160, 160);
 }
 
 .false {
@@ -32,4 +32,10 @@
 
 .trailRow:hover {
 	cursor: pointer;
+}
+
+@media (max-width: 991px) {
+	/* .list-view {
+		margin-top: 0 !important;
+	} */
 }

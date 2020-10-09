@@ -3,16 +3,18 @@
 	/* background-color: #28a745 !important;
 	color: white !important; */
 	color: #28a745 !important;
-	width: 90px;
-	/* font-weight: 600 !important; */
+	/* width: 90px; */
+	font-weight: 650 !important;
+	font-size: 14px !important;
 }
 
 .Tacky {
 	/* background-color: rgb(255, 187, 0) !important;
 	color: white !important; */
 	color: rgb(255, 187, 0) !important;
-	width: 90px;
-	/* font-weight: 600 !important; */
+	/* width: 90px; */
+	font-size: 14px !important;
+	font-weight: 650 !important;
 }
 
 .Muddy,
@@ -20,13 +22,20 @@
 	/* background-color: #e61d1d !important;
 	color: white !important; */
 	color: #e61d1d !important;
-	width: 90px;
-	/* font-weight: 600 !important; */
+	/* width: 90px; */
+	font-weight: 650 !important;
+	font-size: 14px !important;
 }
 
 .Unknown {
-	width: 90px;
-	/* font-weight: 700 !important; */
+	color: rgb(161, 160, 160) !important;
+	/* width: 90px; */
+	font-weight: 650 !important;
+	font-size: 14px !important;
+}
+
+.tablerow {
+	padding-left: 40px !important;
 }
 
 #dropdown-basic {
@@ -34,8 +43,22 @@
 	padding-bottom: 1px;
 }
 
-.tableTrailName,
-.tableTrailCondition,
-.tableTrailUpdated {
-	/* font-size: 14px !important; */
+.trailUpdated,
+.comments {
+	font-size: 14px !important;
 }
+
+.commentIcon {
+	font-size: 20px;
+}
+
+.commentIcon:hover {
+	cursor: pointer;
+}
+/* .tableTrailReport:hover {
+	cursor: pointer;
+} */
+
+/* #dropdown-basic.condition {
+	font-weight: 600 !important;
+} */

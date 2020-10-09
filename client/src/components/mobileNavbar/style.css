@@ -1,0 +1,15 @@
+.navsearchbar {
+	width: 35vw !important;
+	height: 80% !important;
+}
+
+.mobileview {
+	display: none !important;
+}
+
+@media (max-width: 991px) {
+	.mobileview {
+		display: inline-flex !important;
+		width: 100vw;
+	}
+}

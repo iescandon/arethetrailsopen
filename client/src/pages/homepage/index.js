@@ -7,6 +7,8 @@ import { toast } from 'react-toastify';
 import API from '../../utils/API';
 import { formatRelative } from 'date-fns';
 import './style.css';
+import Footer from '../../components/footer';
+import MobileNav from '../../components/mobileNavbar';
 
 function Home() {
 	const [trails, setTrails] = useState([]);
@@ -22,6 +24,10 @@ function Home() {
 	const [resultsClass, setResultsClass] = useState('');
 	const [selectedClass, setSelectedClass] = useState('hideWhenMobile');
 	const [pageState, setPageState] = useState('results');
+	const [filter, setFilter] = useState(false);
+	const [viewChoice, setViewChoice] = useState('map');
+	const [mapClass, setMapClass] = useState('hide');
+	const [listClass, setListClass] = useState('');
 
 	const getUserLocation = () => {
 		navigator.geolocation.getCurrentPosition(
@@ -72,7 +78,7 @@ function Home() {
 			setPageState('results');
 			window.scrollTo(0, 0);
 		}
-	}, [selectedTrail]);
+	}, [selectedTrail.name]);
 
 	const getTrails = () => {
 		API.search()
@@ -179,23 +185,72 @@ function Home() {
 
 	const results = React.createRef();
 
-	// function scrollToResults(event) {
-	// 	if (results.current) {
-	// 		results.current.scrollIntoView({
-	// 			behavior: 'smooth',
-	// 			block: 'nearest',
-	// 		});
-	// 	}
-	// }
-
 	const handleRefresh = () => {
 		window.location.reload(false);
+	};
+
+	const filterTrails = () => {
+		console.log('filter');
+		if (filter === false) {
+			const filter = trails.filter((trail) => trail.open == 'true');
+			console.log(filter);
+			setTrails(filter);
+			setFilter(true);
+		} else {
+			console.log('clear filter');
+			getTrails();
+			setFilter(false);
+		}
+	};
+
+	const changeView = ({ target }) => {
+		const view = target.getAttribute('data-name');
+		console.log(this);
+		if (view === 'list') {
+			console.log('change to list');
+			setViewChoice('list');
+			setMapClass('');
+			setListClass('hide');
+		} else {
+			console.log('change to map');
+			setViewChoice('map');
+			setListClass('');
+			setMapClass('hide');
+		}
 	};
 
 	return (
 		<div>
 			<div>
-				<Navbar pageState={pageState} clearSelectedTrail={clearSelectedTrail} />
+				<Navbar
+					pageState={pageState}
+					clearSelectedTrail={clearSelectedTrail}
+					mapClass={mapClass}
+					clearSelectedTrail={clearSelectedTrail}
+					changeView={changeView}
+					listClass={listClass}
+					filterTrails={filterTrails}
+					handleRefresh={handleRefresh}
+					resetCenterPoint={resetCenterPoint}
+					search={search}
+					getLatAndLong={getLatAndLong}
+					handleInputChange={handleInputChange}
+					userLocation={userLocation}
+				/>
+				<MobileNav
+					mapClass={mapClass}
+					changeView={changeView}
+					listClass={listClass}
+					filterTrails={filterTrails}
+					handleRefresh={handleRefresh}
+					resetCenterPoint={resetCenterPoint}
+					search={search}
+					getLatAndLong={getLatAndLong}
+					handleInputChange={handleInputChange}
+					userLocation={userLocation}
+					pageState={pageState}
+					clearSelectedTrail={clearSelectedTrail}
+				/>
 				<div className="container-fluid">
 					<div className="row">
 						<Map
@@ -214,6 +269,11 @@ function Home() {
 							updateCurrentDate={updateCurrentDate}
 							// changePageView={changePageView}
 							resultsClass={resultsClass}
+							filterTrails={filterTrails}
+							changeView={changeView}
+							mapClass={mapClass}
+							listClass={listClass}
+							viewChoice={viewChoice}
 						/>
 						<Information
 							trails={trails}
@@ -227,8 +287,8 @@ function Home() {
 						/>
 					</div>
 				</div>
+				<Footer />
 			</div>
-			<div></div>
 		</div>
 	);
 }

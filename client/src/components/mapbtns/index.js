@@ -10,14 +10,15 @@ function MapBtns({
 	changeView,
 	mapClass,
 	listClass,
+	filterTrails,
 }) {
 	return (
-		<div>
+		<div className="hideWhenMobile">
 			<div
 				className="btn-group btn-group-toggle rightbtns"
 				data-toggle="buttons"
 			>
-				<Button variant="btn" className="pr-0 mapbtn">
+				<Button variant="btn" className="pr-0 mapbtn" onClick={filterTrails}>
 					<img src={require('../../assets/filter.svg')} alt="filter button" />
 				</Button>
 				<Button variant="btn" className="pr-0 mapbtn">

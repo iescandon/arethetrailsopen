@@ -23,7 +23,7 @@ function MobileNav({
 		return (
 			<Navbar
 				variant="dark"
-				className="sticky-top mobileview d-flex justify-content-between showWhenMobile"
+				className="sticky-top mobileview justify-content-between showWhenMobile"
 			>
 				<a className="circle-back" onClick={clearSelectedTrail}>
 					<i
@@ -39,7 +39,7 @@ function MobileNav({
 		return (
 			<Navbar
 				variant="dark"
-				className="sticky-top mobileview d-flex justify-content-between showWhenMobile"
+				className="sticky-top mobileview justify-content-between showWhenMobile"
 			>
 				<Link
 					to="/"
@@ -57,12 +57,9 @@ function MobileNav({
 	}
 
 	return (
-		<Navbar
-			variant="dark"
-			className="sticky-top d-flex justify-content-between showWhenMobile"
-		>
-			<Form inline className="p-2">
-				<InputGroup>
+		<Navbar variant="dark" className="sticky-top showWhenMobile my-auto">
+			<Form inline>
+				<InputGroup className="col">
 					<Button
 						variant="btn"
 						className={`pl-0 ${mapClass}`}
@@ -86,9 +83,9 @@ function MobileNav({
 						/>
 					</Button>
 				</InputGroup>
-			</Form>
-			<Form inline className="p-2">
-				<InputGroup className="">
+				{/* </Form>
+			<Form inline> */}
+				<InputGroup className="col justify-content-end pr-0">
 					<Button variant="btn" className="mapbtn" onClick={filterTrails}>
 						<img
 							src={require('../../assets/filter-w.svg')}

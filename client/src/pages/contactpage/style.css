@@ -37,3 +37,9 @@ ul {
 		font-size: 48px !important;
 	}
 }
+
+@media (max-width: 991px) {
+	.contactText {
+		margin-top: 30px;
+	}
+}

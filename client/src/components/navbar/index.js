@@ -58,7 +58,7 @@ function Nav({
 			<Navbar.Text>
 				<a className="navbarTitle">Are the trails open?</a>
 			</Navbar.Text>
-			<div id="mySidenav" ref={ref} className="sidenav ml-auto">
+			{/* <div id="mySidenav" ref={ref} className="sidenav ml-auto">
 				<p className="closebtn" onClick={() => closeNav()}>
 					<i class="fa fa-times-circle circle-icon" aria-hidden="true"></i>
 				</p>
@@ -121,7 +121,7 @@ function Nav({
 				onClick={() => openNav()}
 			>
 				&#9776;
-			</span>
+			</span> */}
 		</Navbar>
 	);
 }

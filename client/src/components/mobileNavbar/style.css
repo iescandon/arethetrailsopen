@@ -7,6 +7,15 @@
 	display: none !important;
 }
 
+.circle-back-nav {
+	color: white !important;
+	font-size: 32px;
+}
+
+.circle-back {
+	padding-left: 5px !important;
+}
+
 @media (max-width: 991px) {
 	.mobileview {
 		display: inline-flex !important;

@@ -58,8 +58,10 @@ function ContactPage() {
 			<MobileNav pageState={pageState} />
 			{/* <Jumbotron pageState={pageState} /> */}
 			<div className="container padbtm">
-				<div className="header text-center mt-3 hideWhenMobile">Contact</div>
-				<p className="text-center mt-3">
+				<div className="header text-center mt-3 mb-3 hideWhenMobile">
+					Contact
+				</div>
+				<p className="text-center contactText">
 					Questions, comments, concerns, feedback, business inquiries,
 					collaborations?
 				</p>

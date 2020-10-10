@@ -25,9 +25,9 @@ function MobileNav({
 				variant="dark"
 				className="sticky-top mobileview d-flex justify-content-between showWhenMobile"
 			>
-				<a onClick={clearSelectedTrail}>
+				<a className="circle-back" onClick={clearSelectedTrail}>
 					<i
-						class="fa fa-arrow-circle-left circle-back-nav"
+						className="fa fa-arrow-circle-left circle-back-nav"
 						aria-hidden="true"
 					></i>
 				</a>
@@ -44,9 +44,10 @@ function MobileNav({
 				<Link
 					to="/"
 					className={location.pathname === '/' ? 'nav-link active' : 'nav-link'}
+					className="circle-back"
 				>
 					<i
-						class="fa fa-arrow-circle-left circle-back-nav"
+						className="fa fa-arrow-circle-left circle-back-nav"
 						aria-hidden="true"
 					></i>
 				</Link>
@@ -58,7 +59,7 @@ function MobileNav({
 	return (
 		<Navbar
 			variant="dark"
-			className="sticky-top mobileview d-flex justify-content-between showWhenMobile"
+			className="sticky-top d-flex justify-content-between showWhenMobile"
 		>
 			<Form inline className="p-2">
 				<InputGroup>

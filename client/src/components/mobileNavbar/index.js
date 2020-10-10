@@ -23,7 +23,7 @@ function MobileNav({
 		return (
 			<Navbar
 				variant="dark"
-				className="sticky-top mobileview justify-content-between showWhenMobile"
+				className="sticky-top justify-content-between showWhenMobile"
 			>
 				<a className="circle-back" onClick={clearSelectedTrail}>
 					<i
@@ -39,7 +39,7 @@ function MobileNav({
 		return (
 			<Navbar
 				variant="dark"
-				className="sticky-top mobileview justify-content-between showWhenMobile"
+				className="sticky-top justify-content-between showWhenMobile"
 			>
 				<Link
 					to="/"

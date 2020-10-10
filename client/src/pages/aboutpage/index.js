@@ -9,6 +9,7 @@ function AboutPage() {
 
 	useEffect(() => {
 		setPageState('other');
+		window.scrollTo(0, 0);
 	}, []);
 
 	return (

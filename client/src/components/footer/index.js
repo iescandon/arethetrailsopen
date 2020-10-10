@@ -14,7 +14,7 @@ function Footer() {
 					to="/"
 					className={location.pathname === '/' ? 'nav-link active' : 'nav-link'}
 				>
-					<i class="fa fa-home menuicons"></i>
+					<i className="fa fa-home menuicons"></i>
 					<br />
 					Home
 				</Link>

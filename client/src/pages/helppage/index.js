@@ -13,6 +13,7 @@ function HelpPage() {
 
 	useEffect(() => {
 		setPageState('other');
+		window.scrollTo(0, 0);
 	}, []);
 
 	return (
@@ -27,6 +28,22 @@ function HelpPage() {
 						<Accordion.Toggle
 							as={Card.Header}
 							variant="link"
+							eventKey="13"
+							className="help-header"
+						>
+							What is "Are the trails open?"?
+						</Accordion.Toggle>
+						<Accordion.Collapse eventKey="13">
+							<Card.Body>
+								"Are the trails open?" is a crowd sourcing app that helps easily
+								relay reports of the statuses and conditions of nearby trails.
+							</Card.Body>
+						</Accordion.Collapse>
+					</Card>
+					<Card>
+						<Accordion.Toggle
+							as={Card.Header}
+							variant="link"
 							eventKey="0"
 							className="help-header"
 						>
@@ -37,8 +54,10 @@ function HelpPage() {
 							<Card.Body>
 								"Are the trails open?" trail status and condition data relies
 								100% on the users! So if you see a trail status or condition has
-								changed and it hasn't been updated, please update it so that
-								everyone else can see it!
+								changed on facebook and it hasn't been updated, please update it
+								here so that everyone else can see it! The more people that use
+								it/the more frequently it gets used, the more accurate the data
+								will be.
 							</Card.Body>
 						</Accordion.Collapse>
 					</Card>
@@ -85,12 +104,13 @@ function HelpPage() {
 							eventKey="3"
 							className="help-header"
 						>
-							Why are some trail markers on the map red and others are green?
+							Why are some trail markers on the map red, green, and grey?
 						</Accordion.Toggle>
 						<Accordion.Collapse eventKey="3">
 							<Card.Body>
 								If a marker is red, it means the trails are closed. If the
-								marker is green, it means the trails are open.
+								marker is green, it means the trails are open. If the marker is
+								grey, that means the status of that trail is unknown.
 							</Card.Body>
 						</Accordion.Collapse>
 					</Card>
@@ -107,7 +127,9 @@ function HelpPage() {
 							<Card.Body>
 								Yes! Absolutely! If you go to Memorial Park and see that it is
 								closed, come to "Are the trails open?" and close the trail if it
-								isn't already closed.
+								isn't already closed. Please keep into consideration, we are
+								simply reporting what we see. Trail stewards and captains have
+								the ultimate say whether a trail is officially opened or not.
 							</Card.Body>
 						</Accordion.Collapse>
 					</Card>
@@ -124,7 +146,9 @@ function HelpPage() {
 							<Card.Body>
 								Use the toggle switch next to the name of the trail. If it is
 								green with a checkmark that means the trail is open. If it is
-								red and has an X that means the trail is closed.
+								red and has an X that means the trail is closed. If you are
+								unsure, place it in the middle where there is a grey question
+								mark.
 							</Card.Body>
 						</Accordion.Collapse>
 					</Card>
@@ -187,8 +211,7 @@ function HelpPage() {
 						<Accordion.Collapse eventKey="8">
 							<Card.Body>
 								You must either refresh the page or close/reopen the app to get
-								the most updated data. Try pulling down to refresh! Works on
-								both computers and mobile devices.
+								the most updated data.
 							</Card.Body>
 						</Accordion.Collapse>
 					</Card>
@@ -209,7 +232,7 @@ function HelpPage() {
 							</Card.Body>
 						</Accordion.Collapse>
 					</Card>
-					<Card>
+					{/* <Card>
 						<Accordion.Toggle
 							as={Card.Header}
 							variant="link"
@@ -225,7 +248,7 @@ function HelpPage() {
 								the map in your current location.
 							</Card.Body>
 						</Accordion.Collapse>
-					</Card>
+					</Card> */}
 					<Card>
 						<Accordion.Toggle
 							as={Card.Header}
@@ -233,11 +256,11 @@ function HelpPage() {
 							eventKey="11"
 							className="help-header"
 						>
-							Why is the wheel icon not working?
+							Why is the arrow icon (go to current location) not working?
 						</Accordion.Toggle>
 						<Accordion.Collapse eventKey="11">
 							<Card.Body>
-								The wheel icon uses your devices geolocation tracking service to
+								The arrow icon uses your devices geolocation tracking service to
 								get your current location. You must allow permissions to use
 								your location and have location services on if you're on mobile.
 							</Card.Body>

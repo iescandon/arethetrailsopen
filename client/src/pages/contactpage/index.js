@@ -18,6 +18,7 @@ function ContactPage() {
 
 	useEffect(() => {
 		setPageState('other');
+		window.scrollTo(0, 0);
 	}, []);
 
 	const handleChange = ({ target }) => {
@@ -66,7 +67,7 @@ function ContactPage() {
 					collaborations?
 				</p>
 				<form
-					className="mr-0"
+					className="mr-0 mt-5"
 					id="contact-form"
 					onSubmit={handleSubmit}
 					method="POST"
@@ -106,7 +107,7 @@ function ContactPage() {
 						Submit
 					</button>
 				</form>
-				<div className="text-center">
+				<div className="text-center mt-3">
 					<ul className="navbar-brand menu">
 						<li>
 							<a href="mailto:iescan4@gmail.com">

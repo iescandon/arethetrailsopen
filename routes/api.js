@@ -57,7 +57,8 @@ router.put('/api/trails/comments/:id', (req, res) => {
 		},
 		{
 			$set: {
-				'trails.$.comment': req.body.comment,
+				'trails.$.comment': req.body.trailComment.comment,
+				'trails.$.commenter': req.body.trailComment.commenter,
 				'trails.$.commentDate': Date.now(),
 			},
 		}

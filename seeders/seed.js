@@ -21,6 +21,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -29,6 +30,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -37,6 +39,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -45,6 +48,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -53,6 +57,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -61,6 +66,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -69,6 +75,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -77,6 +84,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -85,6 +93,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -93,6 +102,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -101,6 +111,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -109,6 +120,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -117,6 +129,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -125,6 +138,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -133,6 +147,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -151,6 +166,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -159,6 +175,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -167,6 +184,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -175,6 +193,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -183,6 +202,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -191,6 +211,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -199,6 +220,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -207,6 +229,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -215,6 +238,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -223,6 +247,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -231,6 +256,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -239,6 +265,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -247,6 +274,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -255,6 +283,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -263,6 +292,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -271,6 +301,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -279,6 +310,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -287,6 +319,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -305,6 +338,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -313,6 +347,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -321,6 +356,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -329,6 +365,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -337,6 +374,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -345,6 +383,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -353,6 +392,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -361,6 +401,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -369,6 +410,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -377,6 +419,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -385,6 +428,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -393,6 +437,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -401,6 +446,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -409,6 +455,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -417,6 +464,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -425,6 +473,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -433,6 +482,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -441,6 +491,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -449,6 +500,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -457,6 +509,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -465,6 +518,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -473,6 +527,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -481,6 +536,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -489,6 +545,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -497,6 +554,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -515,6 +573,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -523,6 +582,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -531,6 +591,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -539,6 +600,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -547,6 +609,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -555,6 +618,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -573,6 +637,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -581,6 +646,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -589,6 +655,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -597,6 +664,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -605,6 +673,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -613,6 +682,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -621,6 +691,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -629,6 +700,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -637,6 +709,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -645,6 +718,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -653,6 +727,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -661,6 +736,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -669,6 +745,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -677,6 +754,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -685,6 +763,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -693,6 +772,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -701,6 +781,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -709,6 +790,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -717,6 +799,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -725,6 +808,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -733,6 +817,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -741,6 +826,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -749,6 +835,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -767,6 +854,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -775,6 +863,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -793,6 +882,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -801,6 +891,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -819,6 +910,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -827,6 +919,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -835,6 +928,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -843,6 +937,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -851,6 +946,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -859,6 +955,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -867,6 +964,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -875,6 +973,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -883,6 +982,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -891,6 +991,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -899,6 +1000,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -907,6 +1009,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -915,6 +1018,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -923,6 +1027,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -931,6 +1036,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -949,6 +1055,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -957,6 +1064,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -965,6 +1073,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -973,6 +1082,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -981,6 +1091,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -989,6 +1100,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -997,6 +1109,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1005,6 +1118,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1013,6 +1127,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1021,6 +1136,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1029,6 +1145,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1037,6 +1154,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1045,6 +1163,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1053,6 +1172,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1061,6 +1181,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1069,6 +1190,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -1087,6 +1209,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1095,6 +1218,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1103,6 +1227,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1111,6 +1236,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1119,6 +1245,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1127,6 +1254,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1135,6 +1263,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1143,6 +1272,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1151,6 +1281,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1159,6 +1290,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1167,6 +1299,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1175,6 +1308,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1183,6 +1317,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1191,6 +1326,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1199,6 +1335,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1207,6 +1344,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1215,6 +1353,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1223,6 +1362,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1231,6 +1371,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1239,6 +1380,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1247,6 +1389,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -1265,6 +1408,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1273,6 +1417,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1281,6 +1426,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -1299,6 +1445,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1307,6 +1454,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -1325,6 +1473,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1333,6 +1482,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1341,6 +1491,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1349,6 +1500,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1357,6 +1509,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1365,6 +1518,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1373,6 +1527,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1381,6 +1536,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1389,6 +1545,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1397,6 +1554,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1405,6 +1563,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1413,6 +1572,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1421,6 +1581,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1429,6 +1590,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1437,6 +1599,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1445,6 +1608,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1453,6 +1617,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1461,6 +1626,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1469,6 +1635,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1477,6 +1644,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1485,6 +1653,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -1503,6 +1672,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1511,6 +1681,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1519,6 +1690,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1527,6 +1699,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -1545,6 +1718,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1553,6 +1727,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1561,6 +1736,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1569,6 +1745,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -1587,6 +1764,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1595,6 +1773,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1603,6 +1782,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1611,6 +1791,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1619,6 +1800,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1627,6 +1809,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1635,6 +1818,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1643,6 +1827,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1651,6 +1836,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1659,6 +1845,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1667,6 +1854,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1675,6 +1863,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1683,6 +1872,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1691,6 +1881,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1699,6 +1890,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1707,6 +1899,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -1725,6 +1918,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1733,6 +1927,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1741,6 +1936,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1749,6 +1945,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1757,6 +1954,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1765,6 +1963,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1773,6 +1972,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1781,6 +1981,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -1799,6 +2000,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1807,6 +2009,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1815,6 +2018,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1823,6 +2027,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1831,6 +2036,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1839,6 +2045,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1847,6 +2054,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1855,6 +2063,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1863,6 +2072,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1871,6 +2081,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -1889,6 +2100,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1897,6 +2109,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1905,6 +2118,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1913,6 +2127,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1921,6 +2136,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1929,6 +2145,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1937,6 +2154,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1945,6 +2163,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1953,6 +2172,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1961,6 +2181,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1969,6 +2190,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1977,6 +2199,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1985,6 +2208,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -1993,6 +2217,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -2001,6 +2226,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -2009,6 +2235,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 			{
@@ -2017,6 +2244,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -2035,6 +2263,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],
@@ -2053,6 +2282,7 @@ let trailSystemSeed = [
 				condition: 'Unknown',
 				lastUpdated: Date.now(),
 				comment: '',
+				commenter: '',
 				commentDate: Date.now(),
 			},
 		],

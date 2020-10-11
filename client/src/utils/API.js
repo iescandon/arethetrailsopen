@@ -15,7 +15,7 @@ export default {
 	sendMessage: function (message) {
 		return axios.post('/api/messages', { message });
 	},
-	addComment: function (id, comment, selectedTrail) {
-		return axios.put(`${URL}/comments/${id}`, { comment, selectedTrail });
+	addComment: function (id, trailComment, selectedTrail) {
+		return axios.put(`${URL}/comments/${id}`, { trailComment, selectedTrail });
 	},
 };

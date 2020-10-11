@@ -134,8 +134,8 @@ function Home() {
 			});
 	};
 
-	const addTrailComment = (comment, id) => {
-		API.addComment(id, comment, selectedTrail._id)
+	const addTrailComment = (trailComment, id) => {
+		API.addComment(id, trailComment, selectedTrail._id)
 			.then((res) => {
 				getTrails();
 			})

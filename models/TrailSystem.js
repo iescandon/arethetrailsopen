@@ -8,6 +8,7 @@ const IndividualTrailSchema = new Schema({
 	lastUpdated: Date,
 	comment: String,
 	commentDate: Date,
+	commenter: String,
 });
 
 const TrailSystemSchema = new Schema({

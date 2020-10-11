@@ -55,6 +55,23 @@
 .commentIcon:hover {
 	cursor: pointer;
 }
+
+.commentDiv {
+	font-size: 12px;
+	font-style: italic;
+}
+
+.commenter {
+	/* font-weight: 700; */
+	text-decoration: underline;
+}
+
+.comment {
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 750;
+	padding-bottom: 4px;
+}
 /* .tableTrailReport:hover {
 	cursor: pointer;
 } */

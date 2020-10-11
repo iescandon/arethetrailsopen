@@ -23,13 +23,19 @@ function TrailsTable({
 
 	const [show, setShow] = useState(false);
 	const [selectedRow, setSelectedRow] = useState({});
-	const [trailComment, setTrailComment] = useState('');
+	const [trailComment, setTrailComment] = useState({
+		comment: '',
+		commenter: '',
+	});
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 
 	const handleInputChange = ({ target }) => {
-		const { value } = target;
-		setTrailComment(value);
+		const { name, value } = target;
+		setTrailComment({
+			...trailComment,
+			[name]: value,
+		});
 	};
 
 	return (
@@ -80,17 +86,23 @@ function TrailsTable({
 											{updateCurrentDate(trail.lastUpdated)}
 										</div>
 									</div>
-									<div className="col comments my-auto">
-										{trail.comment === '' ? (
-											<div className="commentDiv">No comments yet!</div>
-										) : (
+									{/* <div className="col comments my-auto"> */}
+									{trail.comment === '' ? null : (
+										<div className="col comments my-auto">
+											{/* <div className="comment">No comments yet!</div> */}
+											<div className="comment">{trail.comment}</div>
 											<div className="commentDiv">
-												{`${trail.comment}`}
-												<br />
-												{`${updateCurrentDate(trail.commentDate)}`}
+												{`Report by `}
+												{trail.commenter === '' ? (
+													<span className="commenter">Anonymous Rider</span>
+												) : (
+													<span className="commenter">{trail.commenter}</span>
+												)}{' '}
+												{updateCurrentDate(trail.commentDate)}
 											</div>
-										)}
-									</div>
+										</div>
+									)}
+									{/* </div> */}
 									<div
 										className="col-2 my-auto text-center"
 										onClick={handleShow}
@@ -102,32 +114,51 @@ function TrailsTable({
 							{selectedRow === trail ? (
 								<Modal show={show} onHide={handleClose}>
 									<Modal.Body>
-										<div className="row justify-content-center mt-4">
+										{/* <div className="row justify-content-center mt-4">
 											Anything we should watch out for on the trails?
-										</div>
-										<div>
-											<Form>
-												<Form.Group controlId="exampleForm.ControlTextarea1">
-													<Form.Control
-														as="textarea"
-														rows={3}
-														value={trailComment}
-														onChange={(event) => {
-															handleInputChange(event);
-														}}
-													/>
-												</Form.Group>
-											</Form>
-										</div>
+										</div> */}
+										{/* <div> */}
+										<Form>
+											<Form.Group controlId="exampleForm.ControlTextarea1">
+												<Form.Label>
+													Anything we should watch out for on the trails?
+												</Form.Label>
+												<Form.Control
+													as="textarea"
+													rows={3}
+													name="comment"
+													value={trailComment.comment}
+													onChange={(event) => {
+														handleInputChange(event);
+													}}
+												/>
+											</Form.Group>
+											<Form.Group controlId="exampleForm.ControlInput1">
+												<Form.Label>What's your name?</Form.Label>
+												<Form.Control
+													type="email"
+													placeholder=""
+													name="commenter"
+													value={trailComment.commenter}
+													onChange={(event) => {
+														handleInputChange(event);
+													}}
+												/>
+											</Form.Group>
+										</Form>
+										{/* </div> */}
 										<Button
 											variant="primary"
 											onClick={() => {
-												setTrailComment('');
+												setTrailComment({
+													comment: '',
+													commenter: '',
+												});
 												handleClose();
 												addTrailComment(trailComment, trail.trailId);
 											}}
 										>
-											Add Comment
+											Submit Report
 										</Button>
 									</Modal.Body>
 								</Modal>

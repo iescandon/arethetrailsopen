@@ -8,7 +8,7 @@ function Footer() {
 	return (
 		<div className="footer row fixed-bottom footermenu">
 			{/* <div className="col text-center pb-2 pt-2 my-auto">© Copyright 2020</div> */}
-			<div className="col-1"></div>
+			{/* <div className="col-1"></div> */}
 			<div className="col text-center my-auto px-0">
 				<Link
 					to="/"
@@ -26,7 +26,7 @@ function Footer() {
 						location.pathname === '/help' ? 'nav-link active' : 'nav-link'
 					}
 				>
-					<i class="fa fa-question menuicons"></i>
+					<i className="fa fa-question menuicons"></i>
 					<br />
 					Help
 				</Link>
@@ -38,7 +38,7 @@ function Footer() {
 						location.pathname === '/about' ? 'nav-link active' : 'nav-link'
 					}
 				>
-					<i class="fa fa-bicycle menuicons"></i>
+					<i className="fa fa-bicycle menuicons"></i>
 					<br />
 					About
 				</Link>
@@ -50,12 +50,12 @@ function Footer() {
 						location.pathname === '/contact' ? 'nav-link active' : 'nav-link'
 					}
 				>
-					<i class="fa fa-envelope menuicons" id="envelope"></i>
+					<i className="fa fa-envelope menuicons" id="envelope"></i>
 					<br />
 					Contact
 				</Link>
 			</div>
-			<div className="col-1"></div>
+			{/* <div className="col-1"></div> */}
 		</div>
 	);
 }

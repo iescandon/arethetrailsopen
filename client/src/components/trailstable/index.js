@@ -9,6 +9,7 @@ function TrailsTable({
 	selectedTrail,
 	updateTrailCondition,
 	updateCurrentDate,
+	addTrailComment,
 }) {
 	const trailConditions = [
 		'Unknown',
@@ -79,7 +80,17 @@ function TrailsTable({
 											{updateCurrentDate(trail.lastUpdated)}
 										</div>
 									</div>
-									<div className="col comments my-auto">comments</div>
+									<div className="col comments my-auto">
+										{trail.comment === '' ? (
+											<div className="commentDiv">No comments yet!</div>
+										) : (
+											<div className="commentDiv">
+												{`${trail.comment}`}
+												<br />
+												{`${updateCurrentDate(trail.commentDate)}`}
+											</div>
+										)}
+									</div>
 									<div
 										className="col-2 my-auto text-center"
 										onClick={handleShow}
@@ -108,7 +119,14 @@ function TrailsTable({
 												</Form.Group>
 											</Form>
 										</div>
-										<Button variant="primary" onClick={handleClose}>
+										<Button
+											variant="primary"
+											onClick={() => {
+												setTrailComment('');
+												handleClose();
+												addTrailComment(trailComment, trail.trailId);
+											}}
+										>
 											Add Comment
 										</Button>
 									</Modal.Body>

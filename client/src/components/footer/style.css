@@ -1,5 +1,5 @@
 .footer {
-	background-color: white;
+	background-color: #f8f8f8;
 	/* margin-top: 5px; */
 	font-size: 14px;
 	height: 8vh;
@@ -25,7 +25,7 @@ a.nav-link {
 
 a.nav-link.active {
 	/* background-color: green !important; */
-	color: black !important;
+	color: #181818 !important;
 	font-weight: 600;
 }
 

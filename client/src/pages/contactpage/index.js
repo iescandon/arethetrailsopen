@@ -67,7 +67,7 @@ function ContactPage() {
 					collaborations?
 				</p>
 				<form
-					className="mr-0 mt-5"
+					className="mr-0 mt-4"
 					id="contact-form"
 					onSubmit={handleSubmit}
 					method="POST"

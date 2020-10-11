@@ -5,8 +5,9 @@ const Schema = mongoose.Schema;
 const IndividualTrailSchema = new Schema({
 	name: String,
 	condition: String,
-	comment: String,
 	lastUpdated: Date,
+	comment: String,
+	commentDate: Date,
 });
 
 const TrailSystemSchema = new Schema({

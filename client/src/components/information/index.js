@@ -17,6 +17,7 @@ function Information({
 	results,
 	clearSelectedTrail,
 	selectedClass,
+	addTrailComment,
 }) {
 	const notify = () => toast.dark('Address Copied!');
 
@@ -96,6 +97,7 @@ function Information({
 						selectedTrail={selectedTrail}
 						updateTrailCondition={updateTrailCondition}
 						updateCurrentDate={updateCurrentDate}
+						addTrailComment={addTrailComment}
 					/>
 				</div>
 				//

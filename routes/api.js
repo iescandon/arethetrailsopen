@@ -48,6 +48,29 @@ router.put('/api/trails/:id', (req, res) => {
 		});
 });
 
+router.put('/api/trails/comments/:id', (req, res) => {
+	console.log(req.body);
+	db.TrailSystem.updateOne(
+		{
+			_id: req.body.selectedTrail,
+			'trails.trailId': req.params.id,
+		},
+		{
+			$set: {
+				'trails.$.comment': req.body.comment,
+				'trails.$.commentDate': Date.now(),
+			},
+		}
+	)
+		.then((data) => {
+			res.json(data);
+			console.log(data);
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+});
+
 router.post('/api/messages', (req, res) => {
 	db.NewMessage.create(req.body.message, (error, data) => {
 		if (error) {

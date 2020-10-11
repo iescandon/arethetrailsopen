@@ -134,6 +134,16 @@ function Home() {
 			});
 	};
 
+	const addTrailComment = (comment, id) => {
+		API.addComment(id, comment, selectedTrail._id)
+			.then((res) => {
+				getTrails();
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+	};
+
 	const updateTrailStatus = (value) => {
 		if (value === 'false') {
 			toast.error(`${selectedTrail.name} is Closed!`, {
@@ -284,6 +294,7 @@ function Home() {
 							updateCurrentDate={updateCurrentDate}
 							clearSelectedTrail={clearSelectedTrail}
 							selectedClass={selectedClass}
+							addTrailComment={addTrailComment}
 						/>
 					</div>
 				</div>

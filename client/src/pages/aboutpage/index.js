@@ -42,7 +42,7 @@ function AboutPage() {
 							<p>
 								Unfortunately these apps are flooded with too much information
 								that makes finding the trail status quite difficult and hard to
-								understand. Additionally it only provides you with one trails
+								understand. Additionally it only provides you with one trail's
 								status, so you have to go through the long process again to find
 								out the status of another trail nearby.
 							</p>

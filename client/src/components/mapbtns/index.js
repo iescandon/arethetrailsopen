@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Button, InputGroup } from 'react-bootstrap';
-// import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import './style.css';
 
 function MapBtns({
@@ -44,7 +43,6 @@ function MapBtns({
 					<Button
 						variant="btn"
 						className={`pl-0 ${mapClass}`}
-						// className="pl-0"
 						onClick={(event) => changeView(event)}
 					>
 						<img
@@ -56,7 +54,6 @@ function MapBtns({
 					<Button
 						variant="btn"
 						className={`pl-0 ${listClass}`}
-						// className="pl-0"
 						onClick={(event) => changeView(event)}
 					>
 						<img

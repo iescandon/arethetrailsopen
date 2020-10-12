@@ -1,7 +1,7 @@
 .list-view {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
-	margin-top: 3.2rem !important;
+	margin-top: 3.05rem !important;
 }
 
 .true {
@@ -35,7 +35,4 @@
 }
 
 @media (max-width: 991px) {
-	/* .list-view {
-		margin-top: 0 !important;
-	} */
 }

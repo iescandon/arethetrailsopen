@@ -1,20 +1,18 @@
 import React, { useState } from 'react';
 import './style.css';
 import useOnclickOutside from 'react-cool-onclickoutside';
-// import { CopyToClipboard } from 'react-copy-to-clipboard';
-// import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import MapBtns from '../mapbtns';
 import MapSearch from '../mapSearch';
 import ListView from '../listview';
-import { OverlayTrigger, Tooltip, InputGroup, Button } from 'react-bootstrap';
+// import { OverlayTrigger, Tooltip, InputGroup, Button } from 'react-bootstrap';
 
 import {
 	GoogleMap,
 	useLoadScript,
 	Marker,
 	InfoWindow,
-	OverlayView,
+	// OverlayView,
 } from '@react-google-maps/api';
 
 const containerStyle = {
@@ -33,12 +31,10 @@ function MapComponent({
 	selectTrail,
 	onMapLoad,
 	userLocation,
-	// scrollToResults,
 	resetCenterPoint,
 	search,
 	handleInputChange,
 	getLatAndLong,
-	// clearSelectedTrail,
 	handleRefresh,
 	updateCurrentDate,
 	resultsClass,
@@ -49,9 +45,6 @@ function MapComponent({
 	viewChoice,
 }) {
 	const [selectedMarker, setSelectedMarker] = useState({});
-	// const [viewChoice, setViewChoice] = useState('map');
-	// const [mapClass, setMapClass] = useState('hide');
-	// const [listClass, setListClass] = useState('');
 	const ref = useOnclickOutside(() => {
 		setSelectedMarker({});
 	});
@@ -70,36 +63,6 @@ function MapComponent({
 			</div>
 		);
 	}
-
-	// const changeView = ({ target }) => {
-	// 	const view = target.getAttribute('data-name');
-	// 	console.log(this);
-	// 	if (view === 'list') {
-	// 		console.log('change to list');
-	// 		setViewChoice('list');
-	// 		setMapClass('');
-	// 		setListClass('hide');
-	// 	} else {
-	// 		console.log('change to map');
-	// 		setViewChoice('map');
-	// 		setListClass('');
-	// 		setMapClass('hide');
-	// 	}
-	// };
-	// const renderTooltip = (props) => (
-	// 	<Tooltip id="button-tooltip" {...props}>
-	// 		List View
-	// 	</Tooltip>
-	// );
-
-	// const notify = () => toast.dark('Address Copied!');
-
-	// const getPixelPositionOffset = (offsetWidth, offsetHeight, labelAnchor) => {
-	// 	return {
-	// 		x: offsetWidth + labelAnchor.x,
-	// 		y: offsetHeight + labelAnchor.y,
-	// 	};
-	// };
 
 	return (
 		<div className={`col-lg-6 col-md-12 px-0 ${resultsClass}`}>
@@ -199,7 +162,6 @@ function MapComponent({
 											<p
 												className="viewTrailsLink mb-0"
 												onClick={() => {
-													// scrollToResults();
 													selectTrail(marker);
 												}}
 											>
@@ -219,7 +181,6 @@ function MapComponent({
 						updateCurrentDate={updateCurrentDate}
 						viewChoice={viewChoice}
 						selectTrail={selectTrail}
-						// scrollToResults={scrollToResults}
 					/>
 				</div>
 			)}

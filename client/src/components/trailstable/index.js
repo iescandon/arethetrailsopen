@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Dropdown, Form, Button, Modal } from 'react-bootstrap';
 import './style.css';
 import Table from 'react-bootstrap/Table';
-// import Modal from '../modal';
-// import { formatRelative } from 'date-fns';
 
 function TrailsTable({
 	selectedTrail,
@@ -86,7 +84,6 @@ function TrailsTable({
 											{updateCurrentDate(trail.lastUpdated)}
 										</div>
 									</div>
-									{/* <div className="col comments my-auto"> */}
 									{trail.comment === '' ? null : (
 										<div className="col comments my-auto">
 											{/* <div className="comment">No comments yet!</div> */}
@@ -102,22 +99,17 @@ function TrailsTable({
 											</div>
 										</div>
 									)}
-									{/* </div> */}
 									<div
 										className="col-2 my-auto text-center"
 										onClick={handleShow}
 									>
-										<i class="fa fa-comment commentIcon"></i>
+										<i className="fa fa-comment commentIcon"></i>
 									</div>
 								</div>
 							</td>
 							{selectedRow === trail ? (
 								<Modal show={show} onHide={handleClose}>
 									<Modal.Body>
-										{/* <div className="row justify-content-center mt-4">
-											Anything we should watch out for on the trails?
-										</div> */}
-										{/* <div> */}
 										<Form>
 											<Form.Group controlId="exampleForm.ControlTextarea1">
 												<Form.Label>
@@ -146,7 +138,6 @@ function TrailsTable({
 												/>
 											</Form.Group>
 										</Form>
-										{/* </div> */}
 										<Button
 											variant="primary"
 											onClick={() => {

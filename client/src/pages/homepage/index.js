@@ -64,15 +64,15 @@ function Home() {
 
 	useEffect(() => {
 		if (selectedTrail.name) {
-			console.log('selected a trail');
-			console.log(selectedTrail);
+			// console.log('selected a trail');
+			// console.log(selectedTrail);
 			setResultsClass('hideWhenMobile');
 			setSelectedClass('');
 			setPageState('selection');
 			window.scrollTo(0, 0);
 		} else {
-			console.log('no trail selected');
-			console.log(selectedTrail);
+			// console.log('no trail selected');
+			// console.log(selectedTrail);
 			setResultsClass('');
 			setSelectedClass('hideWhenMobile');
 			setPageState('results');
@@ -200,10 +200,10 @@ function Home() {
 	};
 
 	const filterTrails = () => {
-		console.log('filter');
+		// console.log('filter');
 		if (filter === false) {
-			const filter = trails.filter((trail) => trail.open == 'true');
-			console.log(filter);
+			const filter = trails.filter((trail) => trail.open === 'true');
+			// console.log(filter);
 			setTrails(filter);
 			setFilter(true);
 		} else {
@@ -215,14 +215,13 @@ function Home() {
 
 	const changeView = ({ target }) => {
 		const view = target.getAttribute('data-name');
-		console.log(this);
 		if (view === 'list') {
-			console.log('change to list');
+			// console.log('change to list');
 			setViewChoice('list');
 			setMapClass('');
 			setListClass('hide');
 		} else {
-			console.log('change to map');
+			// console.log('change to map');
 			setViewChoice('map');
 			setListClass('');
 			setMapClass('hide');
@@ -232,21 +231,7 @@ function Home() {
 	return (
 		<div>
 			<div>
-				<Navbar
-					pageState={pageState}
-					clearSelectedTrail={clearSelectedTrail}
-					mapClass={mapClass}
-					clearSelectedTrail={clearSelectedTrail}
-					changeView={changeView}
-					listClass={listClass}
-					filterTrails={filterTrails}
-					handleRefresh={handleRefresh}
-					resetCenterPoint={resetCenterPoint}
-					search={search}
-					getLatAndLong={getLatAndLong}
-					handleInputChange={handleInputChange}
-					userLocation={userLocation}
-				/>
+				<Navbar pageState={pageState} clearSelectedTrail={clearSelectedTrail} />
 				<MobileNav
 					mapClass={mapClass}
 					changeView={changeView}
@@ -254,9 +239,6 @@ function Home() {
 					filterTrails={filterTrails}
 					handleRefresh={handleRefresh}
 					resetCenterPoint={resetCenterPoint}
-					search={search}
-					getLatAndLong={getLatAndLong}
-					handleInputChange={handleInputChange}
 					userLocation={userLocation}
 					pageState={pageState}
 					clearSelectedTrail={clearSelectedTrail}
@@ -269,15 +251,12 @@ function Home() {
 							selectTrail={selectTrail}
 							onMapLoad={onMapLoad}
 							userLocation={userLocation}
-							// scrollToResults={scrollToResults}
 							resetCenterPoint={resetCenterPoint}
 							search={search}
 							handleInputChange={handleInputChange}
 							getLatAndLong={getLatAndLong}
-							// clearSelectedTrail={clearSelectedTrail}
 							handleRefresh={handleRefresh}
 							updateCurrentDate={updateCurrentDate}
-							// changePageView={changePageView}
 							resultsClass={resultsClass}
 							filterTrails={filterTrails}
 							changeView={changeView}
@@ -286,13 +265,11 @@ function Home() {
 							viewChoice={viewChoice}
 						/>
 						<Information
-							trails={trails}
 							selectedTrail={selectedTrail}
 							updateTrailStatus={updateTrailStatus}
 							updateTrailCondition={updateTrailCondition}
 							results={results}
 							updateCurrentDate={updateCurrentDate}
-							clearSelectedTrail={clearSelectedTrail}
 							selectedClass={selectedClass}
 							addTrailComment={addTrailComment}
 						/>

@@ -43,28 +43,7 @@
 	.selectedTrail {
 		font-size: 28px;
 	}
-	.address,
-	.coordinate {
-		/* font-size: 14px; */
-	}
-
-	.address {
-		/* padding-left: 0 !important;
-		padding-right: 0 !important; */
-	}
-
 	.message {
 		font-size: 48px !important;
 	}
 }
-
-/* .closedSign {
-	width: 60%;
-	object-fit: contain;
-} */
-
-/* @media (max-width: 991px) {
-	.hideWhenMobile {
-		display: none !important;
-	}
-} */

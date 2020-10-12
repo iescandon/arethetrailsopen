@@ -4,13 +4,7 @@ import './style.css';
 
 function ListView({ trails, updateCurrentDate, selectTrail }) {
 	return (
-		<Table
-			striped
-			// bordered
-			hover
-			// variant="dark"
-			className="table list-view"
-		>
+		<Table striped hover className="table list-view">
 			<tbody>
 				{trails.map((trail) => {
 					let status = '';
@@ -29,7 +23,6 @@ function ListView({ trails, updateCurrentDate, selectTrail }) {
 								className="trailRow"
 								onClick={() => {
 									selectTrail(trail);
-									// scrollToResults();
 								}}
 							>
 								<div className="row">

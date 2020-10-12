@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, InputGroup, Button, Form, FormControl } from 'react-bootstrap';
+import { Navbar, InputGroup, Button, Form } from 'react-bootstrap';
 import './style.css';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -10,9 +10,6 @@ function MobileNav({
 	filterTrails,
 	handleRefresh,
 	resetCenterPoint,
-	search,
-	getLatAndLong,
-	handleInputChange,
 	userLocation,
 	pageState,
 	clearSelectedTrail,
@@ -25,12 +22,15 @@ function MobileNav({
 				variant="dark"
 				className="sticky-top justify-content-between showWhenMobile"
 			>
-				<a className="circle-back" onClick={clearSelectedTrail}>
+				<button
+					className="circle-back btn px-0 py-0"
+					onClick={clearSelectedTrail}
+				>
 					<i
 						className="fa fa-arrow-circle-left circle-back-nav"
 						aria-hidden="true"
 					></i>
-				</a>
+				</button>
 			</Navbar>
 		);
 	}
@@ -51,7 +51,6 @@ function MobileNav({
 						aria-hidden="true"
 					></i>
 				</Link>
-				;
 			</Navbar>
 		);
 	}
@@ -83,8 +82,6 @@ function MobileNav({
 						/>
 					</Button>
 				</InputGroup>
-				{/* </Form>
-			<Form inline> */}
 				<InputGroup className="col justify-content-end pr-0">
 					<Button variant="btn" className="mapbtn" onClick={filterTrails}>
 						<img

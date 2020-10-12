@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import MultiToggle from 'react-multi-toggle';
-
-// const green = { GreenCheck };
 
 const groupOptions = [
 	{

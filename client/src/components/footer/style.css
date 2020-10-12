@@ -5,12 +5,6 @@
 	height: 8vh;
 }
 
-/* @media (max-width: 991px) {
-	.footer {
-		font-size: 14px;
-	}
-} */
-
 .footermenu {
 	font-size: 12px;
 }
@@ -24,8 +18,7 @@ a.nav-link {
 }
 
 a.nav-link.active {
-	/* background-color: green !important; */
-	color: #181818 !important;
+	color: #101010 !important;
 	font-weight: 600;
 }
 

@@ -1,21 +1,16 @@
 import React from 'react';
-// import Switch from 'react-switch';
 import Toggle from '../toggle';
 import TrailsTable from '../trailstable';
-import { Card, Button } from 'react-bootstrap';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { toast } from 'react-toastify';
-// import ListView from '../listview';
 import './style.css';
 
 function Information({
-	trails,
 	selectedTrail,
 	updateTrailStatus,
 	updateTrailCondition,
 	updateCurrentDate,
 	results,
-	clearSelectedTrail,
 	selectedClass,
 	addTrailComment,
 }) {
@@ -36,25 +31,12 @@ function Information({
 	}
 
 	return (
-		<div
-			className={`col-lg-6 col-md-12 infoDiv ${selectedClass} padbtm`}
-			// ref={results}
-		>
+		<div className={`col-lg-6 col-md-12 infoDiv ${selectedClass} padbtm`}>
 			<div
 				className="row px-3 mt-4 selectedTrail justify-content-center"
 				ref={results}
 			>
-				{/* <div className="col-1">
-					<p onClick={clearSelectedTrail}>
-						<i
-							class="fa fa-arrow-circle-left circle-back"
-							aria-hidden="true"
-						></i>
-					</p>
-				</div> */}
 				<div className="px-3 text-center">{selectedTrail.name}</div>
-
-				{/* <div className="col-1"></div> */}
 			</div>
 			<div className="row mt-3 justify-content-center">
 				<Toggle
@@ -77,21 +59,8 @@ function Information({
 						{selectedTrail.address}
 					</div>
 				</CopyToClipboard>
-				{/* <div className="col-6 my-auto text-center address">
-					{selectedTrail.address}
-				</div> */}
-				{/* <div className="col-5 my-auto text-center coordinate">
-					Trailhead coordinate
-				</div> */}
 			</div>
 			{selectedTrail.open === 'false' ? null : (
-				// <div className="row mt-5 justify-content-center">
-				// 	<img
-				// 		src={require('../../assets/closed.png')}
-				// 		alt="closed sign"
-				// 		className="closedSign"
-				// 	/>
-				// </div>
 				<div className="row mt-3">
 					<TrailsTable
 						selectedTrail={selectedTrail}
@@ -100,14 +69,7 @@ function Information({
 						addTrailComment={addTrailComment}
 					/>
 				</div>
-				//
 			)}
-			{/* <TrailsTable
-
-					selectedTrail={selectedTrail}
-					updateTrailCondition={updateTrailCondition}
-					updateCurrentDate={updateCurrentDate}
-				/> */}
 		</div>
 	);
 }

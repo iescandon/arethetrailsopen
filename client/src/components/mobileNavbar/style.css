@@ -13,12 +13,10 @@
 }
 
 .circle-back {
-	padding-left: 5px !important;
+	/* padding-left: 5px !important; */
+	background-color: transparent !important;
+	border-color: transparent !important;
 }
-
-/* .form-inline {
-	width: 97vw;
-} */
 
 @media (max-width: 991px) {
 	.mobileview {

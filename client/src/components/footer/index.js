@@ -7,7 +7,6 @@ function Footer() {
 
 	return (
 		<div className="footer row fixed-bottom footermenu">
-			{/* <div className="col text-center pb-2 pt-2 my-auto">© Copyright 2020</div> */}
 			{/* <div className="col-1"></div> */}
 			<div className="col text-center my-auto px-0">
 				<Link

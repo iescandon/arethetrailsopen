@@ -9,29 +9,22 @@ input.form-control.search-form {
 	top: 0.35rem;
 	left: 50%;
 	transform: translateX(-50%);
-	/* width: 100%;
-	max-width: 400px; */
 	z-index: 10;
 }
 
 .mapsearch input {
 	padding: 0.5rem;
-	/* width: 100%; */
 }
 
 form.mapsearch {
-	/* display: none; */
 }
 
 @media (max-width: 991px) {
 	form.mapsearch {
 		top: 0.05rem;
-		/* display: block; */
-		/* padding: 0 !important; */
 	}
 	input.form-control.search-form {
 		display: inline !important;
-		/* padding: 5px !important; */
 		height: 33px !important;
 		width: 60vw !important;
 	}
@@ -39,6 +32,5 @@ form.mapsearch {
 
 @media (max-width: 414px) {
 	input.search-form {
-		/* width: 200px !important; */
 	}
 }

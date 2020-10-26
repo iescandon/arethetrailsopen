@@ -93,7 +93,7 @@ function Information({
 			<div className="row px-3 mt-2 text-center trailUpdated">Coming Soon!</div>
 			<hr></hr>
 			<div className="row mt-2 px-3 detailRow">Parking</div>
-			<div className="row mt-2 trailUpdated">
+			<div className="row pl-3 mt-2 trailUpdated">
 				<CopyToClipboard text={selectedTrail.address}>
 					<div className="col pl-3 my-auto address" onClick={notify}>
 						<div className="row pl-3">{selectedTrail.address}</div>
@@ -121,7 +121,7 @@ function Information({
 						}}
 					>
 						<div className="col">Individual Trail Conditions</div>
-						<div className="col my-auto">
+						<div className="col-2 my-auto">
 							{show === 'show' ? (
 								<i className="fa fa-angle-up pull-right"></i>
 							) : (

@@ -38,5 +38,9 @@
 	cursor: pointer;
 }
 
+.table {
+	background-color: #f8f8f8 !important;
+}
+
 @media (max-width: 991px) {
 }

@@ -37,7 +37,7 @@ function TrailsTable({
 	};
 
 	return (
-		<Table className="table table-striped mt-3">
+		<Table className="table mt-3">
 			<tbody>
 				{selectedTrail.trails.map((trail) => {
 					return (

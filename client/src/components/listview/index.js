@@ -4,7 +4,7 @@ import './style.css';
 
 function ListView({ trails, updateCurrentDate, selectTrail }) {
 	return (
-		<Table striped hover className="table list-view">
+		<Table hover className="table list-view">
 			<tbody>
 				{trails.map((trail) => {
 					let status = '';

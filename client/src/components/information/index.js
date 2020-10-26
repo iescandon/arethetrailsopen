@@ -70,8 +70,8 @@ function Information({
 					updateTrailStatus={updateTrailStatus}
 				/>
 			</div>
-			<hr></hr>
-			<div className="row mt-2 px-3 detailRow">Status</div>
+			{/* <hr></hr> */}
+			<div className="row mt-4 px-3 detailRow">Status</div>
 			<div className="row mt-2 px-3">
 				<div className="col pl-3">
 					<div className={`row trailStatus ${selectedTrail.open}`}>
@@ -124,7 +124,11 @@ function Information({
 					>
 						<div className="col">Individual Trail Conditions</div>
 						<div className="col my-auto">
-							<i className="fa fa-angle-right pull-right"></i>
+							{show === 'show' ? (
+								<i className="fa fa-angle-up pull-right"></i>
+							) : (
+								<i className="fa fa-angle-down pull-right"></i>
+							)}
 						</div>
 					</div>
 					<div className={`row ${show}`}>

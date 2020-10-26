@@ -1,6 +1,7 @@
 .address:hover {
 	cursor: pointer;
-	color: #28a745;
+	/* color: #28a745; */
+	color: #007bff;
 }
 
 .markerlabel {

@@ -15,6 +15,7 @@ function Information({
 	addTrailComment,
 }) {
 	const [weather, setWeather] = useState(null);
+	const [show, setShow] = useState('hide');
 	const notify = () => toast.dark('Address Copied!');
 	let status = '';
 
@@ -70,7 +71,7 @@ function Information({
 				/>
 			</div>
 			<hr></hr>
-			<div className="row mt-3 px-3 detailRow">Status</div>
+			<div className="row mt-2 px-3 detailRow">Status</div>
 			<div className="row mt-2 px-3">
 				<div className="col pl-3">
 					<div className={`row trailStatus ${selectedTrail.open}`}>
@@ -88,11 +89,13 @@ function Information({
 				</div> */}
 			</div>
 			<hr></hr>
-			<div className="row mt-3 px-3 detailRow">Weather</div>
-			<div className="row px-3 mt-3 text-center">weather goes here</div>
+			<div className="row mt-2 px-3 detailRow">Weather</div>
+			<div className="row px-3 mt-2 text-center trailUpdated">
+				weather goes here
+			</div>
 			<hr></hr>
-			<div className="row mt-3 px-3 detailRow">Location</div>
-			<div className="row mt-3">
+			<div className="row mt-2 px-3 detailRow">Parking</div>
+			<div className="row mt-2 trailUpdated">
 				<CopyToClipboard text={selectedTrail.address}>
 					<div className="col my-auto pl-3 address" onClick={notify}>
 						{selectedTrail.address}
@@ -100,9 +103,26 @@ function Information({
 				</CopyToClipboard>
 			</div>
 			<hr></hr>
-			<div className="row mt-3 px-3 detailRow">Trail Conditions</div>
+			<div className="row mt-2 px-3 detailRow">Trailhead Coordinates</div>
+			<div className="row mt-2 pl-3 trailUpdated">numbers</div>
+			<hr></hr>
+			<div
+				className="row mt-2 px-3 detailRow conditionRow"
+				onClick={() => {
+					if (show === 'hide') {
+						setShow('show');
+					} else {
+						setShow('hide');
+					}
+				}}
+			>
+				<div className="col">Individual Trail Conditions</div>
+				<div className="col my-auto">
+					<i className="fa fa-chevron-right pull-right"></i>
+				</div>
+			</div>
 			{selectedTrail.open === 'false' ? null : (
-				<div className="row">
+				<div className={`row ${show}`}>
 					<TrailsTable
 						selectedTrail={selectedTrail}
 						updateTrailCondition={updateTrailCondition}

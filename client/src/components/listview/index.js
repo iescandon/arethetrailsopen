@@ -9,13 +9,13 @@ function ListView({ trails, updateCurrentDate, selectTrail }) {
 				{trails.map((trail) => {
 					let status = '';
 					if (trail.open === 'true') {
-						status = '✓ Open';
+						status = 'OPEN';
 					}
 					if (trail.open === 'false') {
-						status = '✗ Closed';
+						status = 'CLOSED';
 					}
 					if (trail.open === 'unknown') {
-						status = 'Unknown';
+						status = 'UNKNOWN';
 					}
 					return (
 						<tr key={trail.trailId}>

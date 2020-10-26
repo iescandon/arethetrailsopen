@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Toggle from '../toggle';
 import TrailsTable from '../trailstable';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -14,7 +14,32 @@ function Information({
 	selectedClass,
 	addTrailComment,
 }) {
+	const [weather, setWeather] = useState(null);
 	const notify = () => toast.dark('Address Copied!');
+	let status = '';
+
+	if (selectedTrail.open === 'true') {
+		status = 'OPEN';
+	}
+	if (selectedTrail.open === 'false') {
+		status = 'CLOSED';
+	}
+	if (selectedTrail.open === 'unknown') {
+		status = 'UNKNOWN';
+	}
+
+	useEffect(() => {
+		if (selectedTrail.name) {
+			fetch(
+				`https://api.openweathermap.org/data/2.5/onecall?lat=${selectedTrail.lat}&lon=${selectedTrail.lng}&appid=96e27da4f61bebe5c6e5c7c18c453252`
+			)
+				.then((response) => response.json())
+				.then((json) => {
+					setWeather(json);
+					console.log(json);
+				});
+		}
+	}, [selectedTrail.name]);
 
 	if (!selectedTrail.name) {
 		return (
@@ -34,7 +59,7 @@ function Information({
 		<div className={`col-lg-6 col-md-12 infoDiv ${selectedClass} padbtm`}>
 			<div
 				className="row px-3 mt-4 selectedTrail justify-content-center"
-				ref={results}
+				// ref={results}
 			>
 				<div className="px-3 text-center">{selectedTrail.name}</div>
 			</div>
@@ -44,24 +69,40 @@ function Information({
 					updateTrailStatus={updateTrailStatus}
 				/>
 			</div>
-			<div className="row px-2 mt-3 text-center">
-				<div className="col">
-					<img
-						src={require('../../assets/weather.jpg')}
-						alt="weather placeholder"
-						className="weatherimg"
-					/>
+			<hr></hr>
+			<div className="row mt-3 px-3 detailRow">Status</div>
+			<div className="row mt-2 px-3">
+				<div className="col pl-3">
+					<div className={`row trailStatus ${selectedTrail.open}`}>
+						{status}
+					</div>
+					<div className="row trailUpdated">
+						Last updated {updateCurrentDate(selectedTrail.lastToggled)}
+					</div>
 				</div>
+				{/* <div className="col">
+					<Toggle
+						selectedTrail={selectedTrail}
+						updateTrailStatus={updateTrailStatus}
+					/>
+				</div> */}
 			</div>
+			<hr></hr>
+			<div className="row mt-3 px-3 detailRow">Weather</div>
+			<div className="row px-3 mt-3 text-center">weather goes here</div>
+			<hr></hr>
+			<div className="row mt-3 px-3 detailRow">Location</div>
 			<div className="row mt-3">
 				<CopyToClipboard text={selectedTrail.address}>
-					<div className="col my-auto text-center address" onClick={notify}>
+					<div className="col my-auto pl-3 address" onClick={notify}>
 						{selectedTrail.address}
 					</div>
 				</CopyToClipboard>
 			</div>
+			<hr></hr>
+			<div className="row mt-3 px-3 detailRow">Trail Conditions</div>
 			{selectedTrail.open === 'false' ? null : (
-				<div className="row mt-3">
+				<div className="row">
 					<TrailsTable
 						selectedTrail={selectedTrail}
 						updateTrailCondition={updateTrailCondition}

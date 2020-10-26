@@ -39,6 +39,18 @@
 	width: 85%;
 }
 
+.detailRow {
+	color: #a1a09f;
+	font-size: 14px;
+	font-style: italic;
+	/* font-weight: 600; */
+}
+
+.trailToggled {
+	font-size: 14px;
+	font-style: italic;
+}
+
 @media (max-width: 1199px) {
 	.selectedTrail {
 		font-size: 28px;

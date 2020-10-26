@@ -67,10 +67,15 @@
 }
 
 .comment {
-	font-size: 14px;
+	font-size: 12px;
 	font-style: normal;
 	font-weight: 750;
 	padding-bottom: 4px;
+}
+
+.trailName2 {
+	font-size: 14px;
+	font-weight: 800;
 }
 /* .tableTrailReport:hover {
 	cursor: pointer;

@@ -25,6 +25,10 @@
 	font-weight: 800;
 }
 
+/* .trailUpdated {
+	font-style: italic;
+} */
+
 .trailUpdated,
 .trailDistance {
 	font-size: 14px;

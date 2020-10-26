@@ -1,5 +1,7 @@
 .footer {
-	background-color: #f8f8f8;
+	/* background-color: #f8f8f8; */
+	background-color: white;
+	/* opacity: 90%; */
 	/* margin-top: 5px; */
 	font-size: 14px;
 	height: 8vh;

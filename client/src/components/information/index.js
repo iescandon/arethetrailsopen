@@ -95,7 +95,7 @@ function Information({
 			<div className="row mt-2 px-3 detailRow">Parking</div>
 			<div className="row pl-3 mt-2 trailUpdated">
 				<CopyToClipboard text={selectedTrail.address}>
-					<div className="col pl-3 my-auto address" onClick={notify}>
+					<div className="col my-auto address" onClick={notify}>
 						<div className="row pl-3">{selectedTrail.address}</div>
 					</div>
 				</CopyToClipboard>

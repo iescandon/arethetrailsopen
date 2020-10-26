@@ -106,30 +106,36 @@ function Information({
 			<div className="row mt-2 px-3 detailRow">Trailhead Coordinates</div>
 			<div className="row mt-2 pl-3 trailUpdated">numbers</div>
 			<hr></hr>
-			<div
-				className="row mt-2 px-3 detailRow conditionRow"
-				onClick={() => {
-					if (show === 'hide') {
-						setShow('show');
-					} else {
-						setShow('hide');
-					}
-				}}
-			>
-				<div className="col">Individual Trail Conditions</div>
-				<div className="col my-auto">
-					<i className="fa fa-chevron-right pull-right"></i>
+			{selectedTrail.open === 'false' ? (
+				<div className="row justify-content-center selectedTrail">
+					DON'T RIDE MUDDY TRAILS!
 				</div>
-			</div>
-			{selectedTrail.open === 'false' ? null : (
-				<div className={`row ${show}`}>
-					<TrailsTable
-						selectedTrail={selectedTrail}
-						updateTrailCondition={updateTrailCondition}
-						updateCurrentDate={updateCurrentDate}
-						addTrailComment={addTrailComment}
-					/>
-				</div>
+			) : (
+				<React.Fragment>
+					<div
+						className="row mt-2 px-3 detailRow conditionRow"
+						onClick={() => {
+							if (show === 'hide') {
+								setShow('show');
+							} else {
+								setShow('hide');
+							}
+						}}
+					>
+						<div className="col">Individual Trail Conditions</div>
+						<div className="col my-auto">
+							<i className="fa fa-angle-right pull-right"></i>
+						</div>
+					</div>
+					<div className={`row ${show}`}>
+						<TrailsTable
+							selectedTrail={selectedTrail}
+							updateTrailCondition={updateTrailCondition}
+							updateCurrentDate={updateCurrentDate}
+							addTrailComment={addTrailComment}
+						/>
+					</div>
+				</React.Fragment>
 			)}
 		</div>
 	);

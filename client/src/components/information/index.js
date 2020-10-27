@@ -15,7 +15,7 @@ function Information({
 	addTrailComment,
 }) {
 	const [weather, setWeather] = useState(null);
-	const [show, setShow] = useState('show');
+	const [show, setShow] = useState('hide');
 	const notify = () => toast.dark('Address Copied!');
 	let status = '';
 

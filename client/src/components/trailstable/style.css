@@ -5,7 +5,8 @@
 	color: #28a745 !important;
 	/* width: 90px; */
 	font-weight: 650 !important;
-	font-size: 14px !important;
+	font-size: 16px !important;
+	border-radius: 0.25rem;
 }
 
 .Tacky {
@@ -13,8 +14,9 @@
 	color: white !important; */
 	color: rgb(255, 187, 0) !important;
 	/* width: 90px; */
-	font-size: 14px !important;
+	font-size: 16px !important;
 	font-weight: 650 !important;
+	border-radius: 0.25rem;
 }
 
 .Muddy,
@@ -24,14 +26,18 @@
 	color: #e61d1d !important;
 	/* width: 90px; */
 	font-weight: 650 !important;
-	font-size: 14px !important;
+	font-size: 16px !important;
+	border-radius: 0.25rem;
 }
 
 .Unknown {
 	color: rgb(161, 160, 160) !important;
+	/* background-color: white !important; */
+	/* color: black !important; */
 	/* width: 90px; */
 	font-weight: 650 !important;
-	font-size: 14px !important;
+	font-size: 16px !important;
+	border-radius: 0.25rem;
 }
 
 .tablerow {
@@ -52,13 +58,21 @@
 	font-size: 20px;
 }
 
-.commentIcon:hover {
+.commentIcon:hover,
+.commentBox:hover {
 	cursor: pointer;
 }
 
 .commentDiv {
 	font-size: 12px;
 	font-style: italic;
+}
+
+.commentBox {
+	background-color: white;
+	width: 100%;
+	height: 40px;
+	border-radius: 0.25rem;
 }
 
 .commenter {

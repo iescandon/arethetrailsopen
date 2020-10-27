@@ -49,8 +49,8 @@ function TrailsTable({
 								}}
 							>
 								<div className="row">
-									<div className="col">
-										<div
+									<div className="col my-auto">
+										{/* <div
 											className={`row tablerow condition ${trail.condition}`}
 										>
 											<Dropdown>
@@ -78,15 +78,51 @@ function TrailsTable({
 													})}
 												</Dropdown.Menu>
 											</Dropdown>
-										</div>
-										<div className="row tablerow trailName">{trail.name}</div>
-										<div className="row tablerow trailUpdated">
+										</div> */}
+										<div className="pl-4 trailName">{trail.name}</div>
+										{/* <div className="row tablerow trailUpdated">
 											{updateCurrentDate(trail.lastUpdated)}
+										</div> */}
+									</div>
+									<div className="col">
+										<div className={`condition ${trail.condition}`}>
+											<Dropdown>
+												<Dropdown.Toggle
+													variant=""
+													id="dropdown-basic"
+													className={`condition px-0 mr-0 ${trail.condition}`}
+													// className="btn-outline-secondary"
+												>
+													{trail.condition}
+												</Dropdown.Toggle>
+												<Dropdown.Menu>
+													{trailConditions.map((condition) => {
+														return (
+															<Dropdown.Item
+																key={condition}
+																onClick={(event) => {
+																	updateTrailCondition(trail.trailId, event);
+																}}
+																data-condition={condition}
+															>
+																{condition}
+															</Dropdown.Item>
+														);
+													})}
+												</Dropdown.Menu>
+											</Dropdown>
+										</div>
+										<div className="trailUpdated">
+											Last updated {updateCurrentDate(trail.lastUpdated)}
 										</div>
 									</div>
-									{trail.comment === '' ? null : (
+									{/* <div className="col">
+										<div className="trailUpdated">
+											Last updated {updateCurrentDate(trail.lastUpdated)}
+										</div>
+									</div> */}
+									{/* {trail.comment === '' ? null : (
 										<div className="col comments my-auto">
-											{/* <div className="comment">No comments yet!</div> */}
 											<div className="comment">{trail.comment}</div>
 											<div className="commentDiv">
 												{`Report by `}
@@ -102,6 +138,30 @@ function TrailsTable({
 									<div
 										className="col-2 my-auto text-center"
 										onClick={handleShow}
+									>
+										<i className="fa fa-comment commentIcon"></i>
+									</div> */}
+								</div>
+								<div className="row mt-3 pl-4" onClick={handleShow}>
+									{trail.comment === '' ? (
+										<div className="col commentBox"></div>
+									) : (
+										<div className="col comments commentBox my-auto">
+											<div className="comment">{trail.comment}</div>
+											<div className="commentDiv">
+												{`Report by `}
+												{trail.commenter === '' ? (
+													<span className="commenter">Anonymous Rider</span>
+												) : (
+													<span className="commenter">{trail.commenter}</span>
+												)}{' '}
+												{updateCurrentDate(trail.commentDate)}
+											</div>
+										</div>
+									)}
+									<div
+										className="col-2 my-auto text-center"
+										// onClick={handleShow}
 									>
 										<i className="fa fa-comment commentIcon"></i>
 									</div>

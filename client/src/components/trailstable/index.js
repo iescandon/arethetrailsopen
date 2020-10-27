@@ -146,7 +146,7 @@ function TrailsTable({
 									{trail.comment === '' ? (
 										<div className="col commentBox"></div>
 									) : (
-										<div className="col comments commentBox my-auto">
+										<div className="col comments pr-0 py-2 px-2 commentBox my-auto">
 											<div className="comment">{trail.comment}</div>
 											<div className="commentDiv">
 												{`Report by `}

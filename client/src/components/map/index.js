@@ -181,6 +181,7 @@ function MapComponent({
 						updateCurrentDate={updateCurrentDate}
 						viewChoice={viewChoice}
 						selectTrail={selectTrail}
+						centerPoint={centerPoint}
 					/>
 				</div>
 			)}

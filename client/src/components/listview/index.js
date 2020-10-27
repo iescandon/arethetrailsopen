@@ -1,8 +1,9 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import { getDistance } from 'geolib';
 import './style.css';
 
-function ListView({ trails, updateCurrentDate, selectTrail }) {
+function ListView({ trails, updateCurrentDate, selectTrail, centerPoint }) {
 	return (
 		<Table hover className="table list-view">
 			<tbody>
@@ -41,7 +42,16 @@ function ListView({ trails, updateCurrentDate, selectTrail }) {
 											{trail.name}
 										</div>
 										<div className="row pl-4 trailDistance" id="listrow">
-											1.1 mi away
+											{(
+												getDistance(
+													{ latitude: trail.lat, longitude: trail.lng },
+													{
+														latitude: centerPoint.lat,
+														longitude: centerPoint.lng,
+													}
+												) * 0.000621371192
+											).toFixed(2)}{' '}
+											mi away
 										</div>
 									</div>
 									<div className="col-1 my-auto">

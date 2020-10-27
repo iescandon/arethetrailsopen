@@ -74,10 +74,10 @@ function Information({
 			<div className="row mt-4 px-3 detailRow">Status</div>
 			<div className="row mt-2 px-3">
 				<div className="col">
-					<div className={`row pl-3 trailStatus ${selectedTrail.open}`}>
+					<div className={`row pl-3 trailStatus2 ${selectedTrail.open}`}>
 						{status}
 					</div>
-					<div className="row pl-3 trailUpdated">
+					<div className="row pl-3">
 						Last updated {updateCurrentDate(selectedTrail.lastToggled)}
 					</div>
 				</div>
@@ -90,10 +90,10 @@ function Information({
 			</div>
 			<hr></hr>
 			<div className="row mt-2 px-3 detailRow">Weather</div>
-			<div className="row px-3 mt-2 text-center trailUpdated">Coming Soon!</div>
+			<div className="row px-3 mt-2 text-center">Coming Soon!</div>
 			<hr></hr>
 			<div className="row mt-2 px-3 detailRow">Parking</div>
-			<div className="row pl-3 mt-2 trailUpdated">
+			<div className="row pl-3 mt-2">
 				<CopyToClipboard text={selectedTrail.address}>
 					<div className="col my-auto address" onClick={notify}>
 						<div className="row pl-3">{selectedTrail.address}</div>
@@ -102,7 +102,7 @@ function Information({
 			</div>
 			<hr></hr>
 			<div className="row mt-2 px-3 detailRow">Trailhead Coordinates</div>
-			<div className="row mt-2 pl-3 trailUpdated">Coming Soon!</div>
+			<div className="row mt-2 pl-3">Coming Soon!</div>
 			<hr></hr>
 			{selectedTrail.open === 'false' ? (
 				<div className="row justify-content-center selectedTrail">

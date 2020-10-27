@@ -69,6 +69,10 @@
 	color: black;
 }
 
+.trailStatus2 {
+	font-weight: 650;
+}
+
 @media (max-width: 1199px) {
 	.selectedTrail {
 		font-size: 28px;

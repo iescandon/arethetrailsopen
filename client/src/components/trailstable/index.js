@@ -16,7 +16,7 @@ function TrailsTable({
 		'Tacky',
 		'Muddy',
 		'Wet',
-		// '✗ Under Construction',
+		'Under Construction',
 	];
 
 	const [show, setShow] = useState(false);

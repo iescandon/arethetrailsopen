@@ -144,7 +144,7 @@ function HelpPage() {
 						</Accordion.Toggle>
 						<Accordion.Collapse eventKey="5">
 							<Card.Body>
-								Use the toggle switch next to the name of the trail. If it is
+								Use the toggle switch underneath the name of the trail. If it is
 								green with a checkmark that means the trail is open. If it is
 								red and has an X that means the trail is closed. If you are
 								unsure, place it in the middle where there is a grey question

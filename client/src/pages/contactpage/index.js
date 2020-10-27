@@ -103,7 +103,7 @@ function ContactPage() {
 							onChange={(event) => handleChange(event)}
 						/>
 					</div>
-					<button type="submit" className="btn btn-success">
+					<button type="submit" className="btn submitBtn">
 						Submit
 					</button>
 				</form>

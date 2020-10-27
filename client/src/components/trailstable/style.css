@@ -1,12 +1,15 @@
+.condition {
+	font-weight: 650 !important;
+	font-size: 16px !important;
+	/* border-radius: 0.25rem; */
+}
+
 .Dry,
 .Hero {
 	/* background-color: #28a745 !important;
 	color: white !important; */
 	color: #28a745 !important;
 	/* width: 90px; */
-	font-weight: 650 !important;
-	font-size: 16px !important;
-	border-radius: 0.25rem;
 }
 
 .Tacky {
@@ -14,9 +17,6 @@
 	color: white !important; */
 	color: rgb(255, 187, 0) !important;
 	/* width: 90px; */
-	font-size: 16px !important;
-	font-weight: 650 !important;
-	border-radius: 0.25rem;
 }
 
 .Muddy,
@@ -25,9 +25,6 @@
 	color: white !important; */
 	color: #e61d1d !important;
 	/* width: 90px; */
-	font-weight: 650 !important;
-	font-size: 16px !important;
-	border-radius: 0.25rem;
 }
 
 .Unknown {
@@ -35,9 +32,6 @@
 	/* background-color: white !important; */
 	/* color: black !important; */
 	/* width: 90px; */
-	font-weight: 650 !important;
-	font-size: 16px !important;
-	border-radius: 0.25rem;
 }
 
 .tablerow {

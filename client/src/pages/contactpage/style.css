@@ -16,7 +16,7 @@ ul {
 
 .contacticons:hover {
 	text-decoration: none;
-	color: green;
+	color: #007bff;
 }
 
 .menu li {
@@ -30,6 +30,11 @@ ul {
 .header {
 	font-size: 56px !important;
 	font-weight: 800;
+}
+
+.submitBtn {
+	background-color: #007bff !important;
+	color: white !important;
 }
 
 @media (max-width: 1199px) {

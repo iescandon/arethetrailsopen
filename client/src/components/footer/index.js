@@ -6,7 +6,7 @@ function Footer() {
 	const location = useLocation();
 
 	return (
-		<div className="footer row fixed-bottom footermenu">
+		<div className="footer px-4 row fixed-bottom footermenu">
 			{/* <div className="col-1"></div> */}
 			<div className="col text-center my-auto px-0">
 				<Link

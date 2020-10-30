@@ -15,64 +15,70 @@ function ListView({
 	let radius;
 	switch (currentZoom) {
 		case 1:
-			radius = 591657550.5;
+			radius = 160934;
 			break;
 		case 2:
-			radius = 295828775.3;
+			radius = 160934;
 			break;
 		case 3:
-			radius = 147914387.6;
+			radius = 160934;
 			break;
 		case 4:
-			radius = 73957193.82;
+			radius = 160934;
 			break;
 		case 5:
-			radius = 36978596.91;
+			radius = 160934;
 			break;
 		case 6:
-			radius = 18489298.45;
+			radius = 160934;
 			break;
 		case 7:
-			radius = 9244649.227;
+			radius = 160934;
 			break;
 		case 8:
-			radius = 4622324.614;
+			radius = 160934;
+			//100 mi
 			break;
 		case 9:
 			radius = 80467.2;
+			//50 mi
 			break;
 		case 10:
-			radius = 40233.6;
+			radius = 51499;
+			//32 mi
 			break;
 		case 11:
-			radius = 22530.8;
+			radius = 21806.611;
+			//13.55 mi
 			break;
 		case 12:
-			radius = 288895.2884;
+			radius = 12070.1;
+			//7.5 mi
 			break;
 		case 13:
-			radius = 144447.6442;
+			radius = 8046.72;
+			//5 mi
 			break;
 		case 14:
-			radius = 72223.82209;
+			radius = 8046.72;
 			break;
 		case 15:
-			radius = 36111.91104;
+			radius = 8046.72;
 			break;
 		case 16:
-			radius = 18055.95552;
+			radius = 8046.72;
 			break;
 		case 17:
-			radius = 9027.977761;
+			radius = 8046.72;
 			break;
 		case 18:
-			radius = 4513.98888;
+			radius = 8046.72;
 			break;
 		case 19:
-			radius = 2256.99444;
+			radius = 8046.72;
 			break;
 		case 20:
-			radius = 1128.49722;
+			radius = 8046.72;
 			break;
 	}
 

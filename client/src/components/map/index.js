@@ -43,6 +43,9 @@ function MapComponent({
 	mapClass,
 	listClass,
 	viewChoice,
+	zoom,
+	onZoomChanged,
+	currentZoom,
 }) {
 	const [selectedMarker, setSelectedMarker] = useState({});
 	const ref = useOnclickOutside(() => {
@@ -62,6 +65,10 @@ function MapComponent({
 				</div>
 			</div>
 		);
+	}
+
+	function handleZoomChanged() {
+		onZoomChanged(this.getZoom()); //current zoom
 	}
 
 	return (
@@ -84,7 +91,8 @@ function MapComponent({
 				<GoogleMap
 					mapContainerStyle={containerStyle}
 					center={centerPoint}
-					zoom={10}
+					zoom={zoom}
+					onZoomChanged={handleZoomChanged}
 					onLoad={onMapLoad}
 					options={mapOptions}
 				>
@@ -182,6 +190,7 @@ function MapComponent({
 						viewChoice={viewChoice}
 						selectTrail={selectTrail}
 						centerPoint={centerPoint}
+						currentZoom={currentZoom}
 					/>
 				</div>
 			)}

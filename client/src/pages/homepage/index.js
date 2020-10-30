@@ -28,6 +28,11 @@ function Home() {
 	const [viewChoice, setViewChoice] = useState('map');
 	const [mapClass, setMapClass] = useState('hide');
 	const [listClass, setListClass] = useState('');
+	const [currentZoom, setCurrentZoom] = useState(10);
+
+	function handleZoomChanged(newZoom) {
+		setCurrentZoom(newZoom);
+	}
 
 	const getUserLocation = () => {
 		navigator.geolocation.getCurrentPosition(
@@ -263,6 +268,9 @@ function Home() {
 							mapClass={mapClass}
 							listClass={listClass}
 							viewChoice={viewChoice}
+							zoom={currentZoom}
+							onZoomChanged={handleZoomChanged}
+							currentZoom={currentZoom}
 						/>
 						<Information
 							selectedTrail={selectedTrail}

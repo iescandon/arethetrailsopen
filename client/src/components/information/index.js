@@ -3,6 +3,7 @@ import Toggle from '../toggle';
 import TrailsTable from '../trailstable';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { toast } from 'react-toastify';
+import { fromUnixTime } from 'date-fns';
 import './style.css';
 
 function Information({
@@ -56,6 +57,8 @@ function Information({
 		);
 	}
 
+	console.log(fromUnixTime(1330515905));
+
 	return (
 		<div className={`col-lg-6 col-md-12 infoDiv ${selectedClass} padbtm`}>
 			<div
@@ -90,7 +93,15 @@ function Information({
 			</div>
 			<hr></hr>
 			<div className="row mt-2 px-3 detailRow">Weather</div>
-			<div className="row px-3 mt-2 text-center">Coming Soon!</div>
+			<div className="row px-3 mt-2 text-center">
+				{weather === null ? (
+					<div>Loading...</div>
+				) : (
+					<div>{new Date(weather.hourly[0].dt * 1000).toLocaleString()}</div>
+					// <div>{fromUnixTime(1330515905)}</div>
+					// <div>{fromUnixTime(weather.hourly[0].dt)}</div>
+				)}
+			</div>
 			<hr></hr>
 			<div className="row mt-2 px-3 detailRow">Parking</div>
 			<div className="row pl-3 mt-2">

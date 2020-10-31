@@ -45,7 +45,9 @@ function MapComponent({
 	viewChoice,
 	zoom,
 	onZoomChanged,
+	onCenterChanged,
 	currentZoom,
+	currentCenter,
 }) {
 	const [selectedMarker, setSelectedMarker] = useState({});
 	const ref = useOnclickOutside(() => {
@@ -69,6 +71,10 @@ function MapComponent({
 
 	function handleZoomChanged() {
 		onZoomChanged(this.getZoom()); //current zoom
+	}
+
+	function handleCenterChanged() {
+		onCenterChanged(this.getCenter().toJSON());
 	}
 
 	return (
@@ -95,6 +101,7 @@ function MapComponent({
 					onZoomChanged={handleZoomChanged}
 					onLoad={onMapLoad}
 					options={mapOptions}
+					onCenterChanged={handleCenterChanged}
 				>
 					<Marker
 						position={{ lat: userLocation.lat, lng: userLocation.lng }}
@@ -191,6 +198,7 @@ function MapComponent({
 						selectTrail={selectTrail}
 						centerPoint={centerPoint}
 						currentZoom={currentZoom}
+						currentCenter={currentCenter}
 					/>
 				</div>
 			)}

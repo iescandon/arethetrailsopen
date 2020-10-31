@@ -57,7 +57,7 @@ function Information({
 		);
 	}
 
-	console.log(fromUnixTime(1330515905));
+	// console.log(fromUnixTime(1330515905));
 
 	return (
 		<div className={`col-lg-6 col-md-12 infoDiv ${selectedClass} padbtm`}>
@@ -97,7 +97,8 @@ function Information({
 				{weather === null ? (
 					<div>Loading...</div>
 				) : (
-					<div>{new Date(weather.hourly[0].dt * 1000).toLocaleString()}</div>
+					<div>Coming Soon!</div>
+					// <div>{new Date(weather.hourly[0].dt * 1000).toLocaleString()}</div>
 					// <div>{fromUnixTime(1330515905)}</div>
 					// <div>{fromUnixTime(weather.hourly[0].dt)}</div>
 				)}

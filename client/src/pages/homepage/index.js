@@ -29,9 +29,18 @@ function Home() {
 	const [mapClass, setMapClass] = useState('hide');
 	const [listClass, setListClass] = useState('');
 	const [currentZoom, setCurrentZoom] = useState(10);
+	const [currentCenter, setCurrentCenter] = useState({});
 
 	function handleZoomChanged(newZoom) {
 		setCurrentZoom(newZoom);
+	}
+
+	function handleCenterChanged(newCenter) {
+		setCurrentCenter({
+			lat: newCenter.lat,
+			lng: newCenter.lng,
+		});
+		// console.log(newCenter);
 	}
 
 	const getUserLocation = () => {
@@ -42,6 +51,10 @@ function Home() {
 					lng: position.coords.longitude,
 				});
 				setUserLocation({
+					lat: position.coords.latitude,
+					lng: position.coords.longitude,
+				});
+				setCurrentCenter({
 					lat: position.coords.latitude,
 					lng: position.coords.longitude,
 				});
@@ -57,6 +70,10 @@ function Home() {
 
 	const resetCenterPoint = (userLocation) => {
 		setCenterPoint({
+			lat: userLocation.lat,
+			lng: userLocation.lng,
+		});
+		setCurrentCenter({
 			lat: userLocation.lat,
 			lng: userLocation.lng,
 		});
@@ -110,6 +127,7 @@ function Home() {
 		setSearch(value);
 	};
 
+	//not sure if to set current center here
 	const getLatAndLong = (search, event) => {
 		event.preventDefault();
 		Geocode.setApiKey(process.env.REACT_APP_GOOGLE_API_KEY);
@@ -117,6 +135,10 @@ function Home() {
 			(response) => {
 				const { lat, lng } = response.results[0].geometry.location;
 				setCenterPoint({
+					lat,
+					lng,
+				});
+				setCurrentCenter({
 					lat,
 					lng,
 				});
@@ -270,7 +292,9 @@ function Home() {
 							viewChoice={viewChoice}
 							zoom={currentZoom}
 							onZoomChanged={handleZoomChanged}
+							onCenterChanged={handleCenterChanged}
 							currentZoom={currentZoom}
+							currentCenter={currentCenter}
 						/>
 						<Information
 							selectedTrail={selectedTrail}

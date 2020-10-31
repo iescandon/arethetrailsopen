@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import { getDistance, isPointWithinRadius } from 'geolib';
 import './style.css';
@@ -9,9 +9,21 @@ function ListView({
 	selectTrail,
 	centerPoint,
 	currentZoom,
+	currentCenter,
 }) {
-	// let trailsArray = trails;
+	let mapCenterPoint = currentCenter;
 
+	useEffect(() => {
+		trailsArray.filter((trail) => {
+			return isPointWithinRadius(
+				{ latitude: trail.lat, longitude: trail.lng },
+				{ latitude: mapCenterPoint.lat, longitude: mapCenterPoint.lng },
+				radius
+			);
+		});
+	}, [currentCenter]);
+
+	//TODO Fix the meters based on zoom levels
 	let radius;
 	switch (currentZoom) {
 		case 1:
@@ -85,7 +97,7 @@ function ListView({
 	let trailsArray = trails.filter((trail) => {
 		return isPointWithinRadius(
 			{ latitude: trail.lat, longitude: trail.lng },
-			{ latitude: centerPoint.lat, longitude: centerPoint.lng },
+			{ latitude: mapCenterPoint.lat, longitude: mapCenterPoint.lng },
 			radius
 		);
 	});
@@ -106,9 +118,6 @@ function ListView({
 		return a.distance - b.distance;
 	});
 
-	console.log(trailsArray);
-	console.log(radius);
-	console.log(currentZoom);
 	return (
 		<Table hover className="table list-view">
 			<tbody>

@@ -18,7 +18,7 @@ function Information({
 	userLocation,
 }) {
 	const [weather, setWeather] = useState(null);
-	const [show, setShow] = useState('show');
+	const [show, setShow] = useState('hide');
 	const [withinRadius, setWithinRadius] = useState('show');
 	const notify = () => toast.dark('Address Copied!');
 	let status = '';
@@ -83,15 +83,13 @@ function Information({
 			>
 				<div className="px-3 text-center">{selectedTrail.name}</div>
 			</div>
-			<div className={`row mt-3 justify-content-center ${withinRadius}`}>
+			<div
+				className={`row mt-3 mx-auto justify-content-center ${withinRadius}`}
+			>
 				<Toggle
 					selectedTrail={selectedTrail}
 					updateTrailStatus={updateTrailStatus}
 				/>
-				{/* <Toggle
-					selectedTrail={selectedTrail}
-					updateTrailStatus={updateTrailStatus}
-				/> */}
 			</div>
 			{/* <hr></hr> */}
 			<div className="row mt-4 px-3 detailRow">Status</div>

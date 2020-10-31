@@ -125,9 +125,11 @@ function HelpPage() {
 						</Accordion.Toggle>
 						<Accordion.Collapse eventKey="4">
 							<Card.Body>
-								Yes! Absolutely! If you go to Memorial Park and see that it is
-								closed, come to "Are the trails open?" and close the trail if it
-								isn't already closed. Please keep into consideration, we are
+								Yes! Well kind of. Anyone within a 10 mile radius of the
+								trailhead can update the trail status or individual trail
+								conditions. So lets say you go to Memorial Park and see that it
+								is closed, come to "Are the trails open?" and close the trail if
+								it isn't already closed. Please keep into consideration, we are
 								simply reporting what we see. Trail stewards and captains have
 								the ultimate say whether a trail is officially opened or not.
 							</Card.Body>

@@ -4,6 +4,7 @@ import TrailsTable from '../trailstable';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { toast } from 'react-toastify';
 import { fromUnixTime } from 'date-fns';
+import { isPointWithinRadius } from 'geolib';
 import './style.css';
 
 function Information({
@@ -14,9 +15,11 @@ function Information({
 	results,
 	selectedClass,
 	addTrailComment,
+	userLocation,
 }) {
 	const [weather, setWeather] = useState(null);
-	const [show, setShow] = useState('hide');
+	const [show, setShow] = useState('show');
+	const [withinRadius, setWithinRadius] = useState('show');
 	const notify = () => toast.dark('Address Copied!');
 	let status = '';
 
@@ -40,6 +43,19 @@ function Information({
 					setWeather(json);
 					console.log(json);
 				});
+		}
+		if (selectedTrail.name) {
+			const result = isPointWithinRadius(
+				{ latitude: userLocation.lat, longitude: userLocation.lng },
+				{ latitude: selectedTrail.lat, longitude: selectedTrail.lng },
+				16093.4
+			);
+			if (result === true) {
+				setWithinRadius('show');
+			} else {
+				setWithinRadius('hide');
+			}
+			console.log(result);
 		}
 	}, [selectedTrail.name]);
 
@@ -67,11 +83,15 @@ function Information({
 			>
 				<div className="px-3 text-center">{selectedTrail.name}</div>
 			</div>
-			<div className="row mt-3 justify-content-center">
+			<div className={`row mt-3 justify-content-center ${withinRadius}`}>
 				<Toggle
 					selectedTrail={selectedTrail}
 					updateTrailStatus={updateTrailStatus}
 				/>
+				{/* <Toggle
+					selectedTrail={selectedTrail}
+					updateTrailStatus={updateTrailStatus}
+				/> */}
 			</div>
 			{/* <hr></hr> */}
 			<div className="row mt-4 px-3 detailRow">Status</div>
@@ -147,6 +167,7 @@ function Information({
 							updateTrailCondition={updateTrailCondition}
 							updateCurrentDate={updateCurrentDate}
 							addTrailComment={addTrailComment}
+							withinRadius={withinRadius}
 						/>
 					</div>
 				</React.Fragment>

@@ -199,6 +199,7 @@ function MapComponent({
 						centerPoint={centerPoint}
 						currentZoom={currentZoom}
 						currentCenter={currentCenter}
+						userLocation={userLocation}
 					/>
 				</div>
 			)}

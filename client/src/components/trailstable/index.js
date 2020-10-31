@@ -8,6 +8,7 @@ function TrailsTable({
 	updateTrailCondition,
 	updateCurrentDate,
 	addTrailComment,
+	withinRadius,
 }) {
 	const trailConditions = [
 		'Unknown',
@@ -86,31 +87,37 @@ function TrailsTable({
 									</div>
 									<div className="col">
 										<div className={`condition ${trail.condition}`}>
-											<Dropdown>
-												<Dropdown.Toggle
-													variant=""
-													id="dropdown-basic"
-													className={`condition px-0 mr-0 ${trail.condition}`}
-													// className="btn-outline-secondary"
-												>
+											{withinRadius === 'show' ? (
+												<Dropdown>
+													<Dropdown.Toggle
+														variant=""
+														id="dropdown-basic"
+														className={`condition px-0 mr-0 ${trail.condition}`}
+														// className="btn-outline-secondary"
+													>
+														{trail.condition}
+													</Dropdown.Toggle>
+													<Dropdown.Menu>
+														{trailConditions.map((condition) => {
+															return (
+																<Dropdown.Item
+																	key={condition}
+																	onClick={(event) => {
+																		updateTrailCondition(trail.trailId, event);
+																	}}
+																	data-condition={condition}
+																>
+																	{condition}
+																</Dropdown.Item>
+															);
+														})}
+													</Dropdown.Menu>
+												</Dropdown>
+											) : (
+												<div className={`condition ${trail.condition}`}>
 													{trail.condition}
-												</Dropdown.Toggle>
-												<Dropdown.Menu>
-													{trailConditions.map((condition) => {
-														return (
-															<Dropdown.Item
-																key={condition}
-																onClick={(event) => {
-																	updateTrailCondition(trail.trailId, event);
-																}}
-																data-condition={condition}
-															>
-																{condition}
-															</Dropdown.Item>
-														);
-													})}
-												</Dropdown.Menu>
-											</Dropdown>
+												</div>
+											)}
 										</div>
 										<div className="trailUpdated">
 											Last updated {updateCurrentDate(trail.lastUpdated)}

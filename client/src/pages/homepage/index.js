@@ -304,6 +304,7 @@ function Home() {
 							updateCurrentDate={updateCurrentDate}
 							selectedClass={selectedClass}
 							addTrailComment={addTrailComment}
+							userLocation={userLocation}
 						/>
 					</div>
 				</div>

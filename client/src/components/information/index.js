@@ -132,7 +132,7 @@ function Information({
 			</div>
 			<hr></hr>
 			<div className="row mt-2 px-3 detailRow">Trailhead Coordinates</div>
-			<div className="row mt-2 pl-3">Coming Soon!</div>
+			<div className="row mt-2 pl-3">{`${selectedTrail.lat}, ${selectedTrail.lng}`}</div>
 			<hr></hr>
 			{selectedTrail.open === 'false' ? (
 				<div className="row justify-content-center selectedTrail">

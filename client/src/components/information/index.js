@@ -76,7 +76,9 @@ function Information({
 	// console.log(fromUnixTime(1330515905));
 
 	return (
-		<div className={`col-lg-6 col-md-12 infoDiv ${selectedClass} padbtm`}>
+		<div
+			className={`col-lg-6 col-md-12 infoDiv justify-content-center${selectedClass} padbtm`}
+		>
 			<div
 				className="row px-3 mt-4 selectedTrail justify-content-center"
 				// ref={results}

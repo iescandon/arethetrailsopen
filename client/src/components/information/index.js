@@ -134,7 +134,14 @@ function Information({
 			</div>
 			<hr></hr>
 			<div className="row mt-2 px-3 detailRow">Trailhead Coordinates</div>
-			<div className="row mt-2 pl-3">{`${selectedTrail.lat}, ${selectedTrail.lng}`}</div>
+			<div className="row mt-2 pl-3">
+				<a
+					href={`https://maps.google.com/?q=${selectedTrail.lat},+${selectedTrail.lng}`}
+					target="_blank"
+				>
+					{`${selectedTrail.lat}, ${selectedTrail.lng}`}
+				</a>
+			</div>
 			<hr></hr>
 			{selectedTrail.open === 'false' ? (
 				<div className="row justify-content-center selectedTrail">

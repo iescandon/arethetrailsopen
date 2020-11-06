@@ -32,7 +32,7 @@ function AboutPage() {
 					<div className="col-lg-7 col-md-12 my-auto">
 						<div>
 							<p className="text-center header about2 mt-3">About</p>
-							<p className="row mt-4 about-text">
+							{/* <p className="row mt-4 about-text">
 								Various mountain bike trail facebook groups are littered with
 								users asking for the trail status. Although some people know the
 								answers, they get frustrated by having to constantly answer the
@@ -45,7 +45,7 @@ function AboutPage() {
 								understand. Additionally it only provides you with one trail's
 								status, so you have to go through the long process again to find
 								out the status of another trail nearby.
-							</p>
+							</p> */}
 							<p>
 								The developer,{' '}
 								<a

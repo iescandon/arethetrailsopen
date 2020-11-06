@@ -42,6 +42,9 @@
 
 .toggle {
 	border-radius: 50%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 
 .toggleContainer .toggleOption.selected {
@@ -49,11 +52,13 @@
 	cursor: initial;
 }
 
+/* .toggleContainer */
+
 .toggleContainer .toggle {
-	position: absolute;
+	/* position: absolute; */
 	height: 100%;
-	bottom: 0;
-	left: 0;
+	/* bottom: 0;
+	left: 0; */
 	transition: all 0.4s ease-in-out;
 	background: #df5d5d;
 }

@@ -149,7 +149,7 @@ function TrailsTable({
 										<i className="fa fa-comment commentIcon"></i>
 									</div> */}
 								</div>
-								<div className="row mt-3 pl-4" onClick={handleShow}>
+								{/* <div className="row mt-3 pl-4" onClick={handleShow}>
 									{trail.comment === '' ? (
 										<div className="col commentBox"></div>
 									) : (
@@ -172,7 +172,7 @@ function TrailsTable({
 									>
 										<i className="fa fa-comment commentIcon"></i>
 									</div>
-								</div>
+								</div> */}
 							</td>
 							{selectedRow === trail ? (
 								<Modal show={show} onHide={handleClose}>

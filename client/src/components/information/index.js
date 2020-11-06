@@ -18,7 +18,7 @@ function Information({
 	userLocation,
 }) {
 	const [weather, setWeather] = useState(null);
-	const [show, setShow] = useState('hide');
+	const [show, setShow] = useState('show');
 	const [withinRadius, setWithinRadius] = useState('show');
 	const notify = () => toast.dark('Address Copied!');
 	let status = '';

@@ -84,7 +84,7 @@ function Information({
 				<div className="px-3 text-center">{selectedTrail.name}</div>
 			</div>
 			<div
-				className={`row mt-3 mx-auto justify-content-center ${withinRadius}`}
+				className={`row mt-3 mx-auto justify-content-center text-center ${withinRadius}`}
 			>
 				<Toggle
 					selectedTrail={selectedTrail}

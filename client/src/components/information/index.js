@@ -93,10 +93,10 @@ function Information({
 			<div className="row mt-4 px-3 detailRow">Status</div>
 			<div className="row mt-2 px-3">
 				<div className="col-8">
-					<div className={`row pl-3 trailStatus2 ${selectedTrail.open}`}>
+					<div className={`row trailStatus2 ${selectedTrail.open}`}>
 						{status}
 					</div>
-					<div className="row pl-3">
+					<div className="row">
 						Last updated {updateCurrentDate(selectedTrail.lastToggled)}
 					</div>
 				</div>

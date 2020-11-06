@@ -76,24 +76,20 @@ function Information({
 	// console.log(fromUnixTime(1330515905));
 
 	return (
-		<div
-			className={`col-lg-6 col-md-12 infoDiv justify-content-center${selectedClass} padbtm`}
-		>
+		<div className={`col-lg-6 col-md-12 infoDiv ${selectedClass} padbtm`}>
 			<div
 				className="row px-3 mt-4 selectedTrail justify-content-center"
 				// ref={results}
 			>
 				<div className="px-3 text-center">{selectedTrail.name}</div>
 			</div>
-			<div
-				className={`row mt-3 mx-auto justify-content-center text-center centerToggle ${withinRadius}`}
-			>
-				<div className="col mx-auto justify-content-center text-center centerToggle">
-					<Toggle
-						selectedTrail={selectedTrail}
-						updateTrailStatus={updateTrailStatus}
-					/>
-				</div>
+			<div className={`row mt-3 justify-content-center ${withinRadius}`}>
+				{/* <div className="col mx-auto justify-content-center"> */}
+				<Toggle
+					selectedTrail={selectedTrail}
+					updateTrailStatus={updateTrailStatus}
+				/>
+				{/* </div> */}
 			</div>
 			{/* <hr></hr> */}
 			<div className="row mt-4 px-3 detailRow">Status</div>

@@ -73,6 +73,14 @@
 	font-weight: 650;
 }
 
+.centerToggle {
+	/* position: absolute;
+	top: 0.35rem; */
+	left: 50%;
+	/* transform: translateX(-50%); */
+	/* z-index: 10; */
+}
+
 @media (max-width: 1199px) {
 	.selectedTrail {
 		font-size: 28px;

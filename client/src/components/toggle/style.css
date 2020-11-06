@@ -1,5 +1,4 @@
 .toggle-wrapper {
-	/* margin: 0.5em auto; */
 }
 
 .toggle-wrapper label {
@@ -17,9 +16,12 @@
 	border-radius: 75px !important;
 }
 
+.toggleOption {
+	position: relative;
+}
+
 .toggleContainer .toggleOption {
 	display: inline-block;
-	position: relative;
 	z-index: 1;
 	text-align: center;
 	vertical-align: middle;
@@ -55,10 +57,7 @@
 /* .toggleContainer */
 
 .toggleContainer .toggle {
-	/* position: absolute; */
 	height: 100%;
-	/* bottom: 0;
-	left: 0; */
 	transition: all 0.4s ease-in-out;
 	background: #df5d5d;
 }

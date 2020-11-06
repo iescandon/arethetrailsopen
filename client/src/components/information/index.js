@@ -83,18 +83,16 @@ function Information({
 			>
 				<div className="px-3 text-center">{selectedTrail.name}</div>
 			</div>
-			<div className={`row mt-3 justify-content-center ${withinRadius}`}>
-				{/* <div className="col mx-auto justify-content-center"> */}
+			{/* <div className={`row mt-3 justify-content-center ${withinRadius}`}>
 				<Toggle
 					selectedTrail={selectedTrail}
 					updateTrailStatus={updateTrailStatus}
 				/>
-				{/* </div> */}
-			</div>
+			</div> */}
 			{/* <hr></hr> */}
 			<div className="row mt-4 px-3 detailRow">Status</div>
 			<div className="row mt-2 px-3">
-				<div className="col">
+				<div className="col-8">
 					<div className={`row pl-3 trailStatus2 ${selectedTrail.open}`}>
 						{status}
 					</div>
@@ -102,12 +100,16 @@ function Information({
 						Last updated {updateCurrentDate(selectedTrail.lastToggled)}
 					</div>
 				</div>
-				{/* <div className="col">
-					<Toggle
-						selectedTrail={selectedTrail}
-						updateTrailStatus={updateTrailStatus}
-					/>
-				</div> */}
+				<div
+					className={`col-4 my-auto mt-3 justify-content-center ${withinRadius}`}
+				>
+					<div className="row mx-auto justify-content-center">
+						<Toggle
+							selectedTrail={selectedTrail}
+							updateTrailStatus={updateTrailStatus}
+						/>
+					</div>
+				</div>
 			</div>
 			<hr></hr>
 			<div className="row mt-2 px-3 detailRow">Weather</div>

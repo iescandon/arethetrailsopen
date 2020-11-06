@@ -88,10 +88,12 @@ function Information({
 			<div
 				className={`row mt-3 mx-auto justify-content-center text-center centerToggle ${withinRadius}`}
 			>
-				<Toggle
-					selectedTrail={selectedTrail}
-					updateTrailStatus={updateTrailStatus}
-				/>
+				<div className="col mx-auto justify-content-center text-center centerToggle">
+					<Toggle
+						selectedTrail={selectedTrail}
+						updateTrailStatus={updateTrailStatus}
+					/>
+				</div>
 			</div>
 			{/* <hr></hr> */}
 			<div className="row mt-4 px-3 detailRow">Status</div>

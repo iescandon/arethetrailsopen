@@ -31,7 +31,7 @@ function AboutPage() {
 					</div>
 					<div className="col-lg-7 col-md-12 my-auto">
 						<div>
-							<p className="text-center header about2 mt-3">About</p>
+							{/* <p className="text-center header about2 mt-3">About</p> */}
 							{/* <p className="row mt-4 about-text">
 								Various mountain bike trail facebook groups are littered with
 								users asking for the trail status. Although some people know the
@@ -55,13 +55,18 @@ function AboutPage() {
 								>
 									Inez Escandon
 								</a>
-								, loves to ride and noticed this issue in her community. Thus
-								the idea to create "Are the trails open?" was born. "Are the
-								trails open?" is a full-stack MERN application designed to
-								quickly/painlessly find out what popular biking trails are open
-								in the area. Additionally, it also provides users a simple way
-								to update trail status and conditions.
+								, loves to ride and noticed an issue in her community. Thus the
+								idea to create "Are the trails open?" was born. "Are the trails
+								open?" is an app designed to quickly/painlessly find out what
+								popular biking trails are open in the area. Additionally, it
+								provides users a simple way to update trail status and
+								conditions.
 							</p>
+							<br />
+							{/* <p>
+								Support this website (and the developers expensive biking habit)
+								by donating to:
+							</p> */}
 
 							<p className="copyright">
 								Copyright © 2020 - All rights reserved

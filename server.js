@@ -18,6 +18,7 @@ app.use(cors());
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/trailsDB', {
 	useNewUrlParser: true,
 	useFindAndModify: false,
+	useUnifiedTopology: true,
 });
 
 app.use(require('./routes/api.js'));
